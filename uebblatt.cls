@@ -6,6 +6,7 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[ngerman]{babel}
 \RequirePackage{amsmath,amsthm,amssymb,amscd,color,graphicx,environ}
+\RequirePackage[all]{xy}
 \RequirePackage{framed}
 \RequirePackage[protrusion=true,expansion=true]{microtype}
 \RequirePackage{multicol}
@@ -71,6 +72,7 @@
 
 \newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\FF}{\mathbb{F}}
+\newcommand{\PP}{\mathbb{P}}
 \renewcommand{\AA}{\mathbb{A}}
 \newcommand{\A}{\mathcal{A}}
 \newcommand{\C}{\mathcal{C}}
