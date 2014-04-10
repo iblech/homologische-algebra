@@ -1,0 +1,73 @@
+\documentclass{uebblatt}
+
+\begin{document}
+
+\maketitle{1}{-- \emph{Motto} --}
+
+\begin{aufgabe}{Kosimpliziale Identitäten}
+Die \emph{Korandabbildung}~$\partial^i_n : [n-1] \to
+[n]$ ist diejenige eindeutig bestimmte monotone Injektion, die nicht den
+Wert~$i$ annimmt. Die \emph{Koentartungsabbildung}~$\sigma^i_n : [n+1] \to [n]$
+ist diejenige eindeutig bestimmte monotone Surjektion, für die der Wert~$i$
+zwei verschiedene Urbilder besitzt. Beide Definitionen sind für~$n \geq 0$
+und~$0 \leq i \leq n$ sinnvoll. Der untere Index wird in der Notation oftmals
+unterdrückt.
+\begin{enumerate}
+\item Zeige:
+
+Jede monotone Injektion~\tabto{4.55cm}$[n] \to [m]$ ist Verkettung
+von Korandabbildungen. \\
+Jede monotone Surjektion~\tabto{4.55cm}$[n] \to [m]$ ist
+Verkettung von Koentartungsabbildungen. \\
+Jede monotone Abbildung~\tabto{4.55cm}$[n] \to [m]$
+ist Verkettung von Korand- und Koentartungsabbildungen.
+
+\item Verifiziere die folgenden \emph{kosimplizialen Identitäten}.
+\begin{align*}
+  \partial^j \partial^i &= \partial^i \partial^{j-1} & \text{($i < j$)} \\
+  \sigma^j \sigma^i &= \sigma^i \sigma^{j+1} & \text{($i \leq j$)} \\
+  \sigma^j \partial^i &= \partial^i \sigma^{j-1} & \text{($i < j$)} \\
+  \sigma^j \partial^i &= \id & \text{($i = j$, $i = j+1$)} \\
+  \sigma^j \partial^i &= \partial^{i-1} \sigma^j & \text{($i > j + 1$)} 
+\end{align*}
+Welche anschauliche Bedeutung haben die Identitäten? Kann man
+sich Indexschlachten sparen?
+
+\item Seien zwei formale Verkettungsausdrücke von Korand- und
+Koentartungsabbildungen gegeben. Gelte, dass beide dieselbe monotone
+Abbildung~$[n] \to [m]$ beschreiben. Zeige: Allein unter Verwendung der
+kosimplizialen Identitäten kann man die beiden Ausdrücke ineineinander
+überführen.
+
+\emph{Tipp:} Zeige, dass jede monotone Abbildung~$f : [n] \to [m]$ auf
+\emph{eindeutige} Art und Weise als Verkettung
+\[ f = \partial^{i_1} \cdots \partial^{i_s} \sigma^{j_t} \cdots \sigma^{j_1} \]
+geschrieben werden kann, wobei in der Notation von links nach rechts die oberen
+Indizes der Korandabbildungen streng monoton abnehmen und die der
+Koentartungsabbildungen streng monoton zunehmen.
+\end{enumerate}
+
+Ähnlich wie Moduln können auch Kategorien \emph{endlich präsentiert} sein.
+Diese Aufgabe zeigt, dass die simpliziale Buchhaltungskategorie~$\Delta$ von
+den Korand- und Koentartungsabbildungen und nur den kosimplizialen Identitäten als
+Relationen erzeugt wird.
+\end{aufgabe}
+
+\newpage
+
+\begin{center}-- \emph{Aufgabenvorschläge zusätzlich/statt den Skelettaufgaben}
+--\end{center}
+
+\begin{itemize}
+\item Kann man diejenige Abbildung, die ein Dreieck auf eine seiner Kanten
+projiziert, durch eine Abbildung semisimplizialer Mengen realisieren?
+\item Welche semisimpliziale Menge~$S$ hat die Eigenschaft, dass~$X \times S
+\cong X$ für alle~$X$?
+\item Fixiere deinen Lieblingsraum (zum Beispiel die~$S^1$) und eine lokal
+endliche Über\-dec\-kung, sodass deren nichtleere endliche Durchschnitte
+zusammenziehbar sind. Zeichne die semisimpliziale Menge zu dem Nerv dieser
+Überdeckung. Was passiert, wenn die Überdeckung nicht diese gute Eigenschaft
+hat?
+\end{itemize}
+
+\end{document}
