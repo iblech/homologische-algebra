@@ -14,7 +14,7 @@
 \RequirePackage{hyperref}
 
 \RequirePackage{geometry}
-\geometry{tmargin=2cm,bmargin=2cm,lmargin=3.1cm,rmargin=3.1cm}
+\geometry{tmargin=1cm,bmargin=2cm,lmargin=3.1cm,rmargin=3.1cm}
 
 \setlength\parskip{\medskipamount}
 \setlength\parindent{0pt}

@@ -2,7 +2,19 @@
 
 \begin{document}
 
-\maketitle{1}{-- \emph{Motto} --}
+\maketitle{1}{-- \emph{Letzte konkrete Vorbereitungen: Rechnungen mit Simplizes} --}
+
+\begin{aufgabe}{Triangulierung des Produkts zweier Simplizes}
+Sei~$X$ die kanonische Triangulierung des Produkts~$\Delta_p \times \Delta_q$.
+In der Vorlesung wurde ein Verfahren beschrieben, das aus einem
+Punkt~$r = ((\xi_1,\ldots,\xi_p), (\eta_1,\ldots,\eta_q)) \in \Delta_p \times
+\Delta_q$ ein Element~$x \in X_{(\ell)}$ zusammen mit einem Punkt~$s \in
+\Delta_\ell^\circ$ konstruiert.
+
+Zeige: Die kanonische Abbildung~$\theta : \coprod_{n \geq 0} (\Delta_n^\circ \times
+X_{(n)}) \to \Delta_p \times \Delta_q$ schickt~$(x,s)$ auf~$r$, und~$(x,s)$ ist
+das einzige Element der Definitionsmenge mit dieser Eigenschaft.
+\end{aufgabe}
 
 \begin{aufgabe}{Kosimpliziale Identitäten}
 Die \emph{Korandabbildung}~$\partial^i_n : [n-1] \to
@@ -31,7 +43,7 @@ ist Verkettung von Korand- und Koentartungsabbildungen.
   \sigma^j \partial^i &= \partial^{i-1} \sigma^j & \text{($i > j + 1$)} 
 \end{align*}
 Welche anschauliche Bedeutung haben die Identitäten? Kann man
-sich Indexschlachten sparen?
+Indexschlachten vermeiden?
 
 \item Seien zwei formale Verkettungsausdrücke von Korand- und
 Koentartungsabbildungen gegeben. Gelte, dass beide dieselbe monotone
@@ -41,22 +53,21 @@ kosimplizialen Identitäten kann man die beiden Ausdrücke ineineinander
 
 \emph{Tipp:} Zeige, dass jede monotone Abbildung~$f : [n] \to [m]$ auf
 \emph{eindeutige} Art und Weise als Verkettung
-\[ f = \partial^{i_1} \cdots \partial^{i_s} \sigma^{j_t} \cdots \sigma^{j_1} \]
+$f = \partial^{i_1} \cdots \partial^{i_s} \sigma^{j_t} \cdots \sigma^{j_1}$
 geschrieben werden kann, wobei in der Notation von links nach rechts die oberen
 Indizes der Korandabbildungen streng monoton abnehmen und die der
 Koentartungsabbildungen streng monoton zunehmen.
 \end{enumerate}
 
 Ähnlich wie Moduln können auch Kategorien \emph{endlich präsentiert} sein.
-Diese Aufgabe zeigt, dass die simpliziale Buchhaltungskategorie~$\Delta$ von
+Die Aufgabe zeigt, dass die simpliziale Buchhaltungskategorie~$\Delta$ von
 den Korand- und Koentartungsabbildungen und nur den kosimplizialen Identitäten als
 Relationen erzeugt wird.
 \end{aufgabe}
 
-\newpage
+\end{document}
 
-\begin{center}-- \emph{Aufgabenvorschläge zusätzlich/statt den Skelettaufgaben}
---\end{center}
+Für später:
 
 \begin{itemize}
 \item Kann man diejenige Abbildung, die ein Dreieck auf eine seiner Kanten
@@ -69,5 +80,3 @@ zusammenziehbar sind. Zeichne die semisimpliziale Menge zu dem Nerv dieser
 Überdeckung. Was passiert, wenn die Überdeckung nicht diese gute Eigenschaft
 hat?
 \end{itemize}
-
-\end{document}
