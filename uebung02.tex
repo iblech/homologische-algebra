@@ -29,7 +29,7 @@ längs~$g$"' vor. (Wenn~$g$ die Identität ist, ist das keine gute Vorstellung -
 sonst aber schon.)
 
 Ist~$f : [n] \to [m]$ eine monotone Abbildung, so definiert
-man~$\widetilde X(f)(g,x) := (\pi, X(\iota)(x))$, wobei~$[n]
+man~$\widetilde X(f)(g,x) := (\pi, X(\iota)x)$, wobei~$[n]
 \xrightarrow{\pi} [\ell] \xrightarrow{\iota} [k]$ die eindeutige Epi/Mono-Zerlegung
 von~$g \circ f$ ist.
 \begin{enumerate}
@@ -37,8 +37,13 @@ von~$g \circ f$ ist.
 weise also die beiden Axiome über~$\widetilde X$ nach.
 \item Zeige, dass~$\widetilde X$ folgende besondere Eigenschaft hat: Für jedes
 nichtdegenerierte Simplex~$x \in \widetilde X_m$ und jede monotone Injektion~$f
-: [n] \to [m]$ ist das Simplex~$\widetilde X(f)(x) \in \widetilde X_n$
+: [n] \to [m]$ ist das Simplex~$\widetilde X(f)x \in \widetilde X_n$
 ebenfalls nichtdegeneriert.
+
+\emph{Tipp:} Vielleicht hilft es dir, nachzuweisen, dass ein Simplex~$(g,x) \in
+\widetilde X_m$ genau dann nichtdegeneriert ist, wenn~$g$ eine
+Identitätsabbildung ist.
+
 \item Zeige, dass eine beliebige simpliziale Menge genau dann durch die
 beschriebene Konstruktion von einem Verklebedatum stammt, wenn es die
 Eigenschaft aus Teilaufgabe~b) hat.
@@ -47,12 +52,10 @@ Eigenschaft aus Teilaufgabe~b) hat.
 Die Konstruktion~$X \mapsto \widetilde X$ stellt einen Linksadjungierten zum
 Vergissfunktor von der Kategorie der simplizialen Mengen in die Kategorie der
 Verklebedaten dar. In einem gewissen Sinn kann man sie als Kategorifizierung
-des Fundamentalsatzes von Newtons Finite-Differenzen-Kalkül ansehen:
-\[ a_n = \sum_{k=0}^n \binom{n}{k} (\partial^k a)_0. \]
+des Fundamentalsatzes von Newtons Finite-Differenzen-Kalkül ansehen.
 Siehst du eine Verbindung?
+\[ a_n = \sum_{k=0}^n \binom{n}{k} (\partial^k a)_0. \]
 \end{aufgabe}
-
-\newpage
 
 \begin{aufgabe}{Basiswissen zu Homotopie}
 Ein topologischer Raum~$X$ heißt genau dann \emph{zusammenziehbar}, wenn es
