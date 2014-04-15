@@ -2,7 +2,7 @@
 
 \begin{document}
 
-\maketitle{2}{-- \emph{Motto} --}
+\maketitle{2}{-- \emph{Spiel und Spaß mit Verklebedaten} --}
 
 \begin{aufgabe}{Geometrische Realiserung des simplizialen
 Standard-$p$-Simplexes}
@@ -21,17 +21,20 @@ diese Aufgabe auch unmittelbar vermöge abstrakten Nonsens lösen kann.
 In der Vorlesung wurde eine Konstruktion beschrieben, um aus einem
 Verklebedatum~$(X_{(n)})$ eine simpliziale Menge~$\widetilde X$ zu bauen: Als
 Menge der~$m$-Simplizes nimmt man dabei
-\[ X_m := \coprod_{k \geq 0} \coprod_{g : [m] \twoheadrightarrow [k]} X_{(k)}, \]
-Ein~$m$-Simplex von~$\widetilde X$ ist also ein Tupel~$(k,g,x)$, wobei~$k$ eine
-natürliche Zahl,~$g : [m] \to [k]$ eine monotone Surjektion und~$x \in X_{(k)}$
+\[ \widetilde X_m := \coprod_{\substack{k \geq 0 \\ g : [m] \twoheadrightarrow [k]}} X_{(k)}, \]
+Ein~$m$-Simplex von~$\widetilde X$ ist also ein Tupel~$(g,x)$, wobei~$g : [m]
+\to [k]$ eine monotone Surjektion (mit~$k \geq 0$ beliebig) und~$x \in X_{(k)}$
 ein~$k$-Simplex von~$X$ ist; wir stellen es uns als "`Degeneration von~$x$
-längs~$g$"' vor. Ist~$f : [n] \to [m]$ eine monotone Abbildung, so definiert
-man~$\widetilde X(f)(k,g,x) := (\ell, X(\iota)x, \pi)$, wobei~$[n]
+längs~$g$"' vor. (Wenn~$g$ die Identität ist, ist das keine gute Vorstellung --
+sonst aber schon.)
+
+Ist~$f : [n] \to [m]$ eine monotone Abbildung, so definiert
+man~$\widetilde X(f)(g,x) := (\pi, X(\iota)(x))$, wobei~$[n]
 \xrightarrow{\pi} [\ell] \xrightarrow{\iota} [k]$ die eindeutige Epi/Mono-Zerlegung
 von~$g \circ f$ ist.
 \begin{enumerate}
 \item Zeige, dass diese Setzung wirklich zu einer simplizialen Menge führt,
-weise also die beiden Axiome über~$\widetilde X(\placeholder)$ nach.
+weise also die beiden Axiome über~$\widetilde X$ nach.
 \item Zeige, dass~$\widetilde X$ folgende besondere Eigenschaft hat: Für jedes
 nichtdegenerierte Simplex~$x \in \widetilde X_m$ und jede monotone Injektion~$f
 : [n] \to [m]$ ist das Simplex~$\widetilde X(f)(x) \in \widetilde X_n$
@@ -44,8 +47,41 @@ Eigenschaft aus Teilaufgabe~b) hat.
 Die Konstruktion~$X \mapsto \widetilde X$ stellt einen Linksadjungierten zum
 Vergissfunktor von der Kategorie der simplizialen Mengen in die Kategorie der
 Verklebedaten dar. In einem gewissen Sinn kann man sie als Kategorifizierung
-des Fundamentalsatzes von Newtons Finite-Differenzen-Kalkül ansehen.
+des Fundamentalsatzes von Newtons Finite-Differenzen-Kalkül ansehen:
+\[ a_n = \sum_{k=0}^n \binom{n}{k} (\partial^k a)_0. \]
+Siehst du eine Verbindung?
 \end{aufgabe}
+
+\newpage
+
+\begin{aufgabe}{Basiswissen zu Homotopie}
+Ein topologischer Raum~$X$ heißt genau dann \emph{zusammenziehbar}, wenn es
+einen Basispunkt~$x_0 \in X$ derart gibt, dass eine stetige Abbildung~$H :
+X \times [0,1] \to X$ mit~$H(x,0) = x$ und~$H(x,1) = x_0$ für alle~$x \in X$
+existiert.
+
+Eine stetige Abbildung~$f : X \to Y$ heißt genau dann
+\emph{Homotopieäquivalenz}, wenn es eine stetige Abbildung~$g : Y \to X$ derart
+gibt, dass~$g \circ f$ und~$f \circ g$ (zwar nicht unbedingt gleich, aber)
+homotop zur jeweiligen Identitätsabbildung sind. Zwei Räume heißen genau dann
+zueinander \emph{homotopieäquivalent}, wenn es eine Homotopieäquivalenz
+zwischen ihnen gibt.
+
+Beweise so viele der folgenden Behauptungen, wie du möchtest.
+
+\begin{enumerate}
+\item Ein Raum ist genau dann zusammenziehbar, wenn er homotopieäquivalent zu
+einem einpunktigen Raum ist.
+\item Ist~$X$ zusammenziehbar, so sind je zwei stetige Abbildungen~$Y
+\rightrightarrows X$ zueinander homotop. (Das Konzept von Homotopie von
+Abbildungen kann man sich also nicht gut anhand von Abbildungen~$\RR \to \RR$
+veranschaulichen. Die Umkehrung gilt auch.)
+\item Zusammenziehbare Räume sind stets wegzusammenhängend.
+\item \hcancel{Der leere Raum ist zusammenziehbar.}{0pt}{3pt}{0pt}{-2pt}
+\end{enumerate}
+\end{aufgabe}
+
+\end{document}
 
 \begin{aufgabe}{Fasernde simpliziale Mengen}
 Eine simpliziale Menge~$X$ heißt genau dann \emph{fasernd}, wenn für jedes~$n
@@ -64,5 +100,3 @@ Abbildung: Die drei Hörner von~$\Delta^2$.
 \end{center}
 \end{enumerate}
 \end{aufgabe}
-
-\end{document}

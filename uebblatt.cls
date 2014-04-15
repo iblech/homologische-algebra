@@ -11,10 +11,20 @@
 \RequirePackage[protrusion=true,expansion=true]{microtype}
 \RequirePackage{multicol}
 \RequirePackage{lmodern}
-\RequirePackage{hyperref}
 
 \RequirePackage{geometry}
-\geometry{tmargin=1cm,bmargin=2cm,lmargin=3.1cm,rmargin=3.1cm}
+\geometry{tmargin=2cm,bmargin=2cm,lmargin=3.1cm,rmargin=3.1cm}
+
+\RequirePackage{hyperref}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,shapes.callouts,shapes.arrows}
+\newcommand{\hcancel}[5]{%
+    \tikz[baseline=(tocancel.base)]{
+        \node[inner sep=0pt,outer sep=0pt] (tocancel) {#1};
+        \draw[red, line width=0.3mm] ($(tocancel.south west)+(#2,#3)$) -- ($(tocancel.north east)+(#4,#5)$);
+    }%
+}
 
 \setlength\parskip{\medskipamount}
 \setlength\parindent{0pt}
