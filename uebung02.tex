@@ -17,6 +17,36 @@ weise nach, dass sie ein Homöomorphismus ist. Später werden wir lernen, wie ma
 diese Aufgabe auch unmittelbar vermöge abstrakten Nonsens lösen kann.
 \end{aufgabe}
 
+\begin{aufgabe}{Simpliziale Mengen aus Verklebedaten}
+In der Vorlesung wurde eine Konstruktion beschrieben, um aus einem
+Verklebedatum~$(X_{(n)})$ eine simpliziale Menge~$\widetilde X$ zu bauen: Als
+Menge der~$m$-Simplizes nimmt man dabei
+\[ X_m := \coprod_{k \geq 0} \coprod_{g : [m] \twoheadrightarrow [k]} X_{(k)}, \]
+Ein~$m$-Simplex von~$\widetilde X$ ist also ein Tupel~$(k,g,x)$, wobei~$k$ eine
+natürliche Zahl,~$g : [m] \to [k]$ eine monotone Surjektion und~$x \in X_{(k)}$
+ein~$k$-Simplex von~$X$ ist; wir stellen es uns als "`Degeneration von~$x$
+längs~$g$"' vor. Ist~$f : [n] \to [m]$ eine monotone Abbildung, so definiert
+man~$\widetilde X(f)(k,g,x) := (\ell, X(\iota)x, \pi)$, wobei~$[n]
+\xrightarrow{\pi} [\ell] \xrightarrow{\iota} [k]$ die eindeutige Epi/Mono-Zerlegung
+von~$g \circ f$ ist.
+\begin{enumerate}
+\item Zeige, dass diese Setzung wirklich zu einer simplizialen Menge führt,
+weise also die beiden Axiome über~$\widetilde X(\placeholder)$ nach.
+\item Zeige, dass~$\widetilde X$ folgende besondere Eigenschaft hat: Für jedes
+nichtdegenerierte Simplex~$x \in \widetilde X_m$ und jede monotone Injektion~$f
+: [n] \to [m]$ ist das Simplex~$\widetilde X(f)(x) \in \widetilde X_n$
+ebenfalls nichtdegeneriert.
+\item Zeige, dass eine beliebige simpliziale Menge genau dann durch die
+beschriebene Konstruktion von einem Verklebedatum stammt, wenn es die
+Eigenschaft aus Teilaufgabe~b) hat.
+\end{enumerate}
+
+Die Konstruktion~$X \mapsto \widetilde X$ stellt einen Linksadjungierten zum
+Vergissfunktor von der Kategorie der simplizialen Mengen in die Kategorie der
+Verklebedaten dar. In einem gewissen Sinn kann man sie als Kategorifizierung
+des Fundamentalsatzes von Newtons Finite-Differenzen-Kalkül ansehen.
+\end{aufgabe}
+
 \begin{aufgabe}{Fasernde simpliziale Mengen}
 Eine simpliziale Menge~$X$ heißt genau dann \emph{fasernd}, wenn für jedes~$n
 \geq 0$ und~$k$ mit~$0 \leq k \leq n + 1$ folgende Bedingung erfüllt ist:
