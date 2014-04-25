@@ -115,6 +115,10 @@
 \newcommand{\PSh}{\mathrm{PSh}}
 \newcommand{\Zar}{\mathrm{Zar}}
 \newcommand{\Sch}{\mathrm{Sch}}
+\newcommand{\sSet}{\mathrm{sSet}}
+\newcommand{\Top}{\mathrm{Top}}
+\newcommand{\op}{\mathrm{op}}
+\DeclareMathOperator{\sk}{sk}
 \DeclareMathOperator{\Spec}{Spec}
 \DeclareMathOperator{\colim}{colim}
 \DeclareMathOperator{\rank}{rank}
