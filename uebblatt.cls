@@ -118,6 +118,7 @@
 \newcommand{\sSet}{\mathrm{sSet}}
 \newcommand{\Top}{\mathrm{Top}}
 \newcommand{\op}{\mathrm{op}}
+\newcommand{\pr}{\mathrm{pr}}
 \DeclareMathOperator{\sk}{sk}
 \DeclareMathOperator{\Spec}{Spec}
 \DeclareMathOperator{\colim}{colim}

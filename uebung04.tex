@@ -51,4 +51,57 @@ sollen dabei die Quotiententopologie tragen.
 \end{enumerate}
 \end{aufgabe}
 
+\begin{aufgabe}{Triangulationen von Prismen}
+Bestimme alle nichtdegenerierten Simplizes der simplizialen Mengen~$D[1,2]$,
+$D[1,n]$ und~$D[2,2]$.
+\end{aufgabe}
+
+\begin{center}\emph{-- Bitte wenden. --}\end{center}
+
+\newpage
+
+\begin{aufgabe}{Homotopien simplizialer Abbildungen}
+Bezeichne allgemein~$X \times Y$ das kartesische Produkt simplizialer
+Mengen~$X$ und~$Y$; es gilt also~$(X \times Y)_n = X_n \times Y_n$ für alle~$n
+\geq 0$.
+
+\begin{enumerate}
+\item Zeige, dass simpliziale Abbildungen~$I \to X \times Y$ in kanonischer
+1:1--Korrespondenz zu Paaren von simplizialen Abbildungen~$I \to X$,~$I \to Y$
+stehen.
+\item Definiere zwei sinnvolle simpliziale Abbildungen~$p_0, p_1 : X \to
+\Delta[1] \times X$ -- in Analogie zu den stetigen Abbildungen~$x \mapsto
+(0,x)$ bzw.~$x \mapsto (1,x)$, die zwischen einem topologischen Raum und seinem
+Produkt mit dem Einheitsintervall verlaufen.
+\end{enumerate}
+Simpliziale Abbildungen~$f,g : X \to Y$ heißen genau dann \emph{einfach
+homotop}, wenn es eine simpliziale Abbildung~$h : \Delta[1] \times X \to Y$
+gibt sodass~$f = h \circ p_0$ und~$g = h \circ p_1$. Das definiert keine
+Äquivalenzrelation auf der Menge der simplizialen Abbildungen von~$X$ nach~$Y$;
+die feinste solche Äquivalenzrelation, die einfach homotope Abbildungen
+identifiziert, heißt \emph{Homotopie}.
+\begin{enumerate}
+\addtocounter{enumi}{2}
+\item Sei für~$0 \leq i \leq n$ die Abbildung~$\pr_i : \Delta[n] \to \Delta[n]$
+diejenige, die ``alles auf die~$i$-te Ecke projiziert''. Konkret gelte
+also~$(\pr_i)_n(f) = u_k$ für alle~$n,k \geq 0$ und $f : [k] \to [n]$. Dabei
+bezeichne~$u_k$ die konstante Abbildung~$[k] \to [n]$ mit Wert~$i$.
+
+Zeige, dass die Abbildung~$\pr_n$ zur Identitätsabbildung homotop ist.
+
+\item Zeige: Sind~$f$ und~$g$ homotop, so
+auch~$q \circ f \circ p$ und~$q \circ g \circ p$.
+\[ \xymatrix{
+  X' \ar[r]^p & X \ar@/^/[r]^f \ar@/_/[r]_g & Y \ar[r]^q & Y'
+} \]
+
+\item \emph{Schwierige und schwammige Bonusaufgabe zum Grübeln.} Inwieweit
+impliziert schwache Homotopie von simplizialen Abbildungen die gewöhnliche
+topologie Homotopie der zugehörigen geometrischen Realisierungen? Wie sehen
+gegebenenfalls solche Homotopien aus?
+\end{enumerate}
+\end{aufgabe}
+
+\begin{center}\emph{-- Es folgt noch eine weitere Aufgabe. --}\end{center}
+
 \end{document}
