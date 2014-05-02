@@ -7,20 +7,23 @@
 \begin{aufgabe}{Äquivalenzrelationen I}
 Sei~$X$ eine Menge und~$R \subseteq X \times X$ eine Relation auf~$X$
 (also lediglich eine Teilmenge, nicht unbedingt eine Äquivalenzrelation).
-Sei~$(\sim_R)$ der Schnitt über alle Äquivalenzrelation~$S$ auf~$X$, welche~$R$
+Sei~$(\sim_R)$ der Schnitt über alle Äquivalenzrelationen~$S$ auf~$X$, welche~$R$
 umfassen.
 \begin{enumerate}
 \item Zeige: Der Schnitt~$(\sim_R)$ ist wieder eine Äquivalenzrelation auf~$X$
 -- und zwar die feinste, die~$R$ umfasst. (Was bedeutet das? Für jede weitere
 Äquivalenzrelation \ldots)
 
-\item Zeige, dass diese auch explizit \emph{(prädikativ)} wie folgt beschrieben
+\item Zeige, dass diese auch explizit wie folgt beschrieben
 werden kann:
-\[ x \sim_R y \quad\Longleftrightarrow\quad
+\begin{multline*}
+  x \sim_R y \quad\Longleftrightarrow\quad
   \exists n \geq 0{:}\
-  \exists x_1,\ldots,x_n \in X\_
-  x R x_1 \wedge x_1 R x_2 \wedge \cdots \wedge x_{n-1} R x_n \wedge x_n R y.
-  \]
+  \exists x_0,x_1,\ldots,x_n \in X{:} \\
+  x_0 = x \wedge x_n = y \wedge
+  \forall i \in \{ 0 , \ldots, n-1 \}{:}\
+  x_i R x_{i+1} \vee x_{i+1} R x_i.
+\end{multline*}
 
 \item Sei~$f : X \to Y$ eine Abbildung. Gelte~$f(x) = f(y)$ für alle~$x,y \in
 X$ mit~$xRy$. Zeige: Die Setzung~$\bar f : X/{\sim_R} \to Y,\ [x] \mapsto f(x)$
@@ -28,16 +31,29 @@ ist wohldefiniert.
 
 \emph{Hinweis:} Spannender ist es, wenn man diese Teilaufgabe direkt mit~a) und
 ohne Verwendung von~b) löst.
+
+\item Finde Beispiele aus möglichst vielen verschiedenen Teilgebieten der
+Mathematik, wo man auch geeignete große Schnitte zur Konstruktion von Mengen
+mit gewissen guten Eigenschaften verwendet.
 \end{enumerate}
+
+In \emph{prädikativer Mathematik} gestattet man sich nicht, das
+\emph{Potenzmengenaxiom} zu verwenden, demnach jede Menge eine Potenzmenge
+besitzt (statt nur einer Potenzklasse). Als Konsequenz kann man feinste
+Äquivalenzrelationen nicht mehr als geeigneten Schnitt konstruieren, sondern
+nur noch über die explizite Variante aus Teilaufgabe~b). Man sagt auch,
+prädikative Mathematik sei konkret -- aber nicht notwendigerweise elegant.
+Prädikative Mathematik kann man sowohl klassisch als auch intuitionistisch
+betreiben.
 \end{aufgabe}
 
 \begin{aufgabe}{Äquivalenzrelationen II}
 Seien~$Z$ eine Menge und~$R_1$ und~$R_2$ Äquivalenzrelationen auf~$Z$.
-Sei~$\sim$ folgende Relation auf~$Z/R_1$:
+Sei~$R$ die feinste Äquivalenzrelation auf~$Z$, welche~$R_1 \cup R_2$ umfasst.
+Sei ferner~$\sim$ folgende Relation auf~$Z/R_1$:
 \[ K \sim L \quad:\Longleftrightarrow\quad
-  \exists x \in K, y \in L{:}\ x R_2 y. \]
-Sei ferner~$R$ die feinste Äquivalenzrelation auf~$Z$,
-welche~$R_1 \cup R_2$ umfasst.
+  \exists x \in K, y \in L{:}\ x R_2 y \qquad\qquad\text{für alle~$K,L \in
+  Z/R_1$.} \]
 
 \begin{enumerate}
 \item Wieso ist~$\sim$ im Allgemeinen keine Äquivalenzrelation? (Bemühe dich
@@ -51,14 +67,12 @@ sollen dabei die Quotiententopologie tragen.
 \end{enumerate}
 \end{aufgabe}
 
+%\begin{center}\emph{-- Bitte wenden. --}\end{center}
+
 \begin{aufgabe}{Triangulationen von Prismen}
 Bestimme alle nichtdegenerierten Simplizes der simplizialen Mengen~$D[1,2]$,
 $D[1,n]$ und~$D[2,2]$.
 \end{aufgabe}
-
-\begin{center}\emph{-- Bitte wenden. --}\end{center}
-
-\newpage
 
 \begin{aufgabe}{Homotopien simplizialer Abbildungen}
 Bezeichne allgemein~$X \times Y$ das kartesische Produkt simplizialer
