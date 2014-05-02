@@ -1,0 +1,54 @@
+\documentclass{uebblatt}
+
+\begin{document}
+
+\maketitle{4}{-- \emph{Motto} --}
+
+\begin{aufgabe}{Äquivalenzrelationen I}
+Sei~$X$ eine Menge und~$R \subseteq X \times X$ eine Relation auf~$X$
+(also lediglich eine Teilmenge, nicht unbedingt eine Äquivalenzrelation).
+Sei~$(\sim_R)$ der Schnitt über alle Äquivalenzrelation~$S$ auf~$X$, welche~$R$
+umfassen.
+\begin{enumerate}
+\item Zeige: Der Schnitt~$(\sim_R)$ ist wieder eine Äquivalenzrelation auf~$X$
+-- und zwar die feinste, die~$R$ umfasst. (Was bedeutet das? Für jede weitere
+Äquivalenzrelation \ldots)
+
+\item Zeige, dass diese auch explizit \emph{(prädikativ)} wie folgt beschrieben
+werden kann:
+\[ x \sim_R y \quad\Longleftrightarrow\quad
+  \exists n \geq 0{:}\
+  \exists x_1,\ldots,x_n \in X\_
+  x R x_1 \wedge x_1 R x_2 \wedge \cdots \wedge x_{n-1} R x_n \wedge x_n R y.
+  \]
+
+\item Sei~$f : X \to Y$ eine Abbildung. Gelte~$f(x) = f(y)$ für alle~$x,y \in
+X$ mit~$xRy$. Zeige: Die Setzung~$\bar f : X/{\sim_R} \to Y,\ [x] \mapsto f(x)$
+ist wohldefiniert.
+
+\emph{Hinweis:} Spannender ist es, wenn man diese Teilaufgabe direkt mit~a) und
+ohne Verwendung von~b) löst.
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Äquivalenzrelationen II}
+Seien~$Z$ eine Menge und~$R_1$ und~$R_2$ Äquivalenzrelationen auf~$Z$.
+Sei~$\sim$ folgende Relation auf~$Z/R_1$:
+\[ K \sim L \quad:\Longleftrightarrow\quad
+  \exists x \in K, y \in L{:}\ x R_2 y. \]
+Sei ferner~$R$ die feinste Äquivalenzrelation auf~$Z$,
+welche~$R_1 \cup R_2$ umfasst.
+
+\begin{enumerate}
+\item Wieso ist~$\sim$ im Allgemeinen keine Äquivalenzrelation? (Bemühe dich
+nicht, ein konkretes Gegenbeispiel aufzustellen.)
+\item Sei~$\approx$ die feinste Äquivalenzrelation auf~$Z/R_1$, welche~$\sim$
+umfasst. Gib eine kanonische Abbildung~$Z/R \to (Z/R_1)/{\approx}$ an und zeige,
+dass sie eine wohldefinierte Bijektion ist.
+\item Sei~$Z$ sogar ein topologischer Raum. Zeige dann, dass die Bijektion aus
+Teilaufgabe~b) sogar ein Homöomorphismus ist. Die diversen Faktormengen
+sollen dabei die Quotiententopologie tragen.
+\end{enumerate}
+\end{aufgabe}
+
+\end{document}
