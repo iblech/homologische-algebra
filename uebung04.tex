@@ -2,15 +2,15 @@
 
 \begin{document}
 
-\maketitle{4}{-- \emph{Motto} --}
+\maketitle{4}{-- \emph{Induktive Konstruktionen} --}
 
 \begin{aufgabe}{Äquivalenzrelationen I}
 Sei~$X$ eine Menge und~$R \subseteq X \times X$ eine Relation auf~$X$
 (also lediglich eine Teilmenge, nicht unbedingt eine Äquivalenzrelation).
-Sei~$(\sim_R)$ der Schnitt über alle Äquivalenzrelationen auf~$X$, welche~$R$
+Sei~$\sim_R$ der Schnitt über alle Äquivalenzrelationen auf~$X$, welche~$R$
 umfassen.
 \begin{enumerate}
-\item Zeige: Der Schnitt~$(\sim_R)$ ist wieder eine Äquivalenzrelation auf~$X$
+\item Zeige: Der Schnitt~$\sim_R$ ist wieder eine Äquivalenzrelation auf~$X$
 -- und zwar die feinste, die~$R$ umfasst. (Was bedeutet das? Für jede weitere
 Äquivalenzrelation \ldots)
 
@@ -111,11 +111,67 @@ auch~$q \circ f \circ p$ und~$q \circ g \circ p$.
 
 \item \emph{Schwierige und schwammige Bonusaufgabe zum Grübeln.} Inwieweit
 impliziert schwache Homotopie von simplizialen Abbildungen die gewöhnliche
-topologie Homotopie der zugehörigen geometrischen Realisierungen? Wie sehen
+topologische Homotopie der zugehörigen geometrischen Realisierungen? Wie sehen
 gegebenenfalls solche Homotopien aus?
 \end{enumerate}
 \end{aufgabe}
 
-\begin{center}\emph{-- Es folgt noch eine weitere Aufgabe. --}\end{center}
+\begin{aufgabe}{Induktive Konstruktion des Skeletts}
+Anschaulich ergibt sich das~$n$-Skelett einer simplizialen Menge aus
+ihrem~$(n-1)$-Skelett durch Einkleben der nichtdegenerierten~$n$-Simplizes.
+Allgemein ergibt sich eine simpliziale Menge durch geeignete Verklebung
+ihrer~$n$-Simplizes. Das wollen wir in dieser Aufgabe verstehen.
+Sei~$\dot \Delta[n]$ diejenige simpliziale Untermenge von~$\Delta[n]$, der das
+eindeutig bestimmte nichtdegenerierte~$n$-Simplex fehlt:
+\[ \dot \Delta[n]_m := \{ f : [m] \to [n] \,|\,
+  \text{$f$ ist monoton und nicht surjektiv} \} \subseteq \Delta[n]_m. \]
+Das ist eine simpliziale Version der~$(n-1)$-Sphäre.
+Das \emph{Koprodukt} (disjunkt-gemachte Vereinigung) von simplizialen Mengen
+wird einfach levelweise berechnet. Daher gilt
+\[ \Bigl(\coprod_{x \in I} \dot\Delta[n]\Bigr)_m =
+  \coprod_{x \in I} \dot\Delta[n]_m =
+  \{ (x, f) \,|\, x \in I,\ f \in \dot\Delta[n]_m \}. \]
+Bei den folgenden Aufgaben fallen viele Detailnachweise an. Kläre so viele, wie
+du möchtest. Sei im Folgenden~$X$ eine simpliziale Menge und~$X_{(n)}$ die
+Menge ihrer nichtdegenerierten~$n$-Simplizes.
+
+\begin{enumerate}
+\item \emph{Yoneda lässt grüßen.} Sei~$x \in X_n$ ein Simplex. Mache dir
+klar, dass diese Daten eine simpliziale Abbildung~$\bar x : \Delta[n] \to \sk_n
+X,\ f \mapsto X(f)x$ definieren. Was macht diese Abbildung anschaulich?
+
+\item Mache dir klar, dass das Bild von~$\dot\Delta[n]$ unter der Abbildung
+aus~a) schon in~$\sk_{n-1} X$ landet.
+
+\item Gib die kanonischen Abbildungen des oberen linken Teilquadrats des folgenden
+Diagramms an. Zeige, dass dieses Quadrat kommutiert. Wie sehen die simplizialen
+Mengen anschaulich aus?
+
+\item \emph{Nun kommt das eigentliche Ziel.} Sei~$Y$ eine beliebige simpliziale
+Menge und seien simpliziale Abbildungen~$\sk_{n-1}X \to Y$, $\coprod_{x \in
+X_{(n)}} \Delta[n] \to Y$ gegeben, die das "`schräge Quadrat"' zum Kommutieren
+bringen. Zeige: Es gibt genau eine simpliziale Abbildung~$\sk_n X \to Y$, die
+die beiden Teildreiecke kommutieren lässt.
+
+\[ \xymatrixcolsep{4pc}\xymatrixrowsep{4pc}\xymatrix{
+  \coprod_{x \in X_{(n)}} \dot\Delta[n] \ar[r] \ar[d] &
+  \sk_{n-1} X \ar[d] \ar@/^/[rdd] \\
+  \coprod_{x \in X_{(n)}} \Delta[n] \ar[r] \ar@/_/[rrd] &
+  \sk_n X \ar@{-->}[rd] \\
+  && Y
+} \]
+
+Später werden wir lernen, dass diese universelle Eigenschaft ausdrückt, dass
+das obere linke Teilquadrat ein \emph{Pushout-Diagramm} ist. Das macht die
+eingangs erwähnte Aussage über das~$n$-Skelett präzise.
+
+\emph{Tipps:} Ein Simplex~$x \in (\sk_n X)_m$ lässt sich auf eindeutige Art und
+Weise in der Form~$x = X(f)u$ schreiben, wobei~$f : [m] \to [\ell]$ eine
+Surjektion,~$u \in X_\ell$ nichtdegeneriert und~$\ell \leq n$ ist. Es genügt
+schon, die gesuchte Abbildung auf den nichtdegenerierten Simplizes von~$\sk_n
+X$ zu definieren -- die restlichen Werte sind durch das Axiom an simpliziale
+Abbildungen schon festgelegt (inwiefern?).
+\end{enumerate}
+\end{aufgabe}
 
 \end{document}
