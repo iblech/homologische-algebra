@@ -127,6 +127,7 @@
 \DeclareMathOperator{\Int}{int}
 \DeclareMathOperator{\Clos}{cl}
 \DeclareMathOperator{\Kernel}{ker}
+\DeclareMathOperator{\Image}{im}
 \newcommand{\Open}{\mathrm{Op}}
 \newcommand{\?}{\,{:}\,}
 \renewcommand{\_}{\mathpunct{.}\,}

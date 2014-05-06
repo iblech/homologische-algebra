@@ -1,0 +1,52 @@
+\documentclass{uebblatt}
+
+\begin{document}
+
+\maketitle{5}{-- \emph{Motto} --}
+
+\begin{aufgabe}{Homologische Charakterisierung von Zusammenhang}
+Sei~$X$ eine simpliziale Menge. Sei~$\approx$ die feinste Äquivalenzrelation
+auf~$X_0$ mit~$X(\partial^1)u \approx X(\partial^0)u$ für alle~$u \in X_1$;
+anschaulich gilt genau dann~$x \approx y$, wenn sich die~0-Simplizes~$x$
+und~$y$ durch einen Kantenzug miteinander verbinden lassen.
+\begin{enumerate}
+\item Seien~$x,y \in X_0$. Zeige, dass die entsprechenden Punkte in der
+geometrischen Realisierung~$|X|$ genau dann durch einen stetigen Pfad
+miteinander verbunden werden können, wenn~$x \approx y$.
+
+\emph{Tipp:} Eine Richtung ist leichter als die andere. Konstruiere für die
+andere eine geeignete simpliziale Abbildung~$X \to \ul{\Omega}$ und betrachte
+deren geometrische Realisierung. Dabei bezeichnet~$\Omega \supseteq \{0,1\}$ die
+Menge der Wahrheitswerte und~$\ul{\Omega}$ die diskrete simpliziale Menge mit
+Eckenmenge~$\Omega$. Verwende, dass das Einheitsintervall zusammenhängend ist.
+
+\item Zeige für beliebige 0-Simplizes~$x,y \in X_0$:
+\[ x \approx y
+  \quad\Longrightarrow\quad
+  x - y \in \Image(d^0 : C_1(X,\ZZ) \to C_0(X,\ZZ)). \]
+
+\item Zeige:~$H_0(X,\ZZ) \cong \ZZ\langle \text{Wegzusammenhangskomponenten
+von~$|X|$} \rangle$ (freier~$\ZZ$-Modul).
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Homologieberechnungen}
+Berechne die Homologie (mit Koeffizienten in~$\ZZ$) von folgenden simplizialen
+Mengen:
+\begin{enumerate}
+\item das Standard-$n$-Simplex~$\Delta[n]$,
+\item die~$(n-1)$-dimensionale Sphäre~$\dot\Delta[n]$,
+\item der zweidimensionale Torus,
+\item die reelle projektive Ebene.
+\end{enumerate}
+Verwende dazu als Kettengruppen die freien~$\ZZ$-Moduln über den
+\emph{nichtdegenerierten} Simplizes; später werden wir verstehen, wieso diese
+die volle Homologie berechnen. Inwieweit bestätigt sich das Motto \emph{Homologie misst
+(mehrdimensionale) Löcher}?\footnote{Mit Homologie kann man auch Löcher des
+umgebenden logischen Rahmens messen, etwa inwieweit das Auswahlaxiom
+fehlschlägt: Andreas Blass.
+\emph{\href{http://www.ams.org/journals/tran/1983-279-01/S0002-9947-1983-0704615-7/S0002-9947-1983-0704615-7.pdf}{Cohomology detects failures of the axiom of
+choice}}. Trans. Amer. Math. Soc. \textbf{279}, S.~257--269.}
+\end{aufgabe}
+
+\end{document}
