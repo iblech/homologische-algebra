@@ -90,6 +90,7 @@
 \newcommand{\E}{\mathcal{E}}
 \newcommand{\F}{\mathcal{F}}
 \newcommand{\G}{\mathcal{G}}
+\newcommand{\U}{\mathcal{U}}
 \renewcommand{\H}{\mathcal{H}}
 \renewcommand{\O}{\mathcal{O}}
 \newcommand{\K}{\mathcal{K}}
@@ -100,7 +101,10 @@
 \newcommand{\RR}{\mathbb{R}}
 \newcommand{\QQ}{\mathbb{Q}}
 \newcommand{\GG}{\mathbb{G}}
+\newcommand{\aaa}{\mathfrak{a}}
+\newcommand{\bbb}{\mathfrak{b}}
 \newcommand{\ppp}{\mathfrak{p}}
+\newcommand{\qqq}{\mathfrak{q}}
 \newcommand{\Hom}{\mathrm{Hom}}
 \newcommand{\HOM}{\mathcal{H}\mathrm{om}}
 \newcommand{\id}{\mathrm{id}}

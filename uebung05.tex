@@ -49,4 +49,50 @@ fehlschlägt: Andreas Blass.
 choice}}. Trans. Amer. Math. Soc. \textbf{279}, S.~257--269.}
 \end{aufgabe}
 
+\newpage
+
+\begin{aufgabe}{Affine Schemata I}
+Sei~$A$ ein kommutativer Ring (mit Eins). Sei~$\Spec A$ die Menge der Primideale
+von~$A$. Eine Teilmenge~$U \subseteq \Spec A$ heißt genau dann \emph{offen},
+wenn sie eine (beliebige) Vereinigung von \emph{standardoffenen Mengen}
+ist; solche sind Mengen der Form~$D(f) = \{ \ppp \in \Spec A \,|\, f \not\in
+\ppp \}$ mit~$f \in A$. Anschaulich stellt man sich ein Ringelement~$f \in A$
+als \emph{Funktion} auf~$\Spec A$ und die Menge~$D(f)$ als Menge der Punkte,
+wo~$f$ nicht verschwindet, vor.
+
+Ist~$\aaa \subseteq A$ ein Ideal, so ist~$\sqrt{\aaa} := \{ f \in A \,|\,
+\exists n \geq 0{:}\ f^n \in \aaa \}$ das zugehörige \emph{Radikalideal}.
+Sind~$f_1,\ldots,f_n$ Ringelemente, so ist~$(f_1,\ldots,f_n) := \{ \sum_i a_i
+f_i \,|\, a_1,\ldots,a_n \in A \}$ das von diesen Elementen \emph{erzeugte
+Ideal}.
+
+Zeige folgende Behauptungen und interpretiere sie anschaulich, für alle
+Ringelemente~$f,g,g_1,\ldots,g_n \in A$ und Primideale~$\ppp \in \Spec A$:
+\begin{enumerate}
+\item $D(f) \subseteq D(g) \Longleftrightarrow \sqrt{(f)} \subseteq
+\sqrt{(g)}$.
+\item $D(f) \subseteq D(g_1) \cup \cdots \cup D(g_n) \Longleftrightarrow
+\sqrt{(f)} \subseteq \sqrt{(g_1,\ldots,g_n)}$.
+\item Der topologische Abschluss von~$\{\ppp\}$ ist
+durch~$\{ \qqq \in \Spec A \,|\, \ppp \subseteq \qqq \}$ gegeben.
+Wann ist also die Menge~$\{\ppp\}$ selbst schon abgeschlossen?
+\end{enumerate}
+
+\emph{Tipp:} Zeige, dass der Schnitt über alle Primideale~$\ppp$, welche ein
+vorgegebenes Ideal~$\aaa$ umfassen, gleich~$\sqrt{\aaa}$ ist. Für eine Richtung
+musst du eine Katze opfern und für geeignete Elemente~$f \in A$ das Mengensystem
+folgendes Mengensystem betrachten:
+\[ \U := \{ \bbb \subseteq A \,|\, \text{$\bbb$ ist ein Ideal mit $\aaa
+\subseteq \bbb$ und~$f^n \not\in \aaa$ für alle~$n \geq 0$} \} \]
+
+Diese Aufgabe ist eine Hinführung auf \emph{affine Schemata}; es fehlt noch
+die Konstruktion einer geeigneten Ringgarbe~$\O_{\Spec A}$ -- erst dann kann
+man Geometrie betreiben.
+In intuitionistischer Logik ist die Beschreibung über
+Primideale offensichtlich nicht angebracht. Da man aber den \emph{Rahmen der
+offenen Teilmengen} von~$\Spec A$ explizit beschreiben kann (nämlich wie?),
+kann man intuitionistisch~$\Spec A$ immer noch als \emph{Örtlichkeit}
+konstruieren.
+\end{aufgabe}
+
 \end{document}
