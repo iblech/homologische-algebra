@@ -2,7 +2,7 @@
 
 \begin{document}
 
-\maketitle{5}{-- \emph{Motto} --}
+\maketitle{5}{-- \emph{Hier könnte dein Motto stehen.} --}
 
 \begin{aufgabe}{Homologische Charakterisierung von Zusammenhang}
 Sei~$X$ eine simpliziale Menge. Sei~$\approx$ die feinste Äquivalenzrelation
@@ -34,10 +34,10 @@ von~$|X|$} \rangle$ (freier~$\ZZ$-Modul).
 Berechne die Homologie (mit Koeffizienten in~$\ZZ$) von folgenden simplizialen
 Mengen:
 \begin{enumerate}
-\item das Standard-$n$-Simplex~$\Delta[n]$,
-\item die~$(n-1)$-dimensionale Sphäre~$\dot\Delta[n]$,
-\item der zweidimensionale Torus,
-\item die reelle projektive Ebene.
+\item dem Standard-$n$-Simplex~$\Delta[n]$,
+\item der~$(n-1)$-dimensionale Sphäre~$\dot\Delta[n]$ (siehe Aufgabe~5 von Blatt~4),
+\item dem zweidimensionale Torus,
+\item der reelle projektive Ebene.
 \end{enumerate}
 Verwende dazu als Kettengruppen die freien~$\ZZ$-Moduln über den
 \emph{nichtdegenerierten} Simplizes; später werden wir verstehen, wieso diese
@@ -48,6 +48,8 @@ fehlschlägt: Andreas Blass.
 \emph{\href{http://www.ams.org/journals/tran/1983-279-01/S0002-9947-1983-0704615-7/S0002-9947-1983-0704615-7.pdf}{Cohomology detects failures of the axiom of
 choice}}. Trans. Amer. Math. Soc. \textbf{279}, S.~257--269.}
 \end{aufgabe}
+
+\begin{center}-- \emph{Bitte wenden.} --\end{center}
 
 \newpage
 
@@ -80,10 +82,10 @@ Wann ist also die Menge~$\{\ppp\}$ selbst schon abgeschlossen?
 
 \emph{Tipp:} Zeige, dass der Schnitt über alle Primideale~$\ppp$, welche ein
 vorgegebenes Ideal~$\aaa$ umfassen, gleich~$\sqrt{\aaa}$ ist. Für eine Richtung
-musst du eine Katze opfern und für geeignete Elemente~$f \in A$ das Mengensystem
+musst du eine Katze opfern und für geeignete Elemente~$f \in A$
 folgendes Mengensystem betrachten:
 \[ \U := \{ \bbb \subseteq A \,|\, \text{$\bbb$ ist ein Ideal mit $\aaa
-\subseteq \bbb$ und~$f^n \not\in \aaa$ für alle~$n \geq 0$} \} \]
+\subseteq \bbb$ und~$f^n \not\in \aaa$ für alle~$n \geq 0$} \}. \]
 
 Diese Aufgabe ist eine Hinführung auf \emph{affine Schemata}; es fehlt noch
 die Konstruktion einer geeigneten Ringgarbe~$\O_{\Spec A}$ -- erst dann kann
@@ -92,7 +94,46 @@ In intuitionistischer Logik ist die Beschreibung über
 Primideale offensichtlich nicht angebracht. Da man aber den \emph{Rahmen der
 offenen Teilmengen} von~$\Spec A$ explizit beschreiben kann (nämlich wie?),
 kann man intuitionistisch~$\Spec A$ immer noch als \emph{Örtlichkeit}
-konstruieren.
+konstruieren. Das hängt eng mit \emph{dynamischen Methoden in der Algebra}
+zusammen.
+\end{aufgabe}
+
+\begin{aufgabe}{Abgeschnittene simpliziale Mengen}
+Eine~\emph{$N$-abgeschnittene simpliziale Menge} ist eine Familie von
+Daten~$(X_n,X(f))$ wie bei simplizialen Mengen, nur dass die Simplexmengen
+lediglich für~$0 \leq n \leq N$ und die Abbildungen~$X(f)$ für~$f : [k] \to
+[\ell]$ mit~$0 \leq k,\ell \leq N$ gegeben sein müssen. In offensichtlicher Weise
+(wie genau?) legt jede simpliziale Menge~$X$ und jede~$M$-abgeschnittene
+simpliziale Menge~$X$ (mit~$M \geq N$) eine~$N$-abgeschnittene Menge~$\Tr^N X$
+fest.
+
+Ist~$Y$ eine~$N$-abgeschnittene simpliziale Menge, so möchten wir durch die
+Setzungen
+\begin{align*}
+  \widehat Y_m &:= Y_m, \qquad \text{für $m \leq N$,} \\
+  \widehat Y_{N+1} &:= \{ (y_0,\ldots,y_{N+1}) \ |\
+    y_0,\ldots,y_{N+1} \in Y_N,\
+    \text{$Y(\partial^i)y_j = Y(\partial^{j-1})y_i$ für~$i < j$}, \}
+\end{align*}
+sowie~$\widehat Y(\partial^i_{N+1}) = ((y_0,\ldots,y_{N+1}) \mapsto y_i)$
+und gesunden Menschenverstand eine~$(N+1)$-abgeschnittene simpliziale Menge
+definieren.
+
+\begin{enumerate}
+\item Wie kann man sich die Elemente von~$\widehat Y_{n+1}$ als
+"`virtuelle"'~$(N+1)$-Simplizes vorstellen? Was sollen die~$y_i$ eines solchen
+Simplex sein? Wieso soll die Kompatibilitätsbedingung an die~$y_i$ und die
+Randabbildungen erfüllt sein? Inwieweit füllen diese virtuellen Simplizes
+vorhandene "`simpliziale Löcher"' in~$Y_N$?
+
+\item Leite eine sinnvolle Definition für~$\widehat Y(\sigma^i_N)$ her, $0 \leq i \leq N$.
+
+\item Zeige, dass~$\widehat Y$ die \emph{universelle}~$(N+1)$-Fortsetzung
+von~$Y$ ist; zeige also: Ist~$Z$ eine beliebige~$(N+1)$-abgeschnittene
+simpliziale Menge und~$F : \Tr^N Z \to Y$ eine~$N$-abgeschnittene simpliziale
+Abbildung, so gibt es genau eine Fortsetzung von~$F$ zu
+einer~$(N+1)$-abgeschnittenen simplizialen Abbildung~$Z \to \widehat Y$.
+\end{enumerate}
 \end{aufgabe}
 
 \end{document}

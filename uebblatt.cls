@@ -124,6 +124,7 @@
 \newcommand{\op}{\mathrm{op}}
 \newcommand{\pr}{\mathrm{pr}}
 \DeclareMathOperator{\sk}{sk}
+\DeclareMathOperator{\Tr}{Tr}
 \DeclareMathOperator{\Spec}{Spec}
 \DeclareMathOperator{\colim}{colim}
 \DeclareMathOperator{\rank}{rank}
