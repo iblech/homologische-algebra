@@ -1,18 +1,184 @@
 \documentclass{uebblatt}
+\usepackage{calc}
 
 \begin{document}
 
-\maketitle{6}{-- \emph{Garben oganisieren lokale Daten.} --}
+\maketitle{6}{-- \emph{Garben organisieren lokale Daten.} --}
 
 \begin{aufgabe}{Beispiele für Garben}
-Welche der folgenden Prägarben auf einem topologischen Raum~$X$ sind Garben?
+Sei~$X$ ein topologischer Raum. Das fundamentale Beispiel für eine Garbe
+auf~$X$ ist durch die Zuordnung
 \begin{enumerate}
-\item $\C : U \mapsto \{ f : U \to \RR \,|\, \text{$f$ stetig} \}$
-\item $\C_\text{const.} : U \mapsto \{ f : U \to \RR \,|\, \text{$f$ konstant} \}$
-\item $\C_\text{l.c.} : U \mapsto \{ f : U \to \RR \,|\, \text{$f$ lokal konstant} \}$
-\item $\C_\text{bounded} : U \mapsto \{ f : U \to \RR \,|\, \text{$f$ beschränkt} \}$
+\item $\E : U \longmapsto \{ s : U \to E \,|\, \text{$s$ stetig mit $\pi \circ f = \id|_U$} \}$
+\end{enumerate}
+und den gewöhnlichen Einschränkungsabbildungen gegeben. Dabei ist~$\pi : E \to
+X$ eine feste stetige Abbildung. Zeige, dass~$\E$ tatsächlich eine Garbe ist.
+
+Welche der folgenden Setzungen mit den gewöhnlichen Einschränkungsabbildungen
+führen zu Prägarben? Welche sogar zu Garben?
+\newlength{\sheafname}
+\settowidth{\sheafname}{$\C_\text{bounded}$}
+\begin{enumerate}
+\addtocounter{enumi}{1}
+\item \parbox{\sheafname}{$\C$} $: U \longmapsto \{ f : U \to \RR \ |\  \text{$f$ stetig} \}$
+\item \parbox{\sheafname}{$\C_\text{const.}$} $ : U \longmapsto \{ f : U \to \RR \ |\  \text{$f$ konstant} \}$
+\item \parbox{\sheafname}{$\C_\text{l.c.}$} $ : U \longmapsto \{ f : U \to \RR \ |\  \text{$f$ lokal konstant} \}$
+\item \parbox{\sheafname}{$\C_\text{0}$} $ : U \longmapsto \{ f : U \to \RR \ |\
+\text{$f$ hat kompakten Träger in~$U$} \}$
+\item \parbox{\sheafname}{$\C_\text{bounded}$} $ : U \longmapsto \{ f : U \to \RR \ |\  \text{$f$ beschränkt} \}$
 \end{enumerate}
 \end{aufgabe}
+
+\begin{aufgabe}{Exakte Sequenzen von Garben}
+Eine Sequenz~$\F \xra{\alpha} \G \xra{\beta} \H$ von Garben abelscher Gruppen
+auf einem topologischen Raum~$X$ heißt genau dann \emph{exakt} (bei~$\G$), wenn für jede
+offene Teilmenge~$U \subseteq X$ folgende Bedingungen erfüllt sind:
+\begin{itemize}
+\item "`$\Image \subseteq \Kernel$"'. Für jeden Schnitt~$s \in \Gamma(U,\F)$
+gilt~$\beta_U(\alpha_U(s)) = 0 \in \Gamma(U,\H)$.
+\item "`$\Image \supseteq \Kernel$"'. Für jeden Schnitt~$t \in \Gamma(U,\G)$
+mit~$\beta_U(t) = 0 \in \Gamma(U,\H)$ existieren eine offene Überdeckung~$U =
+\bigcup_{i \in I} U_i$ und Schnitte~$s_i \in \Gamma(U_i,\F)$
+mit~$\alpha_{U_i}(s_i) = t|_{U_i}$ für alle~$i \in I$.
+\end{itemize}
+
+Der Begriff der Exaktheit einer Sequenz von \emph{Prä}garben
+abelscher Gruppen wurde anders definiert. Beide Definitionen fallen nicht vom
+Himmel, in ihrem jeweiligen Kontext (Garben bzw. Prägarben) sind sie jeweils
+genau die richtigen. Das werden wir noch verstehen.
+
+\begin{enumerate}
+\item Zeige, dass eine Sequenz von Garben abelscher Gruppen genau dann exakt
+ist, wenn sie \emph{halmweise exakt} ist, wenn also die induzierten
+Sequenzen~$\F_x \to \G_x \to \H_x$ von abelschen Gruppen für alle~$x \in X$ exakt sind.
+
+\item Sei~$\F \to \G \to \H$ eine exakte Sequenz von \emph{Prä}garben.
+Seien~$\F$, $\G$ und~$\H$ aber trotzdem sogar Garben. Zeige, dass die Sequenz
+dann auch als Sequenz von Garben exakt ist.
+
+\item Sei~$0 \to \F \to \G \to \H \to 0$ eine kurze exakte Sequenz von
+\emph{Prä}garben auf einem topologischen Raum. Seien~$\F$ und~$\H$ sogar
+Garben. Zeige, dass~$\G$ ebenfalls eine Garbe ist.
+
+\item \emph{Schnitte nehmen ist linksexakt.}
+Sei~$0 \to \F \to \G \to \H \to 0$ eine kurze exakte Sequenz von Garben
+abelscher Gruppen. Sei~$U \subseteq X$ eine offene Teilmenge. Zeige, dass die
+induzierte Sequenz
+\[ 0 \lra \Gamma(U,\F) \lra \Gamma(U,\G) \lra \Gamma(U,\H) \mathrel{\hcancel{$\lra
+0$}{0pt}{-0pt}{0pt}{-2pt}} \]
+noch exakt ist. Wieso geht die Surjektivität hinten verloren?
+(Wenn dem nicht so wäre, gäbe es übrigens das gesamte Teilgebiet der
+\emph{Garbenkohomologie} nicht.)
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Inneres Hom}
+Seien~$\F$ und~$\G$ Prägarben auf einem topologischen Raum~$X$. Dann
+definieren wir eine weitere Prägarbe durch die Setzung
+\[ \Gamma(U, \HOM(\F,\G)) := \{ \alpha : \F|_U \to \G|_U \text{ Morphismus von Prägarben auf~$U$} \} \]
+und die offensichtlichen Einschränkungsabbildungen (welche?).
+
+Zeige: Ist~$\G$ sogar eine Garbe, so ist~$\HOM(\F,\G)$ ebenfalls eine Garbe.
+\end{aufgabe}
+
+\begin{aufgabe}{Welke Garben}
+Eine Garbe~$\F$ auf einem topologischen Raum~$X$ heißt genau dann \emph{welk}
+(engl. \emph{flabby}, franz. \emph{flasque}),
+wenn die Einschränkungsabbildungen~$\Gamma(X,\F) \to \Gamma(U,\F)$ für alle
+offenen Teilmengen~$U \subseteq \F$ surjektiv sind.
+
+\begin{enumerate}
+\item Zeige durch ein explizites Beispiel, dass die Garbe~$\C$ der stetigen
+Funktionen auf~$\RR$ aus Aufgabe~1b) nicht welk ist.
+\item Sei~$0 \to \F \to \G \to \H \to 0$ eine kurze exakte Sequenz von Garben
+abelscher Gruppen auf einem topologischen Raum~$X$. Sei~$\F$ welk. Sei~$U
+\subseteq X$ eine offene Teilmenge. Zeige, dass
+dann auch die induzierte Sequenz
+\[ 0 \lra \Gamma(U,\F) \lra \Gamma(U,\G) \lra \Gamma(U,\H) \lra 0 \]
+exakt ist. Wegen dieser besonderen Eigenschaft sind welke Garben für die
+homologische Algebra wichtig.
+
+\emph{Tipp:} Opfere eine Katze, um geeignete maximale Fortsetzungen
+zu konstruieren.
+\item Sei~$0 \to \F \to \G \to \H \to 0$ eine kurze exakte Sequenz von Garben
+abelscher Gruppen auf einem topologischen Raum~$X$. Seien~$\F$ und~$\G$ welk.
+Zeige, dass dann auch~$\H$ welk ist.
+\item Sei~$\pi : E \to X$ eine stetige Surjektion. Zeige, dass die
+Garbe~$\widetilde\E$ \emph{aller} Schnitte von~$E \xra{\pi} X$, also die Garbe
+mit~$\Gamma(U,\widetilde\E) = \{ s : U \to E \,|\, \pi
+\circ s = \id|_U \}$ und den gewöhnlichen Einschränkungsabbildungen, welk ist.
+\item Zeige, dass man jede Garbe auf einem topologischen Raum in eine geeignete
+welke Garbe einbetten kann.
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Weiche Garben}
+Eine Garbe~$\F$ auf einem topologischen Raum~$X$ heißt genau dann \emph{weich}
+(engl. \emph{soft}, franz. \emph{mou}), wenn die Abbildungen~$\Gamma(X,\F) \to
+\Gamma(A,\F)$ für alle \emph{abgeschlossenen} Teilmengen~$A \subseteq X$
+surjektiv sind. (Zur Erinnerung:~$\Gamma(A,\F) = \colim\limits_{{U \subseteq
+X\,\text{offen},\,A \subseteq U}} \Gamma(U,\F).$)
+
+Weiche Garben werden vor allem auf parakompakten Hausdorffräumen studiert. Ein
+topologischer Raum ist genau dann \emph{parakompakt}, wenn jede offene
+Überdeckung~$X = \bigcup_i U_i$ eine \emph{lokal endliche Verfeinerung}~$X =
+\bigcup_j V_j$ besitzt: Jede der offenen Teilmengen~$V_j$ soll in einer der
+Mengen~$U_i$ enthalten sein, und jeder Punkt von~$X$ soll in nur endlich
+vielen Mengen~$V_j$ liegen. Parakompakte Hausdorffräume haben ferner folgende
+besondere Eigenschaft: Zu jeder offenen Überdeckung~$X = \bigcup_i U_i$
+existieren offene Mengen~$V_i$ mit~$\overline{V_i} \subseteq U_i$, welche immer
+noch~$X$ überdecken.
+
+\begin{enumerate}
+\item Zeige, dass die Garbe~$\C$ der stetigen Funktionen auf~$\RR$ aus
+Aufgabe~1b) weich ist.
+\item Zeige, dass welke Garben stets weich sind.
+\item Sei~$X$ ein parakompakter Hausdorffraum. Zeige die analoge Behauptung wie
+bei Aufgabe~4b), nur mit~"`$\F$ weich"' statt~"`$\F$ welk"' und mit~"`$A
+\subseteq X$ abgeschlossen"' statt~"`$U \subseteq X$ offen"'.
+\item Sei~$X$ ein parakompakter Hausdorffraum. Zeige die analoge Behauptung wie
+bei Aufgabe~4c), nur mit~"`weich"' statt~"`welk"'.
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Feine Garben}
+Eine Garbe~$\F$ abelscher Gruppen auf einem topologischen Raum~$X$ heißt genau dann \emph{fein}
+(engl. \emph{fine}, franz. \emph{fin}), wenn für je zwei disjunkte abgeschlosse
+Mengen~$A_1, A_2 \subseteq X$ ein Morphismus~$\alpha : \F \to \F$ von Garben
+abelscher Gruppen existiert, sodass~$\alpha$ auf einer offenen Umgebung
+von~$A_1$ Null und auf einer offenen Umgebung von~$A_2$ die Identität ist.
+(Das bedeutet, dass es offene Mengen~$U_1 \supseteq A_1$
+und~$U_2 \supseteq A_2$ gibt, sodass~$\alpha_V$ für alle offenen Teilmengen~$V
+\subseteq U_1$ die Nullabbildung und sodass~$\alpha_V$ für alle offenen
+Teilmengen~$V \subseteq U_2$ die Identitätsabbildung ist.)
+
+\begin{enumerate}
+\item Zeige, dass feine Garben auf parakompakten Hausdorffräumen stets weich
+sind.
+\item Zeige, dass eine Garbe~$\F$ abelscher Gruppen auf einem parakompakten
+Hausdorffraum genau dann fein ist, wenn die Hom-Garbe~$\HOM(\F,\F)$ welk ist.
+
+\emph{Tipp:} Parakompakte Hausdorffräume sind \emph{normal}, das heißt
+je zwei disjunkte abgeschlossene Teilmengen besitzen offene disjunkte
+Umgebungen.
+\end{enumerate}
+\end{aufgabe}
+
+\begin{center}-- \emph{Noch zu \TeX{}en} --\end{center}
+\begin{itemize}
+\item Ausgelagerter Beweis: lokaler Homöomorphismus \ldots
+\item Affine Schemata
+\end{itemize}
+
+\begin{center}-- \emph{Weitere mögliche Aufgaben} --\end{center}
+\begin{itemize}
+\item Halme von~$\O_X$ für~$X = \CC$ berechnen.
+\item Exaktheit der Sequenz~$0 \to \underline{\ZZ} \to \O_X \to \O_X^\times \to 0$
+nachrechnen.
+\end{itemize}
+
+
+\end{document}
 
 \begin{aufgabe}{Mono- und Epimorphismen zwischen Garben}
 Ein Morphismus~$f$ einer gewissen Klasse von Morphismen heißt genau dann
@@ -40,4 +206,10 @@ surjektiv sind.)
 \end{enumerate}
 \end{aufgabe}
 
-\end{document}
+\begin{aufgabe}{Mono- und Epimorphismen von Garben}
+Ein Morphismus~$\alpha : \F \to \G$ von Garben auf einem topologischen Raum~$X$
+heißt genau dann \emph{Epimorphismus}, wenn zu jeder offenen Menge~$U \subseteq X$ und
+jedem lokalen Schnitt~$s \in \Gamma(U,\G)$ eine offene Überdeckung~$U =
+\bigcup_{i \in I} U_i$ und Schnitte~$t_i \in \Gamma(U_i,\F)$ existieren,
+sodass~$\alpha_{U_i}(t_i) = s|_{U_i}$ für alle~$i \in I$.
+\end{aufgabe}

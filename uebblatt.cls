@@ -100,6 +100,7 @@
 \newcommand{\NN}{\mathbb{N}}
 \newcommand{\RR}{\mathbb{R}}
 \newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\CC}{\mathbb{C}}
 \newcommand{\GG}{\mathbb{G}}
 \newcommand{\aaa}{\mathfrak{a}}
 \newcommand{\bbb}{\mathfrak{b}}
