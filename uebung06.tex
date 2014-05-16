@@ -29,6 +29,32 @@ führen zu Prägarben? Welche sogar zu Garben?
 \end{enumerate}
 \end{aufgabe}
 
+\begin{aufgabe}{Der Totalraum einer (Prä-)Garbe}
+Sei~$\F$ eine Prägarbe auf einem topologischen Raum~$X$. Der zugehörige
+\emph{Totalraum}~$F$ ist als Menge die disjunkt-gemachte Vereinigung aller
+Halme~$\F_x$,~$x \in X$, und man topologisiert ihn über die gröbste Topologie, in
+der für alle lokalen Schnitte~$s \in \Gamma(U,\F)$, $U \subseteq X$ offen, die
+Teilmengen
+\[ F(s) := \{ (x, s_x) \in F \,|\, x \in U \} \subseteq F \]
+offen sind. Sei~$\pi : F \to X$ die kanonische Projektionsabbildung
+mit~$(x,u) \mapsto x$.
+
+\begin{enumerate}
+\item Zeige, dass~$\pi$ stetig ist.
+\item Zeige weiter, dass~$\pi$ ein lokaler Homöomorphismus ist: Das heißt, dass
+für alle Punkte~$z \in F$ eine offene Umgebung~$V \subseteq F$ existiert,
+sodass die Bildmenge~$\pi[V] \subseteq X$ offen und die eingeschränkte
+Abbildung~$\pi|_V : V \to \pi[V]$ ein Homöomorphismus ist.
+\item Zeige, dass die Fasern von~$\pi$, also die Mengen~$\pi^{-1}[\{x\}]$
+für~$x \in X$, \emph{diskrete Räume} sind: Das heißt, dass \emph{alle}
+Teilmengen bezüglich der Teilraumtopologie offen sind.
+\item Wieso ist im Allgemeinen der Totalraum der Garbe~$\E$ aus Aufgabe~1a)
+nicht homöomorph zum dortigen Raum~$E$?
+\end{enumerate}
+\end{aufgabe}
+
+\newpage
+
 \begin{aufgabe}{Exakte Sequenzen von Garben}
 Eine Sequenz~$\F \xra{\alpha} \G \xra{\beta} \H$ von Garben abelscher Gruppen
 auf einem topologischen Raum~$X$ heißt genau dann \emph{exakt} (bei~$\G$), wenn für jede
@@ -39,7 +65,8 @@ gilt~$\beta_U(\alpha_U(s)) = 0 \in \Gamma(U,\H)$.
 \item "`$\Image \supseteq \Kernel$"'. Für jeden Schnitt~$t \in \Gamma(U,\G)$
 mit~$\beta_U(t) = 0 \in \Gamma(U,\H)$ existieren eine offene Überdeckung~$U =
 \bigcup_{i \in I} U_i$ und Schnitte~$s_i \in \Gamma(U_i,\F)$
-mit~$\alpha_{U_i}(s_i) = t|_{U_i}$ für alle~$i \in I$.
+mit~$\alpha_{U_i}(s_i) = t|_{U_i}$ für alle~$i \in I$. Man sagt auch: Der
+Schnitt~$t$ soll \emph{lokal} Urbilder besitzen.
 \end{itemize}
 
 Der Begriff der Exaktheit einer Sequenz von \emph{Prä}garben
@@ -79,7 +106,12 @@ definieren wir eine weitere Prägarbe durch die Setzung
 und die offensichtlichen Einschränkungsabbildungen (welche?).
 
 Zeige: Ist~$\G$ sogar eine Garbe, so ist~$\HOM(\F,\G)$ ebenfalls eine Garbe.
+
+\emph{Bemerkung:} Im Allgemeinen ist die kanonische
+Abbildung~$\HOM(\F,\G)_x \to \Hom(\F_x,\G_x)$ weder injektiv noch surjektiv.
 \end{aufgabe}
+
+\newpage
 
 \begin{aufgabe}{Welke Garben}
 Eine Garbe~$\F$ auf einem topologischen Raum~$X$ heißt genau dann \emph{welk}
@@ -101,7 +133,7 @@ homologische Algebra wichtig.
 \emph{Tipp:} Opfere eine Katze, um geeignete maximale Fortsetzungen
 zu konstruieren.
 \item Sei~$0 \to \F \to \G \to \H \to 0$ eine kurze exakte Sequenz von Garben
-abelscher Gruppen auf einem topologischen Raum~$X$. Seien~$\F$ und~$\G$ welk.
+abelscher Gruppen auf einem topologischen Raum. Seien~$\F$ und~$\G$ welk.
 Zeige, dass dann auch~$\H$ welk ist.
 \item Sei~$\pi : E \to X$ eine stetige Surjektion. Zeige, dass die
 Garbe~$\widetilde\E$ \emph{aller} Schnitte von~$E \xra{\pi} X$, also die Garbe
@@ -116,8 +148,8 @@ welke Garbe einbetten kann.
 Eine Garbe~$\F$ auf einem topologischen Raum~$X$ heißt genau dann \emph{weich}
 (engl. \emph{soft}, franz. \emph{mou}), wenn die Abbildungen~$\Gamma(X,\F) \to
 \Gamma(A,\F)$ für alle \emph{abgeschlossenen} Teilmengen~$A \subseteq X$
-surjektiv sind. (Zur Erinnerung:~$\Gamma(A,\F) = \colim\limits_{{U \subseteq
-X\,\text{offen},\,A \subseteq U}} \Gamma(U,\F).$)
+surjektiv sind. Zur Erinnerung:~$\Gamma(A,\F) := \colim\limits_{{U \subseteq
+X\,\text{offen},\,A \subseteq U}} \Gamma(U,\F).$
 
 Weiche Garben werden vor allem auf parakompakten Hausdorffräumen studiert. Ein
 topologischer Raum ist genau dann \emph{parakompakt}, wenn jede offene
@@ -134,10 +166,10 @@ noch~$X$ überdecken.
 Aufgabe~1b) weich ist.
 \item Zeige, dass welke Garben stets weich sind.
 \item Sei~$X$ ein parakompakter Hausdorffraum. Zeige die analoge Behauptung wie
-bei Aufgabe~4b), nur mit~"`$\F$ weich"' statt~"`$\F$ welk"' und mit~"`$A
+bei Aufgabe~5b), nur mit~"`$\F$ weich"' statt~"`$\F$ welk"' und mit~"`$A
 \subseteq X$ abgeschlossen"' statt~"`$U \subseteq X$ offen"'.
 \item Sei~$X$ ein parakompakter Hausdorffraum. Zeige die analoge Behauptung wie
-bei Aufgabe~4c), nur mit~"`weich"' statt~"`welk"'.
+bei Aufgabe~5c), nur mit~"`weich"' statt~"`welk"'.
 \end{enumerate}
 \end{aufgabe}
 
@@ -164,22 +196,69 @@ Umgebungen.
 \end{enumerate}
 \end{aufgabe}
 
-\begin{center}-- \emph{Noch zu \TeX{}en} --\end{center}
-\begin{itemize}
-\item Ausgelagerter Beweis: lokaler Homöomorphismus \ldots
-\item Affine Schemata
-\end{itemize}
+\begin{aufgabe}{Affine Schemata II}
+Sei~$A$ ein kommutativer Ring (mit Eins). Wir definieren auf den
+standardoffenen Teilmengen~$D(f) \subseteq \Spec A$ die Zuordnung
+\[ \O : D(f) \longmapsto A[S_f^{-1}], \]
+wobei~$S_f$ das multiplikative System~$S_f = \{ g \in A \,|\, f \in \sqrt{(g)}
+\}$ ist. Die Elemente des lokalisierten Rings~$A[S_f^{-1}]$
+sind formale Brüche~$\frac{g}{s}$ mit~$g \in A$ und~$s \in S_f$; zwei solche
+Brüche~$\frac{g}{s}$, $\frac{h}{t}$ gelten genau dann als gleich, wenn~$ush =
+utg$ für ein~$u \in S_f$.
 
-\begin{center}-- \emph{Weitere mögliche Aufgaben} --\end{center}
+\begin{enumerate}
+\item Zeige, dass die Setzung wohldefiniert ist, dass also die Menge~$S_f$ nur
+von~$D(f)$, nicht aber von der konkreten Repräsentantenwahl~$f$ abhängt.
+
+\item Überlege, wie man sinnvolle Restriktionsabbildungen~$\O(D(f)) \to
+\O(D(g))$ für~$D(g) \subseteq D(f)$ definieren kann. Zeige mit deiner
+Definition, dass~$\O$ zu einer Prägarbe wird -- welche aber nicht allen offenen
+Teilmengen, sondern nur den standardoffenen Teilmengen Schnittmengen zuweist.
+\item Zeige, dass die so definierte "`Prägarbe"' bezüglich offener
+Überdeckungen der Form~$D(f) = \bigcup_i D(g_i)$ die Garbenaxiome erfüllt.
+
+\emph{Tipp:} Der Spezialfall~$f = 1$ ist in der technischen Ausführung etwas
+einfacher und immer noch interessant genug. Es gilt~$D(f) = \bigcup_i D(g_i)$
+genau dann, wenn~$\sqrt{(f)} = \sqrt{(g_i)_i}$. Ist~$1 = \sum_i s_i$ eine Zerlegung
+der Eins in einem kommutativen Ring, so gibt es für jede natürliche Zahl~$n$
+auch eine Zerlegung der Form~$1 = \sum_i a_i s_i^n$ mit gewissen
+Ringelementen~$a_i$.
+
+\item Wir wollen nun eine Fortsetzung von~$\O$ zu einer auf ganz~$\Spec A$
+definierten Garbe~$\O_{\Spec A}$ konstruieren. Da sich jede beliebige offene
+Teilmenge~$U \subseteq \Spec A$ als Vereinigungen~$U = \bigcup_i D(f_i)$ von
+standardoffenen Teilmengen schreiben lässt, können wir
+\begin{multline*}
+  \O_{\Spec A} : U \longmapsto \{ (s_i)_i \ |\
+  \text{$s_i \in \O(D(f_i))$,} \\
+  \text{$s_i|_{D(f_i f_j)} = s_j|_{D(f_i f_j)} \in \O(D(f_if_j))$ für alle~$i,j$} \}
+\end{multline*}
+definieren. Überlege, wie diese Setzung zu einer wohldefinierten Prägarbe wird.
+Weise dann die Garbenaxiome nach.
+
+\item Zeige, dass für die Halme an Punkten~$\ppp \in \Spec A$ gilt:
+\[ (\O_{\Spec A})_\ppp \cong A_\ppp := A[(A \setminus \ppp)^{-1}]. \]
+\end{enumerate}
+
+Die Garbe~$\O_{\Spec A}$ ist sogar eine Ringgarbe. Ihre Schnitte stellt man
+sich als "`gute"' Funktionen auf~$\Spec A$ vor -- so, wie man etwa bei glatten
+Mannigfaltigkeiten von glatten Funktionen spricht. Einem~$A$-Modul~$M$ kann man
+über eine Konstruktion, die der obigen sehr ähnelt, dann eine~$\O_{\Spec
+A}$-Modulgarbe~$M^\sim$ zuordnen (im Spezialfall~$M = A$ erhält man~$\O_{\Spec
+A}$ zurück). Auf diese Weise erhält der Ausspruch "`sei~$M$ ein~$A$-Modul"'
+geometrische Bedeutung. Diese Begriffe bilden die Grundlage moderner
+algebraischer Geometrie.
+\end{aufgabe}
+
+
+\end{document}
+
 \begin{itemize}
 \item Halme von~$\O_X$ für~$X = \CC$ berechnen.
 \item Exaktheit der Sequenz~$0 \to \underline{\ZZ} \to \O_X \to \O_X^\times \to 0$
 nachrechnen.
 \item Verträglichkeit der beiden Definition für~$\Gamma(A,\F)$ nachrechnen.
 \end{itemize}
-
-
-\end{document}
 
 \begin{aufgabe}{Mono- und Epimorphismen zwischen Garben}
 Ein Morphismus~$f$ einer gewissen Klasse von Morphismen heißt genau dann
