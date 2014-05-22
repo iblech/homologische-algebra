@@ -1,0 +1,48 @@
+\documentclass{uebblatt}
+\usepackage{calc}
+
+\begin{document}
+
+\maketitle{7}{-- \emph{Motto} --}
+
+\begin{aufgabe}{Funktorialität der langen exakten Sequenz}
+Sei ein kommutatives Diagramm von Komplexen und Komplexmorphismen gegeben,
+dessen Zeilen exakte Sequenzen sind:
+\[ \xymatrixcolsep{3.5pc}\xymatrixrowsep{3.5pc}\xymatrix{
+  0 \ar[r]
+    & A^\bullet \ar[r] \ar[d]_{f^\bullet}
+    & B^\bullet \ar[r] \ar[d]_{g^\bullet}
+    & C^\bullet \ar[r] \ar[d]_{h^\bullet}
+    & 0 \\
+  0 \ar[r]
+    & \widetilde A^\bullet \ar[r]
+    & \widetilde B^\bullet \ar[r]
+    & \widetilde C^\bullet \ar[r]
+    & 0
+} \]
+Bekanntlich induzieren die beiden kurzen exakten Sequenzen dann lange exakte
+Sequenzen in Kohomologie. Zeige, dass diese folgendes Diagramm kommutieren
+lassen:
+\[ \xymatrixcolsep{3.5pc}\xymatrixrowsep{3.5pc}\xymatrix{
+  \cdots \ar[r]
+    & H^n(A^\bullet) \ar[r] \ar[d]_{H^n(f^\bullet)}
+    & H^n(B^\bullet) \ar[r] \ar[d]_{H^n(g^\bullet)}
+    & H^n(C^\bullet) \ar[r] \ar[d]_{H^n(h^\bullet)}
+    & H^{n+1}(A^\bullet) \ar[r] \ar[d]_{H^{n+1}(h^\bullet)}
+    & \cdots \\
+  \cdots \ar[r]
+    & H^n(\widetilde A^\bullet) \ar[r]
+    & H^n(\widetilde B^\bullet) \ar[r]
+    & H^n(\widetilde C^\bullet) \ar[r]
+    & H^{n+1}(\widetilde A^\bullet) \ar[r]
+    & \cdots
+} \]
+Wenn du schon weißt, was ein Funktor ist, dann erkläre den Titel der Aufgabe!
+\end{aufgabe}
+
+\begin{aufgabe}{Degenerierte Ketten}
+Sei~$C$ eine simpliziale abelsche Gruppe und~$\widetilde C$ der zugehörige
+Komplex abelscher Gruppen mit Differential~$d = \sum_i (-1)^n C(\partial^i)$.
+\end{aufgabe}
+
+\end{document}
