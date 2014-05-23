@@ -6,7 +6,7 @@
 \maketitle{7}{}
 
 \begin{aufgabe}{Funktorialität der langen exakten Sequenz}
-Sei ein kommutatives Diagramm von Komplexen und Komplexmorphismen gegeben,
+Sei ein kommutatives Diagramm von (Koketten-)Komplexen und Komplexmorphismen gegeben,
 dessen Zeilen exakte Sequenzen sind:
 \[ \xymatrixcolsep{3.5pc}\xymatrixrowsep{3.5pc}\xymatrix{
   0 \ar[r]
@@ -44,7 +44,7 @@ Wenn du schon weißt, was ein Funktor ist, dann erkläre den Titel der Aufgabe!
 Sei~$A$ eine simpliziale abelsche Gruppe und~$CA_\bullet$ der zugehörige
 Komplex abelscher Gruppen mit~$CA_n = A_n$ und Differential~$d = \sum_i (-1)^n
 A(\partial^i)$. Sei~$DA_\bullet \hookrightarrow CA_\bullet$ der Unterkomplex
-der \emph{degenerierten Ketten}.
+der \emph{degenerierten Ketten} (siehe Rückseite).
 \begin{enumerate}
 \item Zeige: Das Differential~$d : CA_n \to CA_{n-1}$ bildet die Elemente
 aus~$DA_n$ auf Elemente aus~$DA_{n-1}$ ab.
@@ -63,16 +63,83 @@ Sei~$\widetilde A_n := \ZZ\langle X_{(n)} \rangle$ die freie abelsche Gruppe
 auf den nichtdegenerierten~$n$-Simplizes.
 
 Überlege zunächst, wie~$\widetilde A$ zu einer simplizialen abelschen Gruppe wird.
-Zeige dann: $H_n(C\widetilde A) \cong H_n(CA)$. Damit ist also gerechtfertigt,
-dass man sich bei Berechnung von Homologie auf die nichtdegenerierten Simplizes
-einschränken darf.
+Zeige dann: $H_n(C\widetilde A_\bullet) \cong H_n(CA_\bullet)$. Damit ist also
+gerechtfertigt, dass man sich bei Berechnung von Homologie auf die
+nichtdegenerierten Simplizes einschränken darf.
 \end{enumerate}
 
-\emph{Auf der Rückseite wird ein ausführlicher Tipp folgen.}
+\emph{Auf der Rückseite gibt es einen ausführlichen Tipp zu Teilaufgabe~b).}
 \end{aufgabe}
 
+Der Unterkomplex der degenerierten Ketten ist in Grad~$n$ durch
 \[ DA_n := \sum_{i=0}^{n-1} \Image(A(\sigma^i) : A_{n-1} \to A_n) \subseteq
-CA_n. \]
-Mit dem Summensymbol ist die Summe von Untergruppen gemeint.
+CA_n \]
+gegeben. Mit dem Summensymbol ist die Summe von Untergruppen gemeint. Ferner
+benötigen wir den \emph{normalisierten Moore-Komplex} $NA_\bullet$ mit
+\begin{align*}
+  NA_n &:= \bigcap_{i=0}^{n-1} \Kernel(A(\partial^j) : A_{n-1} \to A_n)
+\qquad\text{(nicht bis~$n$!)} \\
+\intertext{und für alle~$j \geq 0$ die Unterkomplexe~$N^jA_\bullet$ mit}
+  N^jA_n &:= \begin{cases}
+  \bigcap_{i=0}^j \Kernel(A(\partial^j) : A_{n-1} \to A_n), &
+  \text{für~$n \geq j + 2$,} \\
+  NA_n, &
+  \text{für~$n \leq j + 1$.} \end{cases}
+\end{align*}
+Konventionsgemäß gilt~$N^{-1}A_n = CA_n$ (leere Schnitte!).
+Der Quotientenkomplex~$CA_\bullet/DA_\bullet$ ist in Grad~$n$ durch die
+Faktorgruppe~$CA_n/DA_n$ gegeben. Das Differential schickt~$[x] \mapsto [dx]$
+und ist wegen Teilaufgabe~a) wohldefiniert. Folgende voneinander unabhängig
+bearbeitbaren Schritte führen zum Ziel.
+
+\begin{enumerate}
+\item[1.] Der kanonische Morphismus~$NA_\bullet \to CA_\bullet/DA_\bullet$ ist
+ein Isomorphismus von Kettenkomplexen.
+
+\emph{Tipp:} Zeige mit Induktion über~$j$, dass für~$0 \leq j \leq n-1$ die
+Verkettung~$N^j A_n \hookrightarrow CA_n \twoheadrightarrow CA_n/D^jA_n$ ein
+Isomorphismus ist, wobei~$D^j A_n = \sum_{i=0}^j \Image(A(\sigma^i)).$
+Die Behauptung folgt dann für~$j = n-1$. Schon der Induktionsanfang~$j = 0$ ist
+interessant.
+
+\item[2.] Die~$N^j A_\bullet$ sind für alle~$j \geq 0$ wirklich Komplexe, mit
+dem Differential von~$CA_\bullet$.
+
+\item[3.] Sei~$e^j : N^{j+1}A_\bullet \hookrightarrow N^jA_\bullet$ die
+Einbettung. Wir definieren eine Möchtegernumkehrung~$f^j : N^jA_\bullet \to
+N^{j+1}A_\bullet$ durch
+\[ (f^j)_n(x) := \begin{cases}
+  x - A(\sigma^{j+1}) A(\partial^{j+1})x, &
+  \text{für $n \geq j+2$,} \\
+  x, & \text{für $n \leq j+1$}. \end{cases} \]
+Dann ist~$f^j$ in dem Sinne wohldefiniert, als dass es wirklich Werte
+in~$N^{j+1}A_\bullet$ annimmt, und~$f^j$ ist ein Komplexmorphismus.
+
+\item[4.] Es gilt~$f^j \circ e^j = \id_{N^{j+1}A_\bullet}$.
+
+\item[5.] Es gilt~$\id_{N^jA_\bullet} - e^j f^j = d t^j + t^j d : N^jA_\bullet \to
+N^jA_\bullet$. Dabei ist
+\[ (t^j)_n(x) := \begin{cases}
+  (-1)^j A(\sigma^{j+1}), & \text{für $n \geq j+1$,} \\
+  0, & \text{sonst.} \end{cases} \]
+
+\item[6.] Sei~$e : NA_\bullet \to CA_\bullet$ die Einbettung. Dann definiert
+die Verkettung
+\[ CA_n = N^{-1}A_n \xra{f^{-1}} N^0A_n \xra{f^0} \cdots \xra{f^{n-2}} N^{n-1}A_n =
+NA_n \]
+einen Komplexmorphismus~$f : CA_\bullet \to NA_\bullet$ mit~$f \circ e = \id :
+NA_\bullet \to NA_\bullet$.
+
+\item[7.] Die Morphismen~$T_n : CA_n \to CA_{n+1}$ mit
+\[ T_n = e^0 \cdots e^{n-2} t^{n-1} f^{n-2} \cdots f^0 +
+  e^0 \cdots e^{n-3} t^{n-2} f^{n-3} \cdots f^0 + \cdots +
+  e^0 t^1 f^0 + t^0 \]
+bezeugen die Kettenkomotopie~$e \circ f \simeq \id_{CA_\bullet}$. Also ist~$f$
+eine Kettenhomotopieäquivalenz und induziert daher in Kohomologie
+Isomorphismen.
+\end{enumerate}
+
+Diese Art der Beweisführung findet sich etwa in Goerss, Jardine:
+\emph{Simplicial Homotopy Theory} (Seiten 145ff.).
 
 \end{document}
