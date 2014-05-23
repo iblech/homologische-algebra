@@ -3,7 +3,7 @@
 
 \begin{document}
 
-\maketitle{7}{-- \emph{Motto} --}
+\maketitle{7}{}
 
 \begin{aufgabe}{Funktorialität der langen exakten Sequenz}
 Sei ein kommutatives Diagramm von Komplexen und Komplexmorphismen gegeben,
@@ -41,8 +41,38 @@ Wenn du schon weißt, was ein Funktor ist, dann erkläre den Titel der Aufgabe!
 \end{aufgabe}
 
 \begin{aufgabe}{Degenerierte Ketten}
-Sei~$C$ eine simpliziale abelsche Gruppe und~$\widetilde C$ der zugehörige
-Komplex abelscher Gruppen mit Differential~$d = \sum_i (-1)^n C(\partial^i)$.
+Sei~$A$ eine simpliziale abelsche Gruppe und~$CA_\bullet$ der zugehörige
+Komplex abelscher Gruppen mit~$CA_n = A_n$ und Differential~$d = \sum_i (-1)^n
+A(\partial^i)$. Sei~$DA_\bullet \hookrightarrow CA_\bullet$ der Unterkomplex
+der \emph{degenerierten Ketten}.
+\begin{enumerate}
+\item Zeige: Das Differential~$d : CA_n \to CA_{n-1}$ bildet die Elemente
+aus~$DA_n$ auf Elemente aus~$DA_{n-1}$ ab.
+\end{enumerate}
+Mit den Einschränkungen von~$d$ wird damit~$DA_\bullet$ zu einem Komplex und die
+kanonischen Injektionen~$DA_\bullet \to NA_\bullet$ werden zu einem Komplexmorphismus.
+\begin{enumerate}
+\addtocounter{enumi}{1}
+\item Zeige: $H_n(CA_\bullet) \cong H_n(CA_\bullet/NA_\bullet)$, auf kanonische
+Art und Weise.
+\item Sei nun~$X$ eine simpliziale Menge, sodass Ränder nichtdegenerierter
+Simplizes wieder nichtdegeneriert sind (vgl.~Blatt~2, Aufgabe~2). Erinnere
+dich, dass~$A_n := \ZZ\langle X_n \rangle$ (freie abelsche Gruppe auf den
+Elementen von~$X_n$) zu einer simplizialen abelschen Gruppe wird.
+Sei~$\widetilde A_n := \ZZ\langle X_{(n)} \rangle$ die freie abelsche Gruppe
+auf den nichtdegenerierten~$n$-Simplizes.
+
+Überlege zunächst, wie~$\widetilde A$ zu einer simplizialen abelschen Gruppe wird.
+Zeige dann: $H_n(C\widetilde A) \cong H_n(CA)$. Damit ist also gerechtfertigt,
+dass man sich bei Berechnung von Homologie auf die nichtdegenerierten Simplizes
+einschränken darf.
+\end{enumerate}
+
+\emph{Auf der Rückseite wird ein ausführlicher Tipp folgen.}
 \end{aufgabe}
+
+\[ DA_n := \sum_{i=0}^{n-1} \Image(A(\sigma^i) : A_{n-1} \to A_n) \subseteq
+CA_n. \]
+Mit dem Summensymbol ist die Summe von Untergruppen gemeint.
 
 \end{document}
