@@ -42,7 +42,7 @@ Wenn du schon weißt, was ein Funktor ist, dann erkläre den Titel der Aufgabe!
 
 \begin{aufgabe}{Degenerierte Ketten}
 Sei~$A$ eine simpliziale abelsche Gruppe und~$CA_\bullet$ der zugehörige
-Komplex abelscher Gruppen mit~$CA_n = A_n$ und Differential~$d = \sum_i (-1)^n
+Komplex abelscher Gruppen mit~$CA_n = A_n$ und Differential~$d = \sum_i (-1)^i
 A(\partial^i)$. Sei~$DA_\bullet \hookrightarrow CA_\bullet$ der Unterkomplex
 der \emph{degenerierten Ketten} (siehe Rückseite).
 \begin{enumerate}
@@ -53,7 +53,7 @@ Mit den Einschränkungen von~$d$ wird damit~$DA_\bullet$ zu einem Komplex und di
 kanonischen Injektionen~$DA_\bullet \to NA_\bullet$ werden zu einem Komplexmorphismus.
 \begin{enumerate}
 \addtocounter{enumi}{1}
-\item Zeige: $H_n(CA_\bullet) \cong H_n(CA_\bullet/NA_\bullet)$, auf kanonische
+\item Zeige: $H_n(CA_\bullet) \cong H_n(CA_\bullet/DA_\bullet)$, auf kanonische
 Art und Weise.
 \item Sei nun~$X$ eine simpliziale Menge, sodass Ränder nichtdegenerierter
 Simplizes wieder nichtdegeneriert sind (vgl.~Blatt~2, Aufgabe~2). Erinnere
@@ -77,11 +77,11 @@ CA_n \]
 gegeben. Mit dem Summensymbol ist die Summe von Untergruppen gemeint. Ferner
 benötigen wir den \emph{normalisierten Moore-Komplex} $NA_\bullet$ mit
 \begin{align*}
-  NA_n &:= \bigcap_{i=0}^{n-1} \Kernel(A(\partial^j) : A_{n-1} \to A_n)
+  NA_n &:= \bigcap_{i=0}^{n-1} \Kernel(A(\partial^i) : A_n \to A_{n-1})
 \qquad\text{(nicht bis~$n$!)} \\
 \intertext{und für alle~$j \geq 0$ die Unterkomplexe~$N^jA_\bullet$ mit}
   N^jA_n &:= \begin{cases}
-  \bigcap_{i=0}^j \Kernel(A(\partial^j) : A_{n-1} \to A_n), &
+  \bigcap_{i=0}^j \Kernel(A(\partial^j) : A_n \to A_{n-1}), &
   \text{für~$n \geq j + 2$,} \\
   NA_n, &
   \text{für~$n \leq j + 1$.} \end{cases}
@@ -134,7 +134,7 @@ NA_\bullet \to NA_\bullet$.
 \[ T_n = e^0 \cdots e^{n-2} t^{n-1} f^{n-2} \cdots f^0 +
   e^0 \cdots e^{n-3} t^{n-2} f^{n-3} \cdots f^0 + \cdots +
   e^0 t^1 f^0 + t^0 \]
-bezeugen die Kettenkomotopie~$e \circ f \simeq \id_{CA_\bullet}$. Also ist~$f$
+bezeugen die Kettenhomotopie~$e \circ f \simeq \id_{CA_\bullet}$. Also ist~$f$
 eine Kettenhomotopieäquivalenz und induziert daher in Kohomologie
 Isomorphismen.
 \end{enumerate}
