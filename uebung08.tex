@@ -116,8 +116,38 @@ vereinfachende Techniken kennenlernen.
 \end{enumerate}
 \end{aufgabe}
 
-\begin{aufgabe}{Differentialformen}
-\emph{Folgt in Kürze.}
+\small
+\begin{aufgabe}{Differentialformen und die Formel von Cartan}
+Das \emph{Differential} einer glatten Funktion~$f : U \to \RR$, wobei~$U$ eine
+offene Teilmenge des~$\RR^n$ ist, ist der formale Ausdruck
+$df := \sum_{i=1}^n \frac{\partial f}{\partial x_i} dx_i$.
+%Die~$dx_i$ kann man dabei als formale Symbole ansehen; zugleich sind sie aber
+%auch die Differentiale der Koordinatenfunktionen~$x_1,\ldots,x_n : U \to \RR$.
+Ist~$M$ eine glatte Mannigfaltigkeit, so definieren wir eine
+Prägarbe~$\widetilde\A^1$ auf~$M$ durch die Forderung, dass~$\widetilde\A^1(U)$
+für solche offene Teilmengen~$U$, die isomorph zu einer offenen Teilmenge
+des~$\RR^n$ sind, die Menge formaler Summen von Produkten glatter Funktionen
+mit beliebigen Differentialen ist. Die Garbifizierung von~$\widetilde\A^1$ ist
+dann die Garbe~$\A^1$ der \emph{1-Formen} auf~$M$. Die Garbe der~$p$-Formen
+definieren wir als Garbifizierung der Prägarbe~$U \mapsto \Lambda^p_{\C^\infty}
+\A^1(U)$.
+
+\begin{enumerate}
+\item Seien~$\xi$ und~$\eta$ Vektorfelder auf einer glatten
+Mannigfaltigkeit~$M$, also Derivationen~$\C^\infty(M) \to \C^\infty(M)$. Zeige,
+dass die \emph{Lie-Klammer}~$[\xi,\eta] := \xi \circ \eta - \eta \circ \xi$
+wieder eine Derivation ist.
+\end{enumerate}
+Ist~$\xi$ ein Vektorfeld und~$f dg$ eine~$1$-Form, so definieren
+wir~$\iota_\xi(fdg) = f \cdot \xi(g)$. Das definiert einen Garbenmorphismus~$\A^1
+\to \C^\infty$ (wie genau?). Wenn wir fordern, dass die Leibnizregel gelten
+soll, gibt es ferner nur eine Fortsetzung zu Garbenmorphismen~$\A^p \to
+\A^{p-1}$. Damit können wir~$\omega(\xi_1,\ldots,\xi_n) := (\iota_{\xi_n} \circ
+\cdots \iota_{\xi_1})(\omega)$ für~$n$-Formen~$\omega$ definieren.
+\begin{enumerate}
+\addtocounter{enumi}{1}
+\item Bestätige die Formel von Cartan (Seite~49 in Gelfand--Manin).
+\end{enumerate}
 \end{aufgabe}
 
 \end{document}
