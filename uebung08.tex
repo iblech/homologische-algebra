@@ -5,10 +5,30 @@
 
 \maketitle{8}{}
 
-\begin{aufgabe}{Prisma-Triangulierung}
-\ldots Bestätige Formel (I.21) in Gelfand--Manin \ldots
+\begin{aufgabe}{Prismentriangulierung}
+In der Vorlesung wurde~$\Delta_p \times I$ durch
+Simplizes~$\delta_{p\ell}[\Delta_{p+1}]$ trianguliert (Seite~50f. in
+Gelfand--Manin). Sei~$\delta_p = \sum_{\ell=0}^{p+1}
+(-1)^\ell \delta_{p\ell}$, seien $\varepsilon_0$ und~$\varepsilon_1 : \Delta_p \to
+\Delta_p \times I$ die singulären~$p$-Simplizes
+mit~$\varepsilon_i(\lambda) = (\lambda,i)$ und sei
+\[ \delta^{(i)}_{p-1} = \sum_{\ell = 0}^p (-1)^\ell
+  (\Delta_{\partial^i_p} \times \id_I) \circ \delta_{p-1,\ell} :
+  \Delta_p \to \Delta_p \times I \]
+eine Darstellung der~$i$-ten Seite von~$\Delta_p \times I$ als singuläre Kette.
+Die Abbildung $\Delta_{\partial^i_p}$ hat dabei den Typ $\Delta_{p-1} \to
+\Delta_p$ und wird von der Korandabbildung~$\partial^i_p : [p-1] \to [p]$ induziert.
 
-\ldots Inwieweit spielt sich alles nur auf dem Standardprisma ab? \ldots
+\begin{enumerate}
+\item Interpretiere folgende Identität anschaulich und beweise sie:
+\[ d \delta_p = -\sum_{i=0}^p (-1)^i \delta_{p-1}^{(i)} + \varepsilon_1 -
+\varepsilon_0 \]
+
+\item Inwieweit spielt sich beim Beweis, dass homotope stetige Abbildungen
+kettenhomotope Komplexmorphismen induzieren, eigentlich alles auf dem
+Standardprisma ab? Inwieweit genügt es, die Behauptung für diesen Fall zu
+beweisen?
+\end{enumerate}
 \end{aufgabe}
 
 \begin{aufgabe}{Viele Homotopiebegriffe}
@@ -34,12 +54,70 @@ Koeffizientengruppen~$A$ die induzierten
 Kettenkomplexmorphismen~$C_\bullet(X,A) \to C_\bullet(Y,A)$ zueinander
 kettenhomotop sind.
 
-\emph{Tipp:} Das hat etwas mit Triangulierungen von Prismen zu tun.
+\emph{Tipp:} Vielleicht ist es einfacher, die Kettenhomotopie der induzierten
+Morphismen zwischen den normalisierten Moore-Komplexen (siehe Aufgabe~2 von
+Blatt~7) nachzuweisen. Wieso genügt das?
 \end{enumerate}
 \end{aufgabe}
 
-\begin{aufgabe}{\ldots}
-\ldots Hochschild- und Koszul-Kohomologie \ldots
+\newpage
+
+\begin{aufgabe}{Der Hochschild-Komplex}
+Sei~$k$ ein kommutativer Ring (mit Eins),~$A$ eine assoziative (aber nicht
+unbedingt kommutative)~$k$-Algebra und~$M$ ein~$A$-$A$-Bimodul (was ist das?).
+Wir statten die~$k$-Moduln~$C_n(A,M) := M \otimes A^{\otimes n}$ (alle
+Tensorprodukte über~$k$) mit den Randabbildungen
+\begin{align*}
+  d^0(m \otimes a_1 \otimes \cdots \otimes a_n) &:=
+    ma_1 \otimes a_2 \otimes \cdots \otimes a_n \\
+  d^i(m \otimes a_1 \otimes \cdots \otimes a_n) &:=
+    m \otimes a_1 \otimes \cdots \otimes a_{i-1} \otimes a_i a_{i+1} \otimes
+    a_{i+2} \otimes \cdots \otimes a_n \\
+  d^n(m \otimes a_1 \otimes \cdots \otimes a_n) &:=
+    a_n m \otimes a_1 \cdots \otimes a_{n-1}
+\end{align*}
+und dem Differential~$d = \sum_{i=0}^n (-1)^i d^i : C_n(A,M) \to C_{n-1}(A,M)$
+aus. Die Homologie von~$C_\bullet(A,M)$ ist die \emph{Hochschild-Homologie} der
+Algebra~$A$ mit Koeffizienten in~$M$.
+\begin{enumerate}
+\item Zeige, dass~$d$ wirklich ein Differential ist.
+\item Was ist~$H_0(C_\bullet(A,A))$?
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Der Koszul-Komplex}
+Sei~$A$ ein kommutativer Ring und~$M$ ein~$A$-Modul.
+Seien~$\varphi_1,\ldots,\varphi_p : M \to M$ paarweise kommutierende
+Endomorphismen. Auf den~$A$-Moduln~$M^n := M \otimes_\ZZ \Lambda^n \ZZ^p$
+definieren wir das Differential
+\[ d(x \otimes (e_{j_1} \wedge \cdots \wedge e_{j_n})) :=
+  \sum_{j=1}^p \varphi_j(x) \otimes (e_j \wedge e_{j_1} \wedge \cdots \wedge
+  e_{j_n}). \]
+Dabei ist~$(e_1,\ldots,e_p)$ die kanonische Basis in~$\ZZ^p$ und~$\Lambda^n
+\ZZ^p$ die~$p$-te \emph{äußere Potenz} von~$\ZZ^p$.
+\begin{enumerate}
+\item Zeige, dass diese Setzung wirklich zu einem Differential führt.
+\end{enumerate}
+Bedeutsam ist der Koszul-Komplex unter anderem aus folgendem Grund:
+Sei speziell~$M = A$ und seien die~$\varphi_i$ durch Multiplikation mit
+gewissen Elementen~$x_i$ gegeben. Sei die Folge~$(x_1,\ldots,x_n)$
+\emph{regulär}, das heißt, dass für~$j = 1,\ldots,p$ das Element~$x_i$ im
+Ring~$A/(x_1,\ldots,x_{i-1})$ regulär ist. Dann gilt~$H^p(M^\bullet) \cong
+A/(x_1,\ldots,x_n)$ und die sonstige Kohomologie verschwindet. Der
+Komplex~$M^\bullet$ definiert daher eine \emph{Auflösung}
+von~$A/(x_1,\ldots,x_n)$.
+\begin{enumerate}
+\addtocounter{enumi}{1}
+\item Gib für~$p = 1$ und~$p= 2$ den Koszul-Komplex in diesem Spezialfall
+explizit an.
+\item Wenn du möchtest, kannst du versuchen, die Aussage über die Kohomologie
+zu beweisen. Momentan ist das aber etwas mühevoll, später werden wir
+vereinfachende Techniken kennenlernen.
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Differentialformen}
+\emph{Folgt in Kürze.}
 \end{aufgabe}
 
 \end{document}
