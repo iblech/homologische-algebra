@@ -6,7 +6,7 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[ngerman]{babel}
 \RequirePackage{amsmath,amsthm,amssymb,amscd,color,graphicx,environ,tabto}
-\RequirePackage[all]{xy}
+\RequirePackage[all,2cell]{xy}
 \RequirePackage{framed}
 \RequirePackage[protrusion=true,expansion=true]{microtype}
 \RequirePackage{multicol}
@@ -109,6 +109,7 @@
 \newcommand{\Hom}{\mathrm{Hom}}
 \newcommand{\HOM}{\mathcal{H}\mathrm{om}}
 \newcommand{\id}{\mathrm{id}}
+\newcommand{\Id}{\mathrm{Id}}
 \newcommand{\Aut}[1]{\operatorname{Aut}(#1)}
 \newcommand{\GL}{\mathrm{GL}}
 \newcommand{\placeholder}{\underline{\quad}}

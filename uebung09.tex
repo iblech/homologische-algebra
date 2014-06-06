@@ -1,0 +1,100 @@
+\documentclass{uebblatt}
+
+\UseAllTwocells
+
+\begin{document}
+
+\maketitle{9}{}
+
+\begin{aufgabe}{Funktoren als verallgemeinerte monotone Abbildungen}
+Seien~$P$ und~$Q$ Quasiordnungen (oder Partialordnungen). Seien~$BP$ und~$BQ$
+die zugehörigen dünnen Kategorien, deren Objekte genau die Elemente von~$P$ bzw.~$Q$
+sind und in denen zwischen zwei Objekten genau dann ein Morphismus verläuft,
+wenn die Quelle kleinergleich dem Ziel ist.
+
+\begin{enumerate}
+\item Zeige, dass Funktoren~$BP \to BQ$ auf kanonische Art und Weise mit
+schwach monoton steigenden Abbildungen~$P \to Q$ korrespondieren.
+\item Zeige, dass zwischen zwei Funktoren~$Bf, Bg : BP \to BQ$ höchstens eine
+natürliche Transformation verlaufen kann; und dass es genau dann eine solche
+gibt, wenn für die zugehörigen monotonen Abbildungen~$f, g : P \to Q$ gilt:
+$f(x) \preceq g(x)$ für alle~$x \in P$.
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Beispiele für natürliche Transformationen}
+Sei~$\Id_\Set : \Set \to \Set$ der Identitätsfunktor auf~$\Set$, $P : \Set \to
+\Set$ der (kovariante) Potenzmengenfunktor und~$K : \Set
+\to \Set$ der Funktor
+\[ \begin{array}{@{}rrcl@{}}
+  & X &\longmapsto& X \times X \\
+  & f &\longmapsto& f \times f := ((a,b) \mapsto (f(a),f(b))).
+\end{array} \]
+\begin{enumerate}
+\item
+Zeige: Es gibt nur eine einzige natürliche Transformation $\eta : \Id_\Set
+\to \Id_\Set$, nämlich
+\[ \eta_X : X \to X,\ x \mapsto x. \]
+\item
+Zeige: Es gibt nur eine einzige natürliche Transformation $\omega : \Id_\Set
+\to K$, nämlich
+\[ \omega_X : X \to X \times X,\ x \mapsto (x,x). \]
+\emph{Tipp für a) und b):} Betrachte geeignete Abbildungen $1 \to X$, $\star
+\mapsto x$. Dabei ist~$1 = \{\star\}$ eine einelementige Menge.
+\item
+Zeige: Es gibt keine natürliche Transformation $P \to \Id_\Set$, wohl
+aber eine in die andere Richtung.
+\item Wir nehmen an, dass wir für jede nichtleere Menge~$X$ ein bestimmtes
+Element~$a_X \in X$ gegeben haben. Zeige:
+Die Setzung
+$\tau_X : X \to X,\ x \mapsto a_X$
+definiert \emph{nicht} eine natürliche Transformation~$\Id_\C \to \Id_\C$,
+wobei~$\C$ die Kategorie der nichtleeren Mengen und beliebigen Abbildungen
+bezeichnet.
+\item
+Welche natürlichen Transformationen $\Id_\C \to \Id_\C$ gibt es,
+wenn~$\C$ die Kategorie der reellen Vektorräume bezeichnet?
+\end{enumerate}
+\end{aufgabe}
+
+\newpage
+
+\begin{aufgabe}{Die 2-Kategorie der Kategorien}
+\begin{enumerate}
+\item Seien~$\eta : F \to G$ und~$\varepsilon : G \to H$ natürliche
+Transformationen zwischen Funktoren~$F,G,H : \C \to \D$. Definiere auf
+geeignete Art und Weise die \emph{vertikale Komposition}~$\varepsilon \circ
+\eta : F \to H$. Weise nach, dass deine Definition wirklich zu einer
+natürlichen Transformation führt.
+\item Sei~$\eta : F \to G$ eine natürliche Transformation zwischen
+Funktoren~$F,G : \C \to \D$ und~$\varepsilon : J \to K$ eine natürliche
+Transformation zwischen Funktoren~$J,K : \D \to \E$. Definiere auf geeignete
+Art und Weise die \emph{horizontale Komposition}~$\eta \star \varepsilon : J
+\circ F \to K \circ G$. Musst du dazu Wahlen treffen?
+\item Verifiziere für passende natürliche Transformationen folgendes
+Vertauschungsgesetz:
+\[ (\beta' \circ \beta) \star (\alpha' \circ \alpha) =
+  (\beta' \star \alpha') \circ (\beta \star \alpha) \]
+\end{enumerate}
+\[
+  \xymatrixcolsep{3pc}
+  \xymatrixrowsep{4pc}
+  \xymatrix@+=5pc{
+    \C
+    \ruppertwocell<9>^{\stackrel{F}{}}{<-2.5>_{\mbox{   } \eta}} \ar[r]|G
+    \rlowertwocell<-9>_{\stackrel{}{H}}{<2.5>^{\mbox{  }\varepsilon}} & \D &
+    \C \rtwocell<6>^F_G{\;\;\eta} &
+    \D \rtwocell<6>^J_K{\;\;\varepsilon} &
+    \E
+  }
+\]
+\end{aufgabe}
+
+\begin{aufgabe}{Überraschende Kommutativität}
+Zeige, dass die zweite Homotopiegruppe stets kommutativ ist.
+
+\emph{Diese Aufgabe wird noch ausgebaut, sodass sie etwas mit 2-Kategorien zu
+tun hat.}
+\end{aufgabe}
+
+\end{document}
