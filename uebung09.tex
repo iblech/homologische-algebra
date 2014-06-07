@@ -147,4 +147,22 @@ Teilaufgabe~c) aus~d).
 \end{enumerate}
 \end{aufgabe}
 
+\begin{aufgabe}{Eine Kategorie mit endlichen Mengen als Objekten}
+Zeige, dass folgende Setzungen eine Kategorie~$\Sigma$ definieren. Bestätige
+also das Assoziativgesetz und finde die Identitätsmorpismen.
+\begin{align*}
+  \text{Objekte: } & \text{alle endlichen Mengen} \\
+  \text{Morphismen: } &
+    \Hom(X,Y) := \bigl\{
+      \text{Abbildungen~$f : X \to Y$ zusammen mit} \\
+    & \qquad\qquad\qquad\qquad \text{
+      Totalordnungen auf den Fasern~$f^{-1}[\{y\}]$, $y \in Y$} \bigr\}
+\end{align*}
+Die Komposition soll dabei wie folgt definiert sein: Die Abbildungsteile
+verkettet man wie gewöhnlich, und auf den Fasern~$(g \circ f)^{-1}[\{z\}]$
+definiert man folgende Totalordnung: $i \preceq j$ genau dann, wenn entweder
+$f(i) \neq f(j)$ und~$f(i) \preceq f(j)$ in~$g^{-1}[\{f(i)\}]$, oder $f(i) =
+f(j)$ und~$i \preceq j$ in~$f^{-1}[\{f(i)\}]$.
+\end{aufgabe}
+
 \end{document}
