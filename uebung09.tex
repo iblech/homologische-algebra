@@ -76,6 +76,20 @@ Vertauschungsgesetz:
 \[ (\beta' \circ \beta) \star (\alpha' \circ \alpha) =
   (\beta' \star \alpha') \circ (\beta \star \alpha) \]
 \end{enumerate}
+Eine gewöhnliche Kategorie heißt auch~\emph{1-Kategorie}; eine
+\emph{strikte 2-Kategorie} ist eine Kategorie, in der die
+Hom-Mengen~$\Hom(X,Y)$ nicht nur Mengen, sondern ihrerseits (gewöhnliche
+1-)Kategorien sind, und in der die Verknüpfungsoperationen~$\Hom(Y,Z) \circ
+\Hom(X,Y) \to \Hom(X,Z)$ sogar Funktoren sind. Zur besseren Abgrenzung heißen
+die Objekte~$f \in \Hom(X,Y)$ dann~$1$-Morphismen (zwischen~$X$ und~$Y$) und die
+Morphismen~$\alpha : f \to g$ in~$\Hom(X,Y)$ dann~$2$-Morphismen (zwischen~$f$
+und~$g$).
+\begin{enumerate}
+\addtocounter{enumi}{3}
+\item
+Zeige, dass sich 1-Kategorien,
+Funktoren und natürliche Transformationen zu einer 2-Kategorie organisieren.
+\end{enumerate}
 \[
   \xymatrixcolsep{3pc}
   \xymatrixrowsep{4pc}
@@ -91,10 +105,46 @@ Vertauschungsgesetz:
 \end{aufgabe}
 
 \begin{aufgabe}{Überraschende Kommutativität}
-Zeige, dass die zweite Homotopiegruppe stets kommutativ ist.
+Die \emph{erste Homotopiegruppe}~$\pi_1(X,x_0)$ eines topologischen Raums~$X$
+mit Basispunkt~$x_0$ ist die Menge aller stetigen Abbildungen~$\gamma : [0,1]
+\to X$ mit~$\gamma(0) = \gamma(1) = x_0$, wobei zwei solche Abbildungen genau
+dann miteinander identifiziert werden, wenn sie vermöge einer
+basispunktfixierenden Abbildung~$[0,1] \times [0,1] \to X$ homotop sind.
 
-\emph{Diese Aufgabe wird noch ausgebaut, sodass sie etwas mit 2-Kategorien zu
-tun hat.}
+Die \emph{zweite Homotopiegruppe}~$\pi_2(X,x_0)$ ist
+die Menge aller stetigen Abbildungen~$H : [0,1]^2 \to X$, die den Rand des
+Einheitsquadrats auf den Basispunkt~$x_0$ abbilden, wobei zwei solche
+Abbildungen genau dann miteinander identifiziert werden,  wenn sie vermöge
+einer basispunktfixierenden Abbildung~$[0,1] \times [0,1]^2 \to X$ homotop
+sind.
+
+\begin{enumerate}
+\item Finde \emph{zwei} kanonische Gruppenstrukturen auf~$\pi_2(X,x_0)$.
+\item Beweise, dass die beiden Gruppenstrukturen dasselbe Vertauschungsgesetz
+erfüllen wie in Aufgabe~3c).
+\item Zeige, dass die beiden Gruppenstrukturen übereinstimmen und kommutativ
+sind.
+
+\emph{Tipp:} Das gilt allgemein -- zwei binäre Operationen mit neutralem
+Element, die wie in Aufgabe~3c) miteinander verträglich sind, sind tatsächlich
+gleich und kommutativ.
+
+\item Sei~$A$ ein Objekt einer~2-Kategorie~$\C$. Sei~$\id_A : A \to A$ der
+(1-)Identitätsmorphismus. Sei~$Z(A) := \End(\id_A)$ die Menge
+aller~2-Morphismen von~$\id_A$ nach~$\id_A$.
+
+Finde zwei Gruppenstrukturen auf~$Z(A)$, zeige, dass sie miteinander
+verträglich sind, und folgere daher, dass sie gleich und kommutativ sind.
+
+\item Der \emph{Fundamental-2-Gruppoid}~$\Pi_2(X)$ ist folgende 2-Kategorie:
+Die Objekte sind die Punkte von~$X$, die Morphismen sind Wege zwischen den
+Punkten und die~$2$-Morphismen zwischen Wegen~$\gamma, \gamma'$ sind
+Homotopieklassen von stetigen Abbildungen~$H : [0,1] \times [0,1] \to X$
+mit~$H(0,\cdot) = \gamma$, $H(1,\cdot) = \gamma'$.
+
+Zeige, dass $Z(x_0) = \pi_2(X,x_0)$. Folgere mit dieser Erkenntnis
+Teilaufgabe~c) aus~d).
+\end{enumerate}
 \end{aufgabe}
 
 \end{document}

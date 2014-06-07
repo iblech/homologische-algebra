@@ -106,6 +106,7 @@
 \newcommand{\bbb}{\mathfrak{b}}
 \newcommand{\ppp}{\mathfrak{p}}
 \newcommand{\qqq}{\mathfrak{q}}
+\newcommand{\End}{\mathrm{End}}
 \newcommand{\Hom}{\mathrm{Hom}}
 \newcommand{\HOM}{\mathcal{H}\mathrm{om}}
 \newcommand{\id}{\mathrm{id}}
