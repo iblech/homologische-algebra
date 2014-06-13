@@ -126,6 +126,7 @@
 \newcommand{\Top}{\mathrm{Top}}
 \newcommand{\op}{\mathrm{op}}
 \newcommand{\pr}{\mathrm{pr}}
+\newcommand{\rMod}[1]{\mathrm{Mod}\text{-}#1}
 \DeclareMathOperator{\sk}{sk}
 \DeclareMathOperator{\Tr}{Tr}
 \DeclareMathOperator{\Spec}{Spec}
