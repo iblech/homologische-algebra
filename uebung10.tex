@@ -1,0 +1,115 @@
+\documentclass{uebblatt}
+
+\begin{document}
+
+\maketitle{10}{}
+
+\begin{aufgabe}{Ein konkretes Modell für endlich-dimensionale Vektorräume}
+Sei~$k$ ein Körper. Sei~$\C$ die Kategorie mit
+\begin{align*}
+  \Ob \C &:= \NN, \\
+  \Hom_\C(n, m) &:= k^{m \times n},
+\end{align*}
+wobei die Morphismenverkettung durch die Matrixmultiplikation gegeben ist.
+\begin{enumerate}
+\item Zeige, dass die Kategorie~$\C$ (auf unkanonische Art und Weise) zur Kategorie der
+endlich-dimensionalen~$k$-Vektorräume äquivalent ist.
+
+\emph{Tipp:} Wähle für jeden endlich-dim. Vektorraum~$V$ einen Iso
+$\eta_V : k^{\dim V} \to V$.
+\item Zeige, dass~$\C^\op$ auf kanonische Art und Weise äquivalent zu~$\C$ ist. (Das ist etwas
+Besonderes!)
+\item Zeige, dass die Kategorie der endlich-dimensionalen~$k$-Vektorräume
+\emph{auf kanonische Art und Weise} zu ihrer dualen Kategorie äquivalent ist.
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Kategorielle Eigenschaften}
+Es gibt folgendes Motto: Sei~$\varphi$ eine mathematische Aussage über Kategorien, die
+sich nur unter Verwendung der Konzepte \emph{Objekt}, \emph{Morphismus},
+\emph{Verkettung von Morphismen} und \emph{Gleichheit von Morphismen}
+formulieren lässt. Sind dann~$\C$ und~$\D$ zueinander äquivalente Kategorien,
+so gilt~$\varphi$ genau dann in~$\C$, wenn~$\varphi$ in~$\D$ gilt.
+Beispiele für Aussagen dieser Art sind etwa:
+\begin{itemize}
+\item Die Kategorie besitzt ein initiales Objekt (das ist ein Objekt~$0$,
+sodass es zu jedem Objekt~$X$ genau ein Morphismus~$0 \to X$ gibt).
+\item Je zwei parallele Morphismen sind gleich.
+\item Je zwei Endomorphismen eines Objekts vertauschen miteinander.
+\item Jedes initiale Objekt ist auch terminal.
+\end{itemize}
+Beispiele für Aussagen, die über die Reichweite des Mottos hinausgehen, sind:
+\begin{itemize}
+\item Die Kategorie besitzt genau ein Objekt.
+\item Die Kategorie besitzt genau ein initiales Objekt.
+\item Sind zwei Objekte zueinander isomorph, so sind sie schon gleich.
+\item Je zwei Morphismen (egal zwischen welchen Objekten) sind gleich.
+\end{itemize}
+
+\begin{enumerate}
+\item Mache dir klar, wieso das Motto gilt.
+\item Anna und ihre Freundin Emma haben die Vermutung, dass die folgenden
+Kategorien paarweise nicht zueinander äquivalent sind. Jemand ruft ihnen zu:
+\emph{Mit Teilaufgabe~a) ist der Nachweis einfach!}, nickt und fliegt davon. Kannst du ihnen
+helfen?
+\[ \mathrm{Set} \quad
+  \mathrm{Set}^\op \quad
+  \mathrm{Vect}(\RR) \quad
+  \mathrm{Ring} \quad
+  \mathrm{Top} \quad
+  \mathrm{Man} \quad
+  \mathrm{Sh}(\RR^7) \quad
+  B\ZZ \quad
+  \mathrm{Hask}
+\]
+\item Was war passiert?
+\end{enumerate}
+\end{aufgabe}
+\newpage
+
+\begin{aufgabe}{Volltreue Funktoren}
+\begin{enumerate}
+\item Sei~$f : P \to Q$ eine monotone Abbildung zwischen Quasiordnungen. Wann
+ist~$Bf : BP \to BQ$ treu? Wann voll? Wann wesentlich surjektiv?
+\item Sei~$F : \C \to \D$ ein volltreuer Funktor. Zeige, dass~$F$ eine Äquivalenz
+zwischen~$\C$ und einer gewissen vollen Unterkategorie von~$\D$ (welcher?)
+induziert.
+\item Sei~$F : \C \to \D$ ein volltreuer und wesentlich surjektiver Funktor.
+Wenn wir ein genügend starkes Auswahlprinzip zur Verfügung haben, können wir zu
+jedem Objekt~$Y \in \D$ ein Objekt~$X_Y \in \C$ und einen
+Iso~$g_Y : F(X_Y) \to Y$ wählen.
+
+Erkläre, wie die Zuordnung~$Y \mapsto X_Y$ einen Funktor definiert. Weise die
+Funk\-tor\-ei\-gen\-schaft explizit nach. Zeige ferner, dass es einen natürlichen
+Isomorphismus~$G \circ F \to \Id_\C$ gibt.
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Quotientenkategorien}
+Sei~$\C$ eine Kategorie. Seien für je zwei Objekte~$X,Y \in \C$ eine
+Äquivalenzrelation~$\sim_{X,Y}$ auf~$\Hom_\C(X,Y)$ gegeben.
+\begin{enumerate}
+\item Konstruiere eine Kategorie~$\C/{\sim}$ zusammen mit einem Funktor~$Q : \C
+\to \C/{\sim}$ mit folgender universeller Eigenschaft:
+\begin{itemize}
+\item Wenn~$f \sim_{X,Y} \tilde f$ in~$\C$, dann~$Q(f) = Q(\tilde f)$ in~$\C/{\sim}$.
+\item Ist~$F : \C \to \D$ ein Funktor, der wie~$Q$ äquivalente Morphismen auf gleiche
+schickt, so gibt es genau einen Funktor~$G : \C/{\sim} \to \D$ mit~$F = G \circ
+Q$.
+\end{itemize}
+
+\emph{Tipp:} Nimm zunächst an, dass für alle passenden Morphismen~$f,a,b$
+aus~$f \sim_{X,Y} \tilde f$ schon~$afb \sim_{X',Y'} a\tilde fb$ folgt.
+
+\item Was ist an Teilaufgabe~a) inhaltlich schlecht formuliert?
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Morita-Äquivalenz}
+Ein Objekt~$X$ einer Kategorie~$\C$ heißt genau dann \emph{Erzeuger}, wenn der
+Funktor~$\Hom_\C(X, \placeholder) : \C \to \Set$ volltreu ist.
+
+\emph{Rest folgt in Kürze.}
+\end{aufgabe}
+
+\end{document}
