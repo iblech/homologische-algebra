@@ -1,0 +1,114 @@
+\documentclass{uebblatt}
+
+\begin{document}
+
+\maketitle{11}{}
+
+\begin{aufgabe}{Basiswissen zu Gruppoiden}
+Ein \emph{Gruppoid} ist eine Kategorie, in der alle Morphismen invertierbar
+sind.
+\begin{enumerate}
+\item Erkläre, wie man aus einer Gruppe~$G$ einen Gruppoid~$BG$ mit genau einem Objekt
+machen kann.
+\item Verstehe, inwieweit Gruppoide mit genau einem Objekt dasselbe wie Gruppen
+sind.
+\item Erläutere, inwieweit eine~$G$-Menge dasselbe ist wie ein Funktor~$BG \to
+\Set$.
+\item Finde (neben dem Fundamentalgruppoid aus der nächsten Aufgabe) natürliche
+Beispiele für Gruppoide mit mehr als einem Objekt.
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Überlagerungen und Darstellungen des Fundamentalgruppoids}
+%Die \emph{triviale Überlagerung mit Faser~$F$} eines topologischen Raums~$X$
+%ist der Produktraum~$X \times F$ zusammen mit der Projektionsabbildung~$X
+%\times F \to X$. Dabei wird~$F$ mit der diskreten Topologie versehen.
+%
+%Eine \emph{Überlagerung} eines topologischen Raums~$X$ ist ein Raum~$Y$
+%zusammen mit einem lokalen Homöomorphismus~$\pi : Y \to X$, der \emph{lokal
+%trivial} ist, das heißt eine offene Überdeckung~$X = \bigcup_i U_i$ zulässt,
+%sodass~$\pi^{-1}[U_i] \to U_i$ als stetige Abbildung über~$U_i$ isomorph zu
+%einer trivialen Überlagerung von~$U_i$ ist (das bedeutet, dass der
+%Homöomorphismus~$\pi^{-1}[U_i] \to U_i \times F$ mit~$\pi$ und der kanonischen
+%Projektionsabbildung verträglich sein soll).
+Der \emph{Fundamentalgruppoid}~$\Pi_1(X)$ eines topologischen Raums~$X$ hat als
+Objekte die Punkte von~$X$ und als Morphismen von~$x$ zu~$y$ Homotopieklassen
+von Wegen von~$x$ nach~$y$ (wobei Homotopien die Endpunkte bewahren müssen).
+Als~1-Kategorie ist er eine Approximation des Fundamental-2-Gruppoids von~$X$
+(welcher wiederum eine Approximation des Fundamental-$\infty$-Gruppoids ist).
+\begin{enumerate}
+\item Sei~$x_0 \in X$. Mache dir klar, dass~$\End_{\Pi_1(X)}(x_0) \cong
+\pi_1(X,x_0)$ als Gruppen.
+\item Sei~$\pi : Y \to X$ eine Überlagerung. Dann erhält man eine
+\emph{mengenwertigen Darstellung von~$\Pi_1(X)$}, das heißt einen
+Funktor~$\Pi_1(X) \to \Set$. Auf Objektniveau ist dieser durch die Setzung~$x
+\mapsto \pi^{-1}[\{x\}]$ gegeben.
+
+Erkläre, wie dieser auf Morphismenniveau spezifiert werden soll. Weise
+insbesondere die Wohldefiniertheit deiner Setzung nach.
+
+\emph{Tipp:} Es gibt ein Lemma über die eindeutige Liftbarkeit von Wegen.
+\end{enumerate}
+Wenn~$X$ lokal wegweise zusammenhängend und semi-lokal einfach
+zusammenhängend ist, ist die Kategorie der Überlagerungen von~$X$
+äquivalent zur Kategorie der mengenwertigen Darstellungen
+von~$\Pi_1(X)$. Diese Kategorienäquivalent verfeinert die in der Vorlesung
+angesprochene Äquivalenz zwischen Überlagerungen und~$\pi_1(X,x_0)$-Mengen, die
+die eine Basispunktwahl erfordert und nur funktioniert, wenn~$X$ wegweise
+zusammenhängend ist.
+\begin{enumerate}
+\addtocounter{enumi}{2}
+\item Verifiziere so viele Details dieser Äquivalenz oder der Äquivalenz der
+Vorlesung, wie du möchtest. Interessant ist insbesondere folgender Aspekt:
+
+Sei~$\widetilde X$ die \emph{universelle Überlagerung} von~$X$ bezüglich eines
+Basispunkts~$x_0$. Die Punkte von~$\widetilde X$ sind Homotopieklassen von
+Wegen, deren Anfangspunkt~$x_0$ und deren Endpunkt beliebig ist. (Die
+Homotopien müssen Anfangs- und Endpunkt bewahren.) Topologisiert wird~$\widetilde X$
+als Quotientenraum eines Unterraums des Raums der Abbildungen~$[0,1] \to X$;
+dieser trägt die Kompakt-Offen-Topologie. Es gibt eine kanonische stetige
+Abbildung~$\pi : \widetilde X \to X$, die der Äquivalenzklasse eines Wegs ihren
+Endpunkt zuordnet.
+
+Sei dann ein beliebiger bei~$x_0$ beginnender Weg~$\gamma$ in~$X$ und
+ein Urbild~$z$ von~$x_0$ unter~$\pi$ gegeben. Dann gibt es einen \emph{Lift}
+von~$\gamma$ auf~$\widetilde X$, das heißt einen Weg~$\widetilde\gamma$
+in~$\widetilde X$ mit~$\widetilde\gamma(0) = z$ und~$\pi \circ \widetilde\gamma
+= \gamma$.
+
+\emph{Hinweis:} Mit Notation aus Homotopietyptheorie macht der Beweis mehr
+Spaß.
+\item Sei konkret~$X = \CC \setminus \{0\}$ und~$Y \to X$ der Totalraum der
+Garbe
+\[ U \subseteq X \longmapsto \{ y \in \Gamma(U,\O_X) \,|\,
+  \text{$y'(z) = \tfrac{1}{2z} y(z)$ für alle~$z \in U$} \}. \]
+Da diese Garbe lokal konstant ist, ist~$Y \to X$ eine Überlagerung und
+induziert damit eine Darstellung von~$\Pi_1(X)$.
+
+Zeige: Die Wirkung dieser Darstellung auf einer Schleife in~$X$, die sich genau
+einmal um den Ursprung windet, ist die Abbildung~$[y] \mapsto [-y]$.
+\end{enumerate}
+\end{aufgabe}
+% Gute Referenz: http://www.math.ku.dk/~moller/f03/algtop/notes/covering.pdf
+
+\begin{aufgabe}{Ideale in Banachalgebren}
+Sei~$\aaa \subseteq A$ ein Ideal in einer Banachalgebra~$A$. Zeige, dass der
+topologische Abschluss von~$\aaa$ wieder ein Ideal ist. Folgere, dass maximale
+Ideale in Banachalgebren stets abgeschlossen sind.
+
+\emph{Bemerkung:} Die Äquivalenz
+zwischen~C\textsuperscript{*}\kern-.1ex-Alge\-bren und kompakten
+Hausdorffräumen benötigt das Auswahlaxiom. Eine Verfeinerung dieser Äquivalenz
+gilt aber auch konstruktiv: C\textsuperscript{*}\kern-.1ex-Alge\-bren sind
+äquivalent zu vollständig regulären \emph{Örtlichkeiten}. Dieses Resultat
+findet Anwendung in der Theorie der \emph{Bohr-Topoi} zu
+quantenmechanischen Systemen.
+\end{aufgabe}
+
+\begin{aufgabe}{Pontrjagin-Dualität}
+\end{aufgabe}
+
+\begin{aufgabe}{Absolute Galoisgruppe ohne Abschlusswahl}
+\end{aufgabe}
+
+\end{document}
