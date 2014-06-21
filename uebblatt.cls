@@ -111,7 +111,7 @@
 \newcommand{\HOM}{\mathcal{H}\mathrm{om}}
 \newcommand{\id}{\mathrm{id}}
 \newcommand{\Id}{\mathrm{Id}}
-\newcommand{\Aut}[1]{\operatorname{Aut}(#1)}
+\newcommand{\Aut}{\mathrm{Aut}}
 \newcommand{\GL}{\mathrm{GL}}
 \newcommand{\placeholder}{\underline{\quad}}
 \newcommand{\ul}[1]{\underline{#1}}
