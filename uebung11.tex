@@ -6,26 +6,82 @@
 
 \begin{aufgabe}{Basiswissen zu Gruppoiden}
 Ein \emph{Gruppoid} ist eine Kategorie, in der alle Morphismen invertierbar
-sind.
+sind. Man stellt sich einen Gruppoid wie eine Gruppe vor, mit der
+Einschränkung, dass nicht je
+zwei Elemente miteinander verknüpfbar sind.
 \begin{enumerate}
 \item Erkläre, wie man aus einer Gruppe~$G$ einen Gruppoid~$BG$ mit genau einem Objekt
 machen kann.
 \item Verstehe, inwieweit Gruppoide mit genau einem Objekt dasselbe wie Gruppen
 sind.
-\item Erläutere, inwieweit eine~$G$-Menge dasselbe ist wie ein Funktor~$BG \to
+\item Seien~$x$ und~$y$ zwei isomorphe Objekte eines Gruppoids~$X$. Welche
+Beziehung besteht zwischen den Automorphismengruppen~$\Aut_X(x)$ und~$\Aut_X(y)$?
+\item Sei~$G$ eine Gruppe. Erläutere, inwieweit eine~$G$-Menge dasselbe ist wie ein Funktor~$BG \to
 \Set$.
-\item Finde (neben dem Fundamentalgruppoid aus der nächsten Aufgabe) natürliche
-Beispiele für Gruppoide mit mehr als einem Objekt.
+\item Finde natürliche Beispiele für Gruppoide mit mehr als einem Objekt.
 \end{enumerate}
-Die \emph{Kardinalität} eines Gruppoids~$X$ ist die reelle Zahl~$|X| =
+Eine \emph{mengenwertige Darstellung} eines Gruppoids~$X$ ist ein Funktor~$X
+\to \Set$. Die \emph{Kardinalität} eines Gruppoids~$X$ ist die reelle Zahl~$|X| =
 \sum_{[x]} \frac{1}{|\Aut_X(x)|}$ (im Falle der Konvergenz). Die Summe geht
 über alle Isomorphieklassen von Objekten von~$X$.
 \begin{enumerate}
-\addtocounter{enumi}{4}
+\addtocounter{enumi}{5}
 \item Was ist die Kardinalität des Gruppoids der endlichen Mengen und
 Bijektionen?
 \item Inwieweit verallgemeinert die Gruppoidkardinalität die Kardinalität von
 Mengen?
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Absolute Galoisgruppe ohne Abschlusswahl}
+Die \emph{absolute Galoisgruppe} eines Körpers~$k$ ist die Galoisgruppe eines
+separablen Abschlusses~$k^\mathrm{sep}$ über~$k$, also die Gruppe der
+Isomorphismen~$k^\mathrm{sep} \to k^\mathrm{sep}$ von~$k$-Algebren. Allerdings
+ist der separable Abschluss nur bis auf \emph{uneindeutige} Isomorphie
+bestimmt. Das führt dazu, dass die absolute Galoisgruppe nur \emph{bis auf
+Konjugation} wohldefiniert ist.
+
+\begin{enumerate}
+\item Definiere auf geeignete Art und Weise den \emph{absoluten Galoisgruppoid}
+eines Körpers~$k$. Dabei sollen keine Wahlen getroffen werden.
+% Seine Objekte sollen schlichtweg \emph{alle} separablen
+% Abschlüsse sein -- auf diese Weise wird die Wahl vermieden.
+\item Definiere einen Funktor von der dualen Kategorie der~$k$-Algebren in die
+Kategorie der mengenwertigen Darstellungen des absoluten Galoisgruppoids von~$k$.
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Ideale in Banachalgebren}
+Sei~$\aaa \subseteq A$ ein Ideal in einer Banachalgebra~$A$. Zeige, dass der
+topologische Abschluss von~$\aaa$ wieder ein Ideal ist. Folgere, dass maximale
+Ideale in Banachalgebren stets abgeschlossen sind.
+
+\emph{Bemerkung:} Die Äquivalenz
+zwischen~C\textsuperscript{*}\kern-.1ex-Alge\-bren und kompakten
+Hausdorffräumen benötigt das Auswahlaxiom. Eine Verfeinerung dieser Äquivalenz
+gilt aber auch konstruktiv: C\textsuperscript{*}\kern-.1ex-Alge\-bren sind
+äquivalent zu vollständig regulären \emph{Örtlichkeiten}. Dieses Resultat
+findet Anwendung in der Theorie der \emph{Bohr-Topoi} zu
+quantenmechanischen Systemen.
+\end{aufgabe}
+
+\begin{aufgabe}{Produkte in Kategorien}
+Ein \emph{Möchtegernprodukt} zweier Objekte~$X$ und~$Y$ einer Kategorie~$\C$ ist ein
+Objekt~$P$ zusammen mit Morphismen~$\pi_X : P \to X$, $\pi_Y : P \to Y$. Ein
+\emph{Produkt} von~$X$ und~$Y$ ist ein Möchtegernprodukt, sodass für jedes
+Möchtegernprodukt~$X \leftarrow \widetilde P \to Y$ genau ein Morphismus~$\widetilde
+P \to P$ existiert, der die beiden offensichtlichen Dreiecke kommutieren lässt.
+\begin{enumerate}
+\item Beweise, dass ein Produkt~$P$ von~$X$ und~$Y$ den Funktor~$\C^\op \to
+\Set$,
+\[ U \longmapsto \Hom_\C(U,X) \times \Hom_C(U,Y) \]
+darstellt. (Die Umkehrung stimmt ebenfalls und wurde in der Vorlesung bewiesen.)
+
+\item Überlege, wie man das Konzept eines Produkts von drei Objekten definieren
+sollte. Zeige, dass wenn ein Produkt~$X \times Y$ von Objekten~$X$ und~$Y$
+in einer Kategorie~$\C$ existiert, und wenn ferner ein Produkt~$(X \times Y)
+\times Z$ mit einem dritten Objekt~$Z$ existiert, dieses in kanonischerweise zu
+einem Produkt von~$X,Y,Z$ wird.
 \end{enumerate}
 \end{aufgabe}
 
@@ -101,24 +157,32 @@ einmal um den Ursprung windet, ist die Abbildung~$[y] \mapsto [-y]$.
 \end{aufgabe}
 % Gute Referenz: http://www.math.ku.dk/~moller/f03/algtop/notes/covering.pdf
 
-\begin{aufgabe}{Ideale in Banachalgebren}
-Sei~$\aaa \subseteq A$ ein Ideal in einer Banachalgebra~$A$. Zeige, dass der
-topologische Abschluss von~$\aaa$ wieder ein Ideal ist. Folgere, dass maximale
-Ideale in Banachalgebren stets abgeschlossen sind.
-
-\emph{Bemerkung:} Die Äquivalenz
-zwischen~C\textsuperscript{*}\kern-.1ex-Alge\-bren und kompakten
-Hausdorffräumen benötigt das Auswahlaxiom. Eine Verfeinerung dieser Äquivalenz
-gilt aber auch konstruktiv: C\textsuperscript{*}\kern-.1ex-Alge\-bren sind
-äquivalent zu vollständig regulären \emph{Örtlichkeiten}. Dieses Resultat
-findet Anwendung in der Theorie der \emph{Bohr-Topoi} zu
-quantenmechanischen Systemen.
-\end{aufgabe}
-
 \begin{aufgabe}{Pontrjagin-Dualität}
-\end{aufgabe}
+Die \emph{duale Gruppe}~$G^\vee$ einer lokal kompakten topologischen abelschen
+Gruppe~$G$ ist die Menge aller \emph{Charaktere} von~$G$, also die Menge aller
+stetigen Gruppenhomomorphismen~$G \to S^1$, versehen mit der punktweisen
+Gruppenstruktur und der Topologie gleichmäßiger Konvergenz auf Kompakta.
+Dabei ist~$S^1$ die Menge der komplexen Zahlen mit Betrag~1, versehen mit der
+Multiplikation als Gruppenstruktur und der Teilraumtopologie von~$\CC$.
 
-\begin{aufgabe}{Absolute Galoisgruppe ohne Abschlusswahl}
+\begin{enumerate}
+\item Zeige: $\ZZ^\vee \cong S^1$.
+\item Zeige: $\RR^\vee \cong \RR$.
+\end{enumerate}
+
+Zu lokal kompakten abelschen Gruppen existiert eine gute
+Theorie über Fouriertransformationen. Ist~$f : A \to \CC$ eine komplexwertige
+Funktion genügender Regularität auf einer solchen Gruppe~$A$, so ist die
+Fouriertransformierte~$\hat f : A^\vee \to \CC$ die Funktion mit
+\[ \hat f(\chi) = \int_A f(x) \overline{\chi(x)} \,d\mu(x). \]
+Die Integration findet bezüglich eines \emph{Haar-Maßes} auf~$A$ statt.
+
+\begin{enumerate}
+\addtocounter{enumi}{2}
+\item Zeige, dass die so definierte Fouriertransformation im Fall~$A = \RR$ mit
+der üblichen Fouriertransformation übereinstimmt. Verwende als
+Haar-Maß das gewöhnliche Lebesgue-Maß.
+\end{enumerate}
 \end{aufgabe}
 
 \end{document}
