@@ -1,0 +1,67 @@
+\documentclass{uebblatt}
+\usepackage{multicol}
+
+\begin{document}
+
+\maketitle{12}{}
+
+\begin{aufgabe}{Freie Konstruktionen}
+Sei~$\C$ eine Kategorie algebraischer Strukturen (etwa~$\C = \mathrm{Ring}$
+oder~$\C = \mathrm{Mod}(R)$). Anschaulich stellt man sich das von den Elementen
+einer gewissen Menge~$M$ \emph{frei erzeugte Objekt}~$L(M)$ in~$\C$ wie folgt
+vor: Man beginnt mit den Elementen aus~$M$ und fügt all solche Ausdrücke hinzu,
+dass~$L(M)$ zu einem Objekt von~$\C$ wird (etwa Summen und Produkte im Fall~$\C
+= \mathrm{Ring}$). Dabei nimmt man nur solche Identifikationen vor, die von den
+Axiomen gefordert werden (etwa das Assoziativgesetz). Die Zuordnung~$M \mapsto
+L(M)$ definiert dann einen Funktor~$\Set \to \C$, welcher \emph{linksadjungiert
+zum Vergissfunktor} $V : \C \to \Set$ ist.
+
+\begin{enumerate}
+\item Erkläre, inwieweit die Adjunktionsbeziehung~$L \dashv V$ die anschauliche
+Vorstellung kodiert. (Diese Frage hat eine präzise Antwort.)
+\item Bestimme für die folgenden Vergissfunktoren Linksadjungierte.
+\begin{multicols}{2}
+\renewcommand{\theenumii}{\arabic{enumii}}
+\begin{enumerate}
+\item $\mathrm{Mod}(R) \to \Set$
+\item $\mathrm{Mon} \to \Set$
+\item $\mathrm{Grp} \to \Set$
+\item $\mathrm{Ring} \to \Set$
+\item $\mathrm{Top} \to \Set$
+\item $\mathrm{sSet} \to \Set$
+\item $\mathrm{Ab} \to \mathrm{Grp}$
+\item $\mathrm{Mod}(R) \to \mathrm{Ab}$
+\item $\mathrm{Alg}(R) \to \mathrm{Mod}(R)$
+\item $\mathrm{Met}_\mathrm{complete} \to \mathrm{Met}$
+\item $\mathrm{Alg}(k) \to \mathrm{LieAlg}(k)$
+\item $\mathrm{sSet} \to \text{semi-sSet}$
+\end{enumerate}
+\end{multicols}
+Dabei ist~$\mathrm{Mon}$ die Kategorie der Monoide,~$\mathrm{Alg}(R)$ die Kategorie
+der~$R$-Algebren,~$\mathrm{Met}_\mathrm{complete}$ die Kategorie der
+vollständigen metrischen
+Räume und gleichmäßig stetigen Abbildungen und~$\text{semi-sSet}$ die
+Kategorie der Verklebedaten. Findest du zum Vergissfunktor~$\mathrm{Top} \to
+\Set$ auch einen \emph{Rechts}adjungierten?
+\end{enumerate}
+\end{aufgabe}
+
+Noch zu \TeX{}en:
+
+\begin{verbatim}Berechnung vom Cartier-Dual der affinen Gruppe über k der n-ten
+Einheitswurzeln: \Spec k[x]/(x^n - 1), wobei k ein beliebiger (kommutativer)
+Grundring ist.
+
+II.3.20: Beweise die universelle Eigenschaft des im Beweis konstruierten
+Objektes X.
+
+II.3.24: Zeige (II.16), nämlich, daß F -> FGF -> F und G -> GFG -> G
+Identitäten sind.
+
+Adjunktionsverhältnisse zwischen Aufrundung und Abrundung
+
+Ansonsten noch Aufgabe 2., 3. und 8.
+Aufgabe 10. ist außerdem ein nettes konkretes Beispiel.
+\end{verbatim}
+
+\end{document}
