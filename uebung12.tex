@@ -5,19 +5,36 @@
 
 \maketitle{12}{}
 
+\begin{aufgabe}{Limiten zyklischer Gruppen}
+Sei~$\NN$ mit der Teilbarkeitsordnung versehen. Zeige, dass
+der Kolimes~$\colim_{n \in \NN} \ZZ/(n)$ die Faktorgruppe~$\QQ/\ZZ$ ist. Die
+Diagrammabbildungen~$\ZZ/(n) \to \ZZ/(m)$ sind dabei durch (in~$\ZZ$ zu
+berechnende) Multiplikation mit~$m/n$ gegeben.
+\end{aufgabe}
+
+\begin{aufgabe}{Existenzkriterium für endliche Limiten}
+Sei~$\C$ eine Kategorie, in der es folgende spezielle endliche Limiten gibt:
+ein terminales Objekt, Produkte von je zwei Objekten und Differenzkerne
+(Equalizer) von je zwei parallelen Morphismen. Zeige, dass es in~$\C$
+dann schon alle endlichen Limiten gibt.
+
+\emph{Hinweis:} Es ist nur noch die universelle Eigenschaft des im Beweis der
+Vorlesung konstruierten Objekts~$X$ nachzuweisen.
+\end{aufgabe}
+
 \begin{aufgabe}{Freie Konstruktionen}
 Sei~$\C$ eine Kategorie algebraischer Strukturen (etwa~$\C = \mathrm{Ring}$
 oder~$\C = \mathrm{Mod}(R)$). Anschaulich stellt man sich das von den Elementen
 einer gewissen Menge~$M$ \emph{frei erzeugte Objekt}~$L(M)$ in~$\C$ wie folgt
 vor: Man beginnt mit den Elementen aus~$M$ und fügt all solche Ausdrücke hinzu,
-dass~$L(M)$ zu einem Objekt von~$\C$ wird (etwa Summen und Produkte im Fall~$\C
+damit~$L(M)$ zu einem Objekt von~$\C$ wird (etwa Summen und Produkte im Fall~$\C
 = \mathrm{Ring}$). Dabei nimmt man nur solche Identifikationen vor, die von den
-Axiomen gefordert werden (etwa das Assoziativgesetz). Die Zuordnung~$M \mapsto
+Axiomen gefordert werden (etwa dem Assoziativgesetz). Die Zuordnung~$M \mapsto
 L(M)$ definiert dann einen Funktor~$\Set \to \C$, welcher \emph{linksadjungiert
 zum Vergissfunktor} $V : \C \to \Set$ ist.
 
 \begin{enumerate}
-\item Erkläre, inwieweit die Adjunktionsbeziehung~$L \dashv V$ die anschauliche
+\item Erkläre, inwieweit die Adjunktionsbeziehung~$L \dashv V$ obige anschauliche
 Vorstellung kodiert. (Diese Frage hat eine präzise Antwort.)
 \item Bestimme für die folgenden Vergissfunktoren Linksadjungierte.
 \begin{multicols}{2}
@@ -38,7 +55,7 @@ Vorstellung kodiert. (Diese Frage hat eine präzise Antwort.)
 \end{enumerate}
 \end{multicols}
 Dabei ist~$\mathrm{Mon}$ die Kategorie der Monoide,~$\mathrm{Alg}(R)$ die Kategorie
-der~$R$-Algebren,~$\mathrm{Met}_\mathrm{complete}$ die Kategorie der
+der~$R$-Algebren, $\mathrm{Met}_\mathrm{complete}$ die Kategorie der
 vollständigen metrischen
 Räume und gleichmäßig stetigen Abbildungen und~$\text{semi-sSet}$ die
 Kategorie der Verklebedaten. Findest du zum Vergissfunktor~$\mathrm{Top} \to
@@ -46,22 +63,100 @@ Kategorie der Verklebedaten. Findest du zum Vergissfunktor~$\mathrm{Top} \to
 \end{enumerate}
 \end{aufgabe}
 
-Noch zu \TeX{}en:
+\newpage
+\begin{aufgabe}{Globale Charakterisierung von Limes und Kolimes}
+Sei~$I$ eine Indexkategorie. Sei~$\C$ eine Kategorie, in der alle~$\I$-förmigen
+Limiten existieren. Der \emph{Diagonalfunktor}~$\Delta : \C \to
+[\I,\C]$ schickt ein Objekt~$X$ auf den konstanten Funktor bei~$X$ (dieser
+schickt jedes Objekt auf~$X$ und jeden Morphismus auf~$\id_X$). Dabei
+ist~$[\I,\C]$ die Kategorie der Funktoren~$\I \to \C$.
+\begin{enumerate}
+\item Sei für jedes Diagramm~$F \in [\I,\C]$ ein Limes~$\lim F \in \C$ gewählt.
+Definiere damit einen Funktor~$\lim : [\I,\C] \to \C$, der jedem Diagramm
+seinen Limes zuordnet. Wie wirkt er auf Morphismen? Wieso sind die
+Funktoraxiome erfüllt?
+\item Zeige: $\Delta \dashv \lim$.
+\item Formuliere und beweise mit wenig Aufwand die duale Behauptung
+über Kolimiten.
+\end{enumerate}
+\end{aufgabe}
 
-\begin{verbatim}Berechnung vom Cartier-Dual der affinen Gruppe über k der n-ten
-Einheitswurzeln: \Spec k[x]/(x^n - 1), wobei k ein beliebiger (kommutativer)
-Grundring ist.
+\begin{aufgabe}{Aufrundung und Abrundung}
+Wir betrachten die drei monotonen Abbildungen
+\[ \begin{array}{@{}rrclrcl@{}}
+  \lceil\smallplaceholder\rceil: & \QQ &\longrightarrow& \ZZ, &
+  x &\longmapsto& \text{Aufrundung von~$x$ := (kleinste ganze Zahl~$\geq x$)} \\
+  i: & \ZZ &\longrightarrow& \QQ, &
+  z &\longmapsto& z \\
+  \lfloor\smallplaceholder\rfloor: & \QQ &\longrightarrow& \ZZ, &
+  x &\longmapsto& \text{Abrundung von~$x$ := (größte ganze Zahl~$\leq x$)}
+\end{array} \]
+und die induzierten Funktoren zwischen~$B\QQ$ und~$B\ZZ$.
+Zeige:
+$B\lceil\smallplaceholder\rceil \dashv Bi \dashv B\lfloor\smallplaceholder\rfloor$.
+\end{aufgabe}
 
-II.3.20: Beweise die universelle Eigenschaft des im Beweis konstruierten
-Objektes X.
+\begin{aufgabe}{Allquantifikation, Rückzug und Existenzquantifikation}
+Eine Abbildung~$f : X \to Y$ zwischen Mengen induziert in kanonischer Art und
+Weise drei monotone Abbildungen zwischen den Potenzmengen.
+Zeige: $B\exists_f \dashv Bf^{-1} \dashv B\forall_f$.
+\[ \begin{array}{@{}rr@{\ }c@{\ }lr@{\ }c@{\ }l@{}}
+  \exists_f : & \P(X) &\longrightarrow& \P(Y), &
+    U &\longmapsto& \exists_f(U) := f[U] = \{ y \in Y \ |\ \exists x \in
+    X{:}\ y = f(x) \wedge x \in U \} \\[0.5em]
+  f^{-1} : & \P(Y) &\longrightarrow& \P(X), &
+    V &\longmapsto& f^{-1}[V] \\[0.5em]
+  \forall_f : & \P(X) &\longrightarrow& \P(Y), &
+    W &\longmapsto& \forall_f(W) := \{ y \in Y \ |\ \forall x \in X{:}\
+      y = f(x) \Rightarrow x \in W \}
+\end{array} \]
+\vspace{-1em}
+\end{aufgabe}
 
-II.3.24: Zeige (II.16), nämlich, daß F -> FGF -> F und G -> GFG -> G
-Identitäten sind.
+\begin{aufgabe}{Lineares Currying}
+Seien~$R$ und~$S$ Ringe (mit Eins).
+Sei~$M$ ein~$R$-$S$-Bimodul. Zeige:
+\[ \left(\begin{array}{@{}rcl@{}}
+  \lMod{S} &\longrightarrow& \lMod{R} \\
+  V &\longmapsto& M \otimes_S V
+\end{array}\right)\ \text{\huge$\dashv$}\ \left(\begin{array}{@{}rcl@{}}
+  \lMod{R} &\longrightarrow& \lMod{S} \\
+  W &\longmapsto& \Hom_R(M,W)
+\end{array}\right) \]
+\vspace{-1em}
+\end{aufgabe}
 
-Adjunktionsverhältnisse zwischen Aufrundung und Abrundung
+\begin{aufgabe}{Die Dreiecksidentitäten von Adjunktionen}
+Sei~$F \dashv G$ ein Paar adjungierter Funktoren. Zeige, dass zwischen
+der \emph{Eins} $\eta : \Id \to G \circ F$ und der \emph{Koeins} $\varepsilon :
+F \circ G \to \Id$ folgende Beziehungen bestehen:
+\[
+  \xymatrix{
+    G \ar[rd]_{\eta_{G(\smallplaceholder)}} \ar[rr]^{\id} &&
+    G \\
+    & GFG \ar[ru]_{G \eta}
+  }
+  \qquad
+  \xymatrix{
+    F \ar[rd]_{F \eta} \ar[rr]^{\id} &&
+    F \\
+    & FGF \ar[ru]_{\eta_{F(\smallplaceholder)}}
+  }
+\]
+\vspace{-1em}
+\end{aufgabe}
 
-Ansonsten noch Aufgabe 2., 3. und 8.
-Aufgabe 10. ist außerdem ein nettes konkretes Beispiel.
-\end{verbatim}
+\begin{aufgabe}{Ein Beispiel für Cartier-Dualität}
+Sei~$k$ ein kommutativer Grundring und~$A = k[X]/(X^n - 1)$. Anschaulich
+ist~$A$ die Algebra der Funktionen auf dem Unterschema der~$n$-ten
+Einheitswurzeln in~$\AA^1_k$ (unabhängig davon, ob diese in~$k$ tatsächlich
+existieren oder nicht).
+\begin{enumerate}
+\item Zeige, dass~$A$ mit der Komultiplikation~$[X] \mapsto [X] \otimes [X]$ zu
+einer Bialgebra wird.
+\item Welche Bialgebra ist das Cartier-Duale~$A^\vee = \Hom_k(A,k)$?
+\end{enumerate}
+\end{aufgabe}
+
 
 \end{document}

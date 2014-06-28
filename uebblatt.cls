@@ -91,6 +91,7 @@
 \newcommand{\F}{\mathcal{F}}
 \newcommand{\G}{\mathcal{G}}
 \newcommand{\U}{\mathcal{U}}
+\newcommand{\I}{\mathcal{I}}
 \renewcommand{\H}{\mathcal{H}}
 \renewcommand{\O}{\mathcal{O}}
 \newcommand{\K}{\mathcal{K}}
@@ -114,6 +115,7 @@
 \newcommand{\Aut}{\mathrm{Aut}}
 \newcommand{\GL}{\mathrm{GL}}
 \newcommand{\placeholder}{\underline{\quad}}
+\newcommand{\smallplaceholder}{\underline{\ \ }}
 \newcommand{\ul}[1]{\underline{#1}}
 \newcommand{\Set}{\mathrm{Set}}
 \newcommand{\Grp}{\mathrm{Grp}}
@@ -126,6 +128,7 @@
 \newcommand{\Top}{\mathrm{Top}}
 \newcommand{\op}{\mathrm{op}}
 \newcommand{\pr}{\mathrm{pr}}
+\newcommand{\lMod}[1]{#1\text{-}\mathrm{Mod}}
 \newcommand{\rMod}[1]{\mathrm{Mod}\text{-}#1}
 \DeclareMathOperator{\sk}{sk}
 \DeclareMathOperator{\Tr}{Tr}
