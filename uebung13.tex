@@ -15,7 +15,7 @@ Halm~$\RR$ ist, zu einem lokal geringten Raum. Es gibt einen kanonischen
 Morphismus~$\Delta \to \RR^0$ lokal geringter Räume (welcher?).
 
 \begin{enumerate}
-\item Welche Elemente sind in~\dualnumbers{} invertierbar?
+\item Welche Elemente in~\dualnumbers{} sind invertierbar?
 \item Sei~$X$ eine reelle glatte Mannigfaltigkeit. Sei~$x_0 \in X$. Zeige:
 Lokale~$\RR$-Al\-geb\-ren\-ho\-mo\-mor\-phis\-men~$\O_{X,x_0} \to \dualnumbers$ stehen in
 kanonischer Eins-zu-Eins-Korrespondenz mit~$\RR$-linearen Derivationen~$\O_{X,x_0} \to \RR$.
@@ -38,6 +38,28 @@ Ring~$\dualnumbers$ heißt auch \emph{Ring der dualen Zahlen} und ist in der
 Numerik bei der Technik der automatischen Differentiation wichtig. Um davon
 einen ersten Eindruck zu erhalten, musst du nur für ein Polynom~$p \in \RR[X]$
 den Term~$p(x_0 + \varepsilon \cdot v) \in \dualnumbers$ auswerten.
+\end{aufgabe}
+
+\begin{aufgabe}{Funktionsinterpretation}
+Ist~$f \in \O_{X,x}$ ein Keim der Strukturgarbe~$\O_X$ eines lokal geringten
+Raums~$X$, so sieht man~$[f] \in \O_{X,x}/\mmm_x$ als "`Funktionswert von~$f$ an
+der Stelle~$x$"' an. Der Körper, in dem~$f$ Funktionswerte in diesem Sinn
+annimmt, kann also anders als bei gewöhnlichen reellwertigen Funktionen von
+Punkt zu Punkt variieren.
+\begin{enumerate}
+\item Sei~$X$ eine glatte reelle Mannigfaltigkeit. Beweise, dass die
+Faktorringe~$\O_{X,x}/\mmm_x$ kanonisch isomorph zu~$\RR$ sind und dass die
+angegebene Vorstellung von Funktionswerten mit der bekannten und hier
+anwendbaren Definition übereinstimmt.
+\item Sei~$X = \Spec \ZZ$. Wo hat die "`Funktion"' $45 \in \Gamma(X,\O_X)$
+Nullstellen? Was sind vermutlich doppelte Nullstellen?
+
+\emph{Tipp:} Zur Definition von~$\Spec\ZZ$ siehe Übungsblatt 5. In
+Übungsblatt~6 wurden die Halme von~$\O_{\Spec\ZZ}$ berechnet.
+\item Finde einen lokal geringten Raum~$X$ und einen globalen Schnitt~$f \in
+\Gamma(X,\O_X)$, der nicht Null ist, aber dessen Funktionswerte an jedem Punkt
+verschwinden.
+\end{enumerate}
 \end{aufgabe}
 
 \end{document}
