@@ -1,0 +1,43 @@
+\documentclass{uebblatt}
+
+\newcommand{\dualnumbers}{\ensuremath{\RR[\varepsilon]/(\varepsilon^2)}}
+
+\begin{document}
+
+\maketitle{13}{}
+
+\begin{aufgabe}{Der wandelnde Tangentialvektor}
+Sei~$\Delta$ der folgende lokal geringte Raum: Der zugrundeliegende
+topologische Raum ist der einpunktige Raum, und der eindeutige Halm der
+Strukturgarbe~$\O_\Delta$ ist der Ring~\dualnumbers.
+Ferner wird~$\RR^0$ mit der Strukturgarbe~$\O_{\RR^0}$, deren eindeutiger
+Halm~$\RR$ ist, zu einem lokal geringten Raum. Es gibt einen kanonischen
+Morphismus~$\Delta \to \RR^0$ lokal geringter Räume (welcher?).
+
+\begin{enumerate}
+\item Welche Elemente sind in~\dualnumbers{} invertierbar?
+\item Sei~$X$ eine reelle glatte Mannigfaltigkeit. Sei~$x_0 \in X$. Zeige:
+Lokale~$\RR$-Al\-geb\-ren\-ho\-mo\-mor\-phis\-men~$\O_{X,x_0} \to \dualnumbers$ stehen in
+kanonischer Eins-zu-Eins-Korrespondenz mit~$\RR$-linearen Derivationen~$\O_{X,x_0} \to \RR$.
+
+\emph{Hinweis:} Die Ringgarbe~$\O_X$ ist die Garbe der glatten reellwertigen
+Funktionen auf~$X$. Ein Ringhomomorphismus ist genau dann lokal, wenn er
+Invertierbarkeit reflektiert. Ist~$\varphi : \O_{X,x_0} \to \dualnumbers$ ein
+lokaler Ringhomomorphismus, so gilt~$\varphi(f) = f(x_0) + \varepsilon \cdot
+D(f)$ für eine von~$f \in \O_{X,x_0}$ abhängige Zahl~$D(f)$ -- wieso?
+\item Sei~$X$ eine reelle glatte Mannigfaltigkeit. Dann gibt es einen
+kanonischen Morphismus lokal geringer Räume~$X \to \RR^0$. Zeige: Morphismus
+lokal geringter Räume~$\Delta \to X$, welche mit den Strukturmorphismen
+nach~$\RR^0$ verträglich sind, stehen in kanonischer Eins-zu-Eins-Korrespondenz
+zu Tangentialvektoren von~$X$.
+\end{enumerate}
+
+Teilaufgabe~c) erklärt, wieso~$\Delta$ (oder besser~$\id : \Delta \to \Delta$)
+auch \emph{der wandelnde Tangentialvektor} genannt wird. Der
+Ring~$\dualnumbers$ heißt auch \emph{Ring der dualen Zahlen} und ist in der
+Numerik bei der Technik der automatischen Differentiation wichtig. Um davon
+einen ersten Eindruck zu erhalten, musst du nur für ein Polynom~$p \in \RR[X]$
+den Term~$p(x_0 + \varepsilon \cdot v) \in \dualnumbers$ auswerten.
+\end{aufgabe}
+
+\end{document}
