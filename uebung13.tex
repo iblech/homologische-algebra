@@ -12,7 +12,7 @@ topologische Raum ist der einpunktige Raum, und der eindeutige Halm der
 Strukturgarbe~$\O_\Delta$ ist der Ring~\dualnumbers.
 Ferner wird~$\RR^0$ mit der Strukturgarbe~$\O_{\RR^0}$, deren eindeutiger
 Halm~$\RR$ ist, zu einem lokal geringten Raum. Es gibt einen kanonischen
-Morphismus~$\Delta \to \RR^0$ lokal geringter Räume (welcher?).
+Morphismus~$\Delta \to \RR^0$ lokal geringter Räume (welchen?).
 
 \begin{enumerate}
 \item Welche Elemente in~\dualnumbers{} sind invertierbar?
@@ -26,7 +26,7 @@ Invertierbarkeit reflektiert. Ist~$\varphi : \O_{X,x_0} \to \dualnumbers$ ein
 lokaler Ringhomomorphismus, so gilt~$\varphi(f) = f(x_0) + \varepsilon \cdot
 D(f)$ für eine von~$f \in \O_{X,x_0}$ abhängige Zahl~$D(f)$ -- wieso?
 \item Sei~$X$ eine reelle glatte Mannigfaltigkeit. Dann gibt es einen
-kanonischen Morphismus lokal geringer Räume~$X \to \RR^0$. Zeige: Morphismus
+kanonischen Morphismus lokal geringer Räume~$X \to \RR^0$. Zeige: Morphismen
 lokal geringter Räume~$\Delta \to X$, welche mit den Strukturmorphismen
 nach~$\RR^0$ verträglich sind, stehen in kanonischer Eins-zu-Eins-Korrespondenz
 zu Tangentialvektoren von~$X$.
@@ -52,13 +52,55 @@ Faktorringe~$\O_{X,x}/\mmm_x$ kanonisch isomorph zu~$\RR$ sind und dass die
 angegebene Vorstellung von Funktionswerten mit der bekannten und hier
 anwendbaren Definition übereinstimmt.
 \item Sei~$X = \Spec \ZZ$. Wo hat die "`Funktion"' $45 \in \Gamma(X,\O_X)$
-Nullstellen? Was sind vermutlich doppelte Nullstellen?
+Nullstellen? Wo liegen vermutlich doppelte Nullstellen?
 
 \emph{Tipp:} Zur Definition von~$\Spec\ZZ$ siehe Übungsblatt 5. In
 Übungsblatt~6 wurden die Halme von~$\O_{\Spec\ZZ}$ berechnet.
 \item Finde einen lokal geringten Raum~$X$ und einen globalen Schnitt~$f \in
 \Gamma(X,\O_X)$, der nicht Null ist, aber dessen Funktionswerte an jedem Punkt
 verschwinden.
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Der terminale lokal geringte Raum}
+Zeige, dass der (überhaupt nicht einpunktige!) Raum~$\Spec \ZZ$ der terminale
+lokal geringte Raum ist.
+
+\emph{Hinweis:} Bekanntlich ist der Ring~$\ZZ$ initial in der Kategorie der
+Ringe. Damit folgt sofort, dass~$\Spec\ZZ$ terminal in der Kategorie der
+affinen Schemata ist -- denn diese ist äquivalent zur dualen Kategorie von der
+der Ringe. Hier geht es aber darum, Terminalität in der größeren Kategorie
+aller lokal geringten Räume nachzuweisen. Wissen über Schemata ist hierfür
+nicht nötig.
+
+\emph{Bemerkung:} Die étale Kohomologie von~$\Spec\ZZ$ stellt eine Verbindung
+zwischen Primzahlen und der Verschlingungszahl von Knoten her.
+\url{http://math.ucr.edu/home/baez/week257.html}
+\end{aufgabe}
+
+\begin{aufgabe}{Schnitte als Faserprodukte}
+\begin{enumerate}
+\item Seien~$U$ und~$V$ Teilmengen einer Menge~$X$. Was ist das Faserprodukt~$U
+\times_X V$ in der Kategorie der Mengen?
+\item Seien~$U$ und~$V$ offene Teilmengen eines topologischen Raums~$X$. Was
+ist das Faserprodukt~$U \times_X V$ in der Kategorie der offenen Mengen
+von~$X$?
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Kategorielle Vollständigkeit}
+\begin{enumerate}
+\item Zeige, dass die Kategorie der Mengen \emph{vollständig} ist: Jedes Diagramm
+mit kleiner Indexkategorie besitzt einen Limes.
+\item Errate die duale Aufgabe und löse sie.
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Freie Körper?}
+\begin{enumerate}
+\item Zeige: Die Kategorie der Körper besitzt kein initiales Objekt.
+\item Folgere: Der Vergissfunktor von der Kategorie der Körper in die Kategorie
+der Mengen besitzt keinen Linksadjungierten. Freie Körper gibt es also nicht.
 \end{enumerate}
 \end{aufgabe}
 
