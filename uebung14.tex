@@ -1,0 +1,91 @@
+\documentclass{uebblatt}
+\haiitrue
+
+\begin{document}
+
+\maketitle{14}{}
+
+\begin{aufgabe}{Definition des Kerns}
+Sei~$\C$ eine~$\Ab$-angereicherte Kategorie. Sei~$\varphi : X \to Y$ ein
+Morphismus in~$\C$. Zeige, dass für ein Objekt~$K$ zusammen mit einem Morphismus~$k
+: K \to X$ folgende Aussagen äquivalent sind:
+\begin{enumerate}
+\item[1.] Das Paar stellt den Funktor
+$\C^\op \to \Ab$, $T \mapsto
+  \Kernel(\Hom_\C(T,X) \to \Hom_\C(T,Y))$ dar.
+\item[2.] Das Paar hat folgende universelle Eigenschaft:
+Zu jedem
+Morphismus~$k' : K' \to X$ mit~$\varphi \circ k' = 0$ gibt es genau einen
+Morphismus~$h : K' \to K$ mit~$k' = k \circ h$.
+\marginpar{\hspace{-1.5cm}$\xymatrixcolsep{2pc}\xymatrixrowsep{2pc}\xymatrix{
+  & K' \ar[d]^{k'} \ar[rd]^0 \ar@{-->}[ld]_h \\
+  K \ar[r]_k & X \ar[r]_{\varphi} & Y
+}$}
+\item[3.] Für alle Objekte~$T$ ist folgende Sequenz abelscher Gruppen
+exakt.
+\[ 0 \longrightarrow \Hom_\C(T,K) \longrightarrow \Hom_\C(T,X)
+  \longrightarrow \Hom_\C(T,Y) \]
+\end{enumerate}
+
+\emph{Zur Erinnerung:} Ein Paar bestehend aus einem Objekt~$K$ und einem
+Element~$k \in F(K)$ stellt genau dann einen Funktor~$F : \C^\op \to \Set$ dar,
+wenn es folgende universelle Eigenschaft hat: Für jedes Objekt~$K'$ und jedes
+Element~$k' \in F(K')$ existiert genau ein Morphismus~$h : K' \to K$ mit~$k' =
+F(h)(k)$.
+\end{aufgabe}
+
+\begin{aufgabe}{Kerne und Monomorphismen}
+Sei~$\varphi : X \to Y$ ein Morphismus in einer Kategorie~$\C$, die die Axiome~A1
+und~A2 erfüllt.
+\begin{enumerate}
+\item Zeige, dass~$\varphi$ genau dann ein Monomorphismus (d.\,h.
+linkskürzbar) ist, wenn das Nullobjekt zusammen mit dem eindeutigen
+Morphismus nach~$X$ ein Kern von~$\varphi$ ist.
+\item Formuliere und beweise mit wenig Aufwand die duale Aussage.
+\item Sei~$\C$ sogar abelsch und~$\varphi$ sowohl ein Mono- als auch ein
+Epimorphismus. Zeige, dass~$\varphi$ dann sogar ein Isomorphismus ist.
+(Man sagt auch, abelsche Kategorien seien \emph{balanciert}. Welche wichtigen
+Kategorien sind nicht balanciert?)
+\end{enumerate}
+\end{aufgabe}
+
+%\begin{aufgabe}{Differenzkerne}
+%Seien~$f,g : X \to Y$ Morphismen in einer~$\Ab$-angereicherten Kategorie.
+%Zeige, dass Differenzkerne (Equalizer) von~$X \rightrightarrows Y$ dasselbe
+%sind wie Kerne von~$f-g$.
+%\end{aufgabe}
+
+\begin{aufgabe}{Rückzug von Mono- und Epimorphismen}
+Sei in einer beliebigen Kategorie~$\C$ ein Faserproduktdiagramm gegeben.
+\begin{enumerate}
+\item Zeige: Ist~$f$ ein Monomorphismus, so auch~$f'$.
+\item Sei~$\C$ sogar abelsch. Zeige: Ist~$f$ ein Epimorphismus, so auch~$f'$.
+
+\emph{Tipp:} Vollziehe die Behauptung erst im Fall~$\C = \lMod{R}$ nach. Hole
+dir dann bessere Tipps ab.
+\end{enumerate}
+\[ \xymatrixcolsep{3pc}\xymatrixrowsep{3pc}\xymatrix{
+  Y' \ar[r]^{g'} \ar[d]_{f'} & Y \ar[d]^f \\
+  X' \ar[r]_g & X
+} \]
+\end{aufgabe}
+
+\newpage
+
+\begin{aufgabe}{Homotopietheorie von Nerven}
+\begin{enumerate}
+\item Sei~$\eta : F \to G$ eine natürliche Transformation zwischen
+Funktoren~$F,G : \C \to \D$. Zeige, dass die induzierten simplizialen
+Abbildungen~$NF, NG : N\C \to N\D$ zwischen den Nerven zueinander homotop
+sind.
+\item Sei~$F \dashv G$ ein adjungiertes Funktorpaar. Zeige, dass~$NF$ eine
+Homotopieäquivalenz ist (mit~$NG$ als schwachem Inversen).
+\item Sei~$\C$ eine Kategorie, die ein initiales oder terminales Objekt
+besitzt. Zeige, dass~$N\C$ zusammenziehbar ist, d.\,h. homotopieäquivalent zu
+einem Punkt.
+
+\emph{Tipp:} Elegant kann man das mit Teilaufgabe~b) lösen.
+\end{enumerate}
+\end{aufgabe}
+
+\end{document}

@@ -29,19 +29,29 @@
 \setlength\parskip{\medskipamount}
 \setlength\parindent{0pt}
 
-\newif\ifloesungen\loesungenfalse
 \newif\ifpruefung\pruefungfalse
+\newif\ifhaii\haiifalse
 
 \newlength{\titleskip}
 \setlength{\titleskip}{1.5em}
 \renewcommand{\maketitle}[2]{%
-  \ifloesungen\else\pagestyle{empty}\fi%
-  Universität Augsburg \hfill Sommersemester 2014 \\
-  Lehrstuhl für Algebra und Zahlentheorie \\
-  Prof. Marc Nieper-Wißkirchen \\
-  Ingo Blechschmidt \\[0em]
+  \pagestyle{empty}%
+    Universität Augsburg \hfill
+    Prof. Marc Nieper-Wißkirchen \\
+    Lehrstuhl für Algebra und Zahlentheorie \hfill
+    Ingo Blechschmidt \\
+    Wintersemester 2014/2015 \\[0em]
+  \ifhaii
+  \else
+    Universität Augsburg \hfill
+    Sommersemester \\
+    Lehrstuhl für Algebra und Zahlentheorie \\
+    Prof. Marc Nieper-Wißkirchen \\
+    Ingo Blechschmidt \\[0em]
+  \fi
 
-  \begin{center}\Large \textbf{Übungsblatt #1 zur Homologischen Algebra I} \\[1em]
+  \begin{center}\Large \textbf{Übungsblatt #1 zur Homologischen Algebra
+  \ifhaii II \else I \fi} \\[1em]
   \normalsize #2
   \end{center}
   \vspace{\titleskip}}
@@ -119,6 +129,7 @@
 \newcommand{\smallplaceholder}{\underline{\ \ }}
 \newcommand{\ul}[1]{\underline{#1}}
 \newcommand{\Set}{\mathrm{Set}}
+\newcommand{\Ab}{\mathrm{Ab}}
 \newcommand{\Grp}{\mathrm{Grp}}
 \newcommand{\Vect}{\mathrm{Vect}}
 \newcommand{\Sh}{\mathrm{Sh}}
