@@ -1,0 +1,118 @@
+\documentclass{uebblatt}
+\haiitrue
+
+\begin{document}
+
+\maketitle{15}{}
+
+Bei Diagrammjagden mit abelschen Gruppen oder Moduln hantiert man mit
+\emph{Elementen}: "`Für jedes Element"', "`wegen Exaktheit existiert ein
+Urbild"', \ldots{} Bei Objekten beliebiger Kategorien kann man nicht mehr von
+Elementen im wörtlichen Sinn sprechen, ein geeigneter Ersatz sind aber
+\emph{globale Elemente} -- das sind Morphismen~$1 \to X$ in der Kategorie,
+wobei~$1$ das terminale Objekt bezeichnet. Im Fall der Kategorie der Mengen
+entsprechen die globalen Elemente gerade den gewöhnlichen (wieso?).
+
+In abelschen Kategorien sind globale Elemente aber stets langweilig: Das
+terminale Objekt ist in diesem Fall das Nullobjekt, also besitzt jedes Objekt
+genau ein globales Element (wieso?). Für eine sinnvolle Theorie muss man daher
+nicht nur die globalen Elemente, sondern \emph{Elemente beliebiger Stufe}
+betrachten: Morphismen~$I \to X$, wobei~$I$ ein beliebiges Objekt ist. Solche
+Morphismen stellen wir uns als~$I$-indizierte Familien von hypothetischen
+gewöhnlichen Elementen von~$X$ vor.
+
+Es gibt aber noch eine weitere Schwierigkeit: Im Allgemeinen lassen
+sich~$I$-Elemente nicht längs Epimorphismen~$\pi : Y \twoheadrightarrow X$
+liften -- das heißt, dass zu einem~$I$-Element~$x : I \to X$
+nicht notwendigerweise ein~$I$-Element~$y : I \to Y$ mit~$x = \pi \circ y$
+existiert. (Geht dies ausnahmsweise doch, und zwar für alle Epimorphismen, so
+heißt~$I$ \emph{projektiv}.)
+
+Da das bei Diagrammjagden aber ein wichtiger Schritt ist, müssen wir erlauben,
+bei Bedarf den Parameterbereich~$I$ zu \emph{verfeinern}, das heißt zu einer
+Überdeckung~$J \twoheadrightarrow I$ überzugehen. Dann sind Lifts immer
+möglich: Wenn wir~$x$ längs~$\pi$ zurückziehen, also das
+Faserproduktdiagramm
+\[ \xymatrix{
+  J \ar@{->>}[r]^p \ar[d]_y & I \ar[d]^x \\
+  Y \ar@{->>}[r]_\pi & X
+} \]
+betrachten, so ist das resultierende~$J$-Element~$y$ ein Lift
+des~$I$-Elements~$x$.
+
+Der tiefere Hintergrund ist folgender: Um ohne Verfeinerungen
+Lifts produzieren zu können, müssten wir \emph{auf lineare Art und Weise}
+Urbilder auswählen können. Das ist im Allgemeinen nicht möglich (auch nicht
+unter Verwendung des Auswahlaxioms). Wenn wir aber Verfeinerungen erlauben,
+sammelt der neue Parameterbereich~$J$ alle möglichen Werte für die Wahlen auf,
+sodass keine Wahlen mehr getroffen werden müssen. Die Epimorphie von~$p$ drückt
+aus, dass die Wahlen jeweils einzeln möglich wären (dass wir also nicht aus
+leeren Mengen auswählen müssten).
+
+Die Buchführung über nötige Verfeinerungen kann man in einer neuen Sprache
+verbergen und so gewöhnliche elementbasierte Diagrammjagden in beliebigen
+abelschen Kategorien interpretieren. Das ist das Ziel der ersten beiden
+Aufgaben. Was Aussagen der neuen Sprache tatsächlich bedeuten, ist in Tafel~XXX
+definiert.
+
+\newpage
+
+\begin{aufgabe}{Beispiele für die interne Sprache}
+\begin{enumerate}
+\item Zeige: Ein Morphismus~$f : X \to Y$ in~$\C$ ist genau dann \ldots
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{ll}
+  1. der Nullmorphismus, & wenn
+  $I \models \forall x\?X\_ f(x) = 0$, \\
+  2. ein Monomorphismus, & wenn
+  $I \models \forall x\?X\_ f(x) = 0 \Rightarrow x = 0$, \\
+  3. ein Epimorphismus, & wenn
+  $I \models \forall y\?Y\_ \exists x\?X\_ f(x) = y$.
+\end{tabular}
+
+\item Zeige: Ein Sequenz~$X \xra{f} Y \xra{g} Z$ ist genau dann bei~$Y$ exakt,
+wenn
+\[ I \models \forall x\?X\_ g(f(x)) = 0
+  \qquad\text{und}\qquad
+  I \models \forall y\?Y\_ g(y) = 0 \Rightarrow \exists x\?X\_ y = f(x). \]
+
+\item Seien~$X$ und~$Y$ Objekte in~$\C$. Sei~$\varphi(x,y)$ eine Formel, in der
+zwei Variablen der Typen~$X$ und~$Y$ vorkommen. Gelte
+$0 \models \forall x\?X\_ \exists!y\?Y\_ \varphi(x,y)$, ausgeschrieben also
+\begin{multline*}0 \models \forall x\?X\_ \exists y\?Y\_ \varphi(x,y)
+  \qquad\text{und} \\
+  0 \models \forall x\?X\_ \forall y,y'\?Y\_ \varphi(x,y) \wedge \varphi(x,y')
+  \Rightarrow y = y'. {\qquad\qquad\qquad} \end{multline*}
+Zeige, dass dann genau ein Morphismus~$f : X \to Y$ mit~$0 \models \forall
+x\?X\_ \varphi(x,f(x))$ existiert.
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Eigenschaften der internen Sprache}
+\begin{enumerate}
+\item Sei~$\varphi$ eine \emph{Formel über~$I$}, das heißt, dass
+in~$\varphi$~$I$-Elemente vorkommen dürfen. Sei~$p : J \to I$ ein beliebiger
+Morphismus. Sei~$p^*\varphi$ die Formel über~$J$, die man aus~$\varphi$ erhält,
+wenn man alle in~$\varphi$ vorkommenden~$I$-Elemente mit~$p$ vorkomponiert und
+so zu~$J$-Elementen macht. Zeige:
+\[ I \models \varphi \qquad\Longrightarrow\qquad
+  J \models p^*\varphi. \]
+\item Sei~$\varphi$ eine \emph{Formel über~$I$}. Sei~$p : J \twoheadrightarrow
+I$ ein Epimorphismus. Zeige:
+\[ I \models \varphi \qquad\Longleftarrow\qquad
+  J \models p^*\varphi. \]
+\item Sei~$\varphi$ eine Formel über~$I$. Gelte, dass man mit den in Tafel~XXX
+angegebenen Schlussregeln aus~$\varphi$ eine weitere Formel~$\psi$ folgern
+kann. Zeige:
+\[ I \models \varphi \quad\Longrightarrow\qquad I \models \psi. \]
+
+\emph{Tipp:} \ldots
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Lemmas}
+Viererlemma, Schlangenlemma, \ldots
+\end{aufgabe}
+
+\end{document}
