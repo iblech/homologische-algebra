@@ -57,7 +57,9 @@
   \vspace{\titleskip}}
 
 \renewcommand*\theenumi{\alph{enumi}}
+\renewcommand*\theenumii{\arabic{enumii}}
 \renewcommand{\labelenumi}{\theenumi)}
+\renewcommand{\labelenumii}{\theenumii.}
 
 \newlength{\aufgabenskip}
 \setlength{\aufgabenskip}{1.5em}
@@ -151,6 +153,7 @@
 \DeclareMathOperator{\Int}{int}
 \DeclareMathOperator{\Clos}{cl}
 \DeclareMathOperator{\Kernel}{ker}
+\DeclareMathOperator{\Coker}{coker}
 \DeclareMathOperator{\Image}{im}
 \DeclareMathOperator{\Ob}{Ob}
 \newcommand{\Open}{\mathrm{Op}}

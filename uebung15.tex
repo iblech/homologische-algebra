@@ -1,13 +1,18 @@
 \documentclass{uebblatt}
 \haiitrue
 
+\usepackage{float}
+\floatstyle{ruled}
+\restylefloat{table}
+\addto\captionsngerman{\renewcommand\tablename{Tafel}}
+
 \begin{document}
 
-\maketitle{15}{}
+\maketitle{15}{-- Entwurf --}
 
 Bei Diagrammjagden mit abelschen Gruppen oder Moduln hantiert man mit
 \emph{Elementen}: "`Für jedes Element"', "`wegen Exaktheit existiert ein
-Urbild"', \ldots{} Bei Objekten beliebiger Kategorien kann man nicht mehr von
+Urbild"', und so weiter. Bei Objekten beliebiger Kategorien kann man nicht mehr von
 Elementen im wörtlichen Sinn sprechen, ein geeigneter Ersatz sind aber
 \emph{globale Elemente} -- das sind Morphismen~$1 \to X$ in der Kategorie,
 wobei~$1$ das terminale Objekt bezeichnet. Im Fall der Kategorie der Mengen
@@ -25,7 +30,7 @@ Es gibt aber noch eine weitere Schwierigkeit: Im Allgemeinen lassen
 sich~$I$-Elemente nicht längs Epimorphismen~$\pi : Y \twoheadrightarrow X$
 liften -- das heißt, dass zu einem~$I$-Element~$x : I \to X$
 nicht notwendigerweise ein~$I$-Element~$y : I \to Y$ mit~$x = \pi \circ y$
-existiert. (Geht dies ausnahmsweise doch, und zwar für alle Epimorphismen, so
+existiert. (Geht dies ausnahmsweise doch, und zwar für alle Epimorphismen~$\pi$, so
 heißt~$I$ \emph{projektiv}.)
 
 Da das bei Diagrammjagden aber ein wichtiger Schritt ist, müssen wir erlauben,
@@ -52,12 +57,48 @@ leeren Mengen auswählen müssten).
 Die Buchführung über nötige Verfeinerungen kann man in einer neuen Sprache
 verbergen und so gewöhnliche elementbasierte Diagrammjagden in beliebigen
 abelschen Kategorien interpretieren. Das ist das Ziel der ersten beiden
-Aufgaben. Was Aussagen der neuen Sprache tatsächlich bedeuten, ist in Tafel~XXX
-definiert.
+Aufgaben. Was Aussagen der neuen Sprache tatsächlich bedeuten, ist auf der
+nächsten Seite definiert.
+
+Über das gesamte Übungsblatt fixieren wir eine abelsche Kategorie~$\C$.
 
 \newpage
 
-\begin{aufgabe}{Beispiele für die interne Sprache}
+Die folgenden Regeln definieren die Bedeutung von~$I \models \varphi$.
+Dabei muss~$\varphi$ eine \emph{Formel über~$I$} sein, das heißt, dass
+sich~$\varphi$ aus den Symbolen $=$, $\top$, $\wedge$, $\Rightarrow$,
+$\forall x\?X$ und $\exists x\?X$
+sowie etwaigen Variablen und~$I$-Elementen zusammensetzt.
+
+Ist~$p : J \to I$ ein beliebiger Morphismus, so ist~$p^*\varphi$ diejenige
+Formel über~$J$, die man aus~$\varphi$ erhält, wenn man alle in~$\varphi$
+vorkommenden~$I$-Elemente mit~$p$ vorkomponiert und so zu~$J$-Elementen
+macht.
+
+Ist~$\varphi$ eine Formel über~$I$, in der eine Variable~$x$ vorkommt, und
+ist~$x : I \to X$ ein~$I$-Element eines Objekts~$X$, so ist~$\varphi[x]$
+diejenige Formel, die man aus~$\varphi$ erhält, wenn man an Stelle der
+Variable~$x$ das gegebene Element~$x$ schreibt.
+\begin{center}\framebox{$\renewcommand{\arraystretch}{1.3}\begin{array}{@{}lcl@{}}
+  I \models x = x' &\Ll&
+    \text{Für die gegebenen Elemente $x, x' : I \to X$ gilt $x = y$.} \\
+  I \models \top &\Ll&
+    \text{Stets erfüllt.} \\
+  I \models \phi \wedge \psi &\Ll&
+    \text{$I \models \phi$ und $I \models \psi$.} \\
+  I \models \phi \Rightarrow \psi &\Ll&
+    \text{Für alle~$J \xra{p} I$ gilt: Aus $J \models p^*\phi$ folgt $J \models p^*\psi$.} \\
+  I \models \forall x\?X\_ \phi &\Ll&
+    \text{Für alle~$J \xra{p} I$ und alle $x : J \to X$
+    gilt: $J \models (p^*\phi)[x]$.} \\
+  I \models \exists x\?X\_ \phi &\Ll&
+    \text{Es gibt einen Epimorphismus~$J \stackrel{p}{\twoheadrightarrow} I$ und} \\
+  &&{\quad\quad} \text{ein Element $x : J \to X$ mit
+  $J \models (p^*\phi)[x]$.}
+\end{array}$}\end{center}
+\vspace{\aufgabenskip}
+
+\begin{aufgabe}{Beispiele für den Umgang mit verallgemeinerten Elementen}
 \begin{enumerate}
 \item Zeige: Ein Morphismus~$f : X \to Y$ in~$\C$ ist genau dann \ldots
 
@@ -82,37 +123,103 @@ zwei Variablen der Typen~$X$ und~$Y$ vorkommen. Gelte
 $0 \models \forall x\?X\_ \exists!y\?Y\_ \varphi(x,y)$, ausgeschrieben also
 \begin{multline*}0 \models \forall x\?X\_ \exists y\?Y\_ \varphi(x,y)
   \qquad\text{und} \\
-  0 \models \forall x\?X\_ \forall y,y'\?Y\_ \varphi(x,y) \wedge \varphi(x,y')
+  0 \models \forall x\?X\_ \forall y\?Y\_ \forall y'\?Y\_ \varphi(x,y) \wedge \varphi(x,y')
   \Rightarrow y = y'. {\qquad\qquad\qquad} \end{multline*}
-Zeige, dass dann genau ein Morphismus~$f : X \to Y$ mit~$0 \models \forall
+Zeige, dass genau ein Morphismus~$f : X \to Y$ mit~$0 \models \forall
 x\?X\_ \varphi(x,f(x))$ existiert.
 \end{enumerate}
 \end{aufgabe}
 
-\begin{aufgabe}{Eigenschaften der internen Sprache}
-\begin{enumerate}
-\item Sei~$\varphi$ eine \emph{Formel über~$I$}, das heißt, dass
-in~$\varphi$~$I$-Elemente vorkommen dürfen. Sei~$p : J \to I$ ein beliebiger
-Morphismus. Sei~$p^*\varphi$ die Formel über~$J$, die man aus~$\varphi$ erhält,
-wenn man alle in~$\varphi$ vorkommenden~$I$-Elemente mit~$p$ vorkomponiert und
-so zu~$J$-Elementen macht. Zeige:
-\[ I \models \varphi \qquad\Longrightarrow\qquad
-  J \models p^*\varphi. \]
-\item Sei~$\varphi$ eine \emph{Formel über~$I$}. Sei~$p : J \twoheadrightarrow
-I$ ein Epimorphismus. Zeige:
-\[ I \models \varphi \qquad\Longleftarrow\qquad
-  J \models p^*\varphi. \]
-\item Sei~$\varphi$ eine Formel über~$I$. Gelte, dass man mit den in Tafel~XXX
-angegebenen Schlussregeln aus~$\varphi$ eine weitere Formel~$\psi$ folgern
-kann. Zeige:
-\[ I \models \varphi \quad\Longrightarrow\qquad I \models \psi. \]
+\newpage
 
-\emph{Tipp:} \ldots
+\begin{aufgabe}{Die beiden Viererlemmas}
+Sei ein kommutatives Diagramm der Form
+\[ \xymatrixcolsep{3pc}\xymatrixrowsep{3pc}\xymatrix{
+  A \ar[r]^f \ar[d]_p & B \ar[r]^g \ar[d]_q & C \ar[r]^h \ar[d]_r & D \ar[d]_s \\
+_  A' \ar[r]_{f'} & B' \ar[r]_{g'} & C' \ar[r]_{h'} & D
+} \]
+mit exakten Zeilen gegeben. Sei~$p$ epimorph und~$s$ monomorph.
+Zeige:
+\begin{enumerate}
+\item Ist~$r$ epimorph, so auch~$q$.
+\item Ist~$q$ monomorph, so auch~$r$.
+\end{enumerate}
+\emph{Hinweis:} Die beiden Teilaussagen sind dual zueinander (inwiefern?),
+deswegen genügt es, eine der beiden Teilaufgaben zu bearbeiten. Es macht aber
+trotzdem Spaß, für beide Aussagen Diagrammjagden zu führen, da diese in den
+beiden Fällen einen verschiedenen Charakter haben.
+\end{aufgabe}
+
+\begin{aufgabe}{Das Fünferlemma}
+Sei ein kommutatives Diagramm der Form
+\[ \xymatrixcolsep{3pc}\xymatrixrowsep{3pc}\xymatrix{
+  A \ar[r]^f \ar[d]_p & B \ar[r]^g \ar[d]_q & C \ar[r]^h \ar[d]_r & D \ar[r]^i \ar[d]_s & E \ar[d]_t \\
+_  A' \ar[r]_{f'} & B' \ar[r]_{g'} & C' \ar[r]_{h'} & D \ar[r]_{i'} & E'
+} \]
+mit exakten Zeilen gegeben. Sei~$p$ epimorph und~$t$ monomorph. Seien~$q$
+und~$s$ Isomorphismen. Zeige, dass dann auch~$r$ ein Isomorphismus ist.
+\end{aufgabe}
+
+\begin{aufgabe}{Das Schlangenlemma}
+Sei ein kommutatives Diagramm der Form
+\[ \xymatrixcolsep{3pc}\xymatrixrowsep{3pc}\xymatrix{
+  & A \ar[r]^{i} \ar[d]_f & B \ar[r]^{p} \ar[d]_g & C \ar[r] \ar[d]_h & 0 \\
+  0 \ar[r] & A' \ar[r]_{i'} & B' \ar[r]_{p'} & C
+} \]
+mit exakten Zeilen gegeben.
+\begin{enumerate}
+\item Konstruiere einen kanonischen Morphismus~$\partial : \Kernel h \to \Coker f$.
+\item Konstruiere weitere kanonische Morphismen der Form
+\[ \Kernel f \longrightarrow \Kernel g \longrightarrow \Kernel h \stackrel{\partial}{\longrightarrow}
+  \Coker f \longrightarrow \Coker g \longrightarrow \Coker h. \]
+\item Zeige, dass die Sequenz aus~b) exakt ist.
 \end{enumerate}
 \end{aufgabe}
 
-\begin{aufgabe}{Lemmas}
-Viererlemma, Schlangenlemma, \ldots
+\newpage
+
+\begin{aufgabe}{Ein Metatheorem über die interne Sprache}
+\begin{enumerate}
+\item Sei~$\varphi$ eine \emph{Formel über~$I$}. Sei~$p : J \to I$ ein beliebiger
+Morphismus. Zeige:
+\[ I \models \varphi \quad\Longrightarrow\quad
+  J \models p^*\varphi. \]
+\item Sei~$\varphi$ eine \emph{Formel über~$I$}. Sei~$p : J \twoheadrightarrow
+I$ ein Epimorphismus. Zeige:
+\[ I \models \varphi \quad\Longleftarrow\quad
+  J \models p^*\varphi. \]
+\item
+Jeder Beweis über klassische Elemente, der nur die sprachlichen Mittel $=$,
+$\top$, $\wedge$, $\Rightarrow$, $\forall$ und $\exists$ verwendet, lässt sich
+in der internen Sprache nachbauen, also für verallgemeinerte Elemente
+nachvollziehen. Genauer gilt:
+\begin{quote}
+Sei~$\varphi$ eine Formel über~$I$. Gelte, dass man mit den üblichen logischen
+Schlussregeln aus~$\varphi$ eine weitere Formel~$\psi$ über~$I$ folgern
+kann. Dann:
+\[ I \models \varphi \quad\Longrightarrow\quad I \models \psi. \]
+\end{quote}
+Wenn du das verstehen möchtest, dann beweise für beliebige Formeln über
+verallgemeinerte Elemente:
+\begin{enumerate}
+\item $I \models (\varphi \Rightarrow \varphi)$.
+\item $I \models \varphi \ \wedge\  I \models (\varphi
+\Rightarrow \psi) \quad\Longrightarrow\quad I \models \psi$.
+\item $I \models (\varphi \Rightarrow \top)$.
+\item $I \models (\varphi \wedge \psi \Rightarrow \varphi)$.
+\item $I \models (\varphi \wedge \psi \Rightarrow \psi)$.
+\item $I \models (\varphi \wedge \psi \Rightarrow \chi) \quad\Longleftrightarrow\quad
+  I \models (\varphi \Rightarrow (\psi \Rightarrow \chi))$.
+\item $I \models \forall x\?X\_ (\varphi \Rightarrow \psi) \quad\Longleftrightarrow\quad
+  I \models (\exists x\?X\_ \varphi) \Rightarrow \psi$.
+
+  Dabei darf in~$\psi$ die Variable~$x$ nicht vorkommen.
+\item $I \models \forall x\?X\_ (\varphi \Rightarrow \psi) \quad\Longleftrightarrow\quad
+  I \models \varphi \Rightarrow (\forall x\?X\_ \psi)$.
+
+  Dabei darf in~$\varphi$ die Variable~$x$ nicht vorkommen.
+\end{enumerate}
+\end{enumerate}
 \end{aufgabe}
 
 \end{document}
