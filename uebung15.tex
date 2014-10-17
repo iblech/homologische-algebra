@@ -79,6 +79,10 @@ Ist~$\varphi$ eine Formel über~$I$, in der eine Variable~$x$ vorkommt, und
 ist~$x : I \to X$ ein~$I$-Element eines Objekts~$X$, so ist~$\varphi[x]$
 diejenige Formel, die man aus~$\varphi$ erhält, wenn man an Stelle der
 Variable~$x$ das gegebene Element~$x$ schreibt.
+
+Ist~$f : X \to Y$ ein Morphismus und~$x : I \to X$ ein~$I$-Element von~$X$, so
+schreiben wir~"`$f(x)$"' für das~$I$-Element~$f \circ x : I \to Y$. Mit~"`$0$"'
+meinen wir den Nullmorphismus des entsprechenden Typs.
 \begin{center}\framebox{$\renewcommand{\arraystretch}{1.3}\begin{array}{@{}lcl@{}}
   I \models x = x' &\Ll&
     \text{Für die gegebenen Elemente $x, x' : I \to X$ gilt $x = y$.} \\
@@ -112,7 +116,7 @@ Variable~$x$ das gegebene Element~$x$ schreibt.
   $I \models \forall y\?Y\_ \exists x\?X\_ f(x) = y$.
 \end{tabular}
 
-\item Zeige: Ein Sequenz~$X \xra{f} Y \xra{g} Z$ ist genau dann bei~$Y$ exakt,
+\item Zeige: Eine Sequenz~$X \xra{f} Y \xra{g} Z$ ist genau dann bei~$Y$ exakt,
 wenn
 \[ I \models \forall x\?X\_ g(f(x)) = 0
   \qquad\text{und}\qquad
