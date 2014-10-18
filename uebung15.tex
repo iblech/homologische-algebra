@@ -8,7 +8,7 @@
 
 \begin{document}
 
-\maketitle{15}{-- Entwurf --}
+\maketitle{15}{}
 
 Bei Diagrammjagden mit abelschen Gruppen oder Moduln hantiert man mit
 \emph{Elementen}: "`Für jedes Element"', "`wegen Exaktheit existiert ein
@@ -224,6 +224,25 @@ verallgemeinerte Elemente:
   Dabei darf in~$\varphi$ die Variable~$x$ nicht vorkommen.
 \end{enumerate}
 \end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Garbifizierung von Prägarben von Abbildungen}
+Sei~$X$ ein topologischer Raum und~$A$ eine abelsche Gruppe. Sei~$\varphi(f)$
+eine Eigenschaft von~$A$-wertigen Abbildungen, welche auf beliebigen offenen
+Teilmengen von~$X$ definiert sind. Gelte für alle offenen Teilmengen~$U
+\subseteq X$:
+\begin{itemize}
+\item $\varphi(\text{Nullfunktion~$0 \to A$})$.
+\item Wenn~$\varphi(f)$ und~$\varphi(g)$ für~$f,g:U \to A$, dann auch~$\varphi(f+g)$.
+\item Wenn~$\varphi(f)$ für~$f:U \to A$, dann auch~$\varphi(f|_V)$ für jede
+offene Teilmenge~$V \subseteq U$.
+\end{itemize}
+Sei eine Prägarbe~$\F$ durch~$\Gamma(U,\F) := \{ f : U \to A \,|\, \varphi(f)
+\}$ definiert. Zeige, dass~$\F$ separiert ist und dass die Garbifizierung
+von~$\F$ explizit gegeben ist durch:
+\[ U \subseteq X \longmapsto
+  \{ f : U \to A \,|\, \text{es gibt eine offene Überdeckung~$U = \bigcup_i
+  U_i$ mit~$\varphi(f|_{U_i})$ für alle~$i$} \} \]
 \end{aufgabe}
 
 \end{document}
