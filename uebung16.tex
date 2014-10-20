@@ -1,0 +1,45 @@
+\documentclass{uebblatt}
+\haiitrue
+
+\begin{document}
+
+\maketitle{16}{}
+
+\begin{aufgabe}{Universelle Eigenschaft der Garbifizierung}
+Seien~$\F$ und~$\G$ Prägarben auf einem topologischen Raum~$X$ (oder einer
+Örtlichkeit). Sei~$\alpha : \F \to \G$ ein Morphismus von Prägarben. Sei~$\G$
+sogar eine Garbe. Sei~$\F \xra{\iota} s(\F)$ die Garbifizierung von~$\F$.
+Konstruiere einen Garbenmorphismus~$\overline{\alpha} : s(\F) \to \G$
+mit~$\overline{\alpha} \circ \iota = \alpha$ und weise insbesondere seine
+Wohldefiniertheit nach.
+\end{aufgabe}
+
+\begin{aufgabe}{Halme des Pushforwards}
+\begin{enumerate}
+\item Sei~$X$ ein topologischer Raum. Sei~$f : Y \hookrightarrow X$ die
+Inklusion eines abgeschlossenen Teilraums. Sei~$\E$ eine Garbe auf~$Y$. Zeige:
+\[ (f_* \E)_x \cong \begin{cases}
+  \E_x, & \text{falls $x \in Y$,} \\
+  \{0\}, & \text{falls $x \not\in Y$.}
+\end{cases} \]
+\item Mache dir anhand eines Beispiels klar, dass die analoge Aussage für
+Inklusionen offener Teilräume im Allgemeinen nicht gilt.
+\item Folgere, dass der Pushforward-Funktor~$f_* : \mathrm{AbShv}(Y) \to
+\mathrm{AbShv}(X)$ in der Situation von Teilaufgabe~a) exakt ist.
+\item Sei~$f : Y \to X$ eine abgeschlossene stetige Abbildung. Sei~$\E$ eine
+Garbe auf~$Y$. Sei~$x \in X$. Zeige: $(f_* \E)_x \cong \Gamma(f^{-1}[x], \E)$.
+
+\emph{Hinweis:} Beachte, dass die Faser~$f^{-1}[x]$ im Allgemeinen nicht offen
+sein wird. Die rechte Seite ist daher als Kolimes über die~$\E(U)$, wobei~$U
+\subseteq Y$ alle offenen Mengen mit~$f^{-1}[x] \subseteq U$ durchläuft,
+definiert.
+
+\emph{Tipp:} Eine stetige Abbildung~$f : Y \to X$ ist genau dann abgeschlossen,
+wenn für alle~$x \in X$ und alle offenen Umgebungen~$U$ von~$f^{-1}[x]$ in~$Y$
+eine offene Umgebung~$V$ von~$x$ mit~$f^{-1}[V] \subseteq U$ existiert.
+\end{enumerate}
+\end{aufgabe}
+
+\end{document}
+
+Für später: j^! usw.
