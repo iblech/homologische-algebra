@@ -37,15 +37,65 @@ definiert.
 \emph{Tipp:} Eine stetige Abbildung~$f : Y \to X$ ist genau dann abgeschlossen,
 wenn für alle~$x \in X$ und alle offenen Umgebungen~$U$ von~$f^{-1}[x]$ in~$Y$
 eine offene Umgebung~$V$ von~$x$ mit~$f^{-1}[V] \subseteq U$ existiert.
-(Siehe XXX.)
+(Siehe zum Beispiel
+\href{https://www2.math.uni-paderborn.de/fileadmin/Mathematik/People/wedhorn/Lehre/SkriptMannigfaltigkeiten.pdf#page=86}{Torsten
+Wedhorn, \emph{Manifolds, sheaves, and cohomology}, Seite 86}.)
 \end{enumerate}
 \end{aufgabe}
 
-Jordan--Hölder (Gelfand--Manin, Seite 121, Aufgabe 8)
+\begin{aufgabe}{Der Satz von Jordan--Hölder}
+Ein Objekt~$X$ einer abelschen Kategorie heißt genau dann \emph{einfach}, wenn
+es \emph{genau zwei} Unterobjekte besitzt. (Ein \emph{Unterobjekt} ist ein
+Monomorphismus~$U \xra{i} X$. Unterobjekte~$U \xra{i} X$, $U' \xra{i'} X$
+werden genau dann als gleich angesehen, wenn es einen Isomorphismus~$q : U \to
+U'$ mit~$i' \circ q = i$ gibt.) Das Nullobjekt zählt also nicht als einfach.
 
-Serresche Quotientenkategorien (Gelfand--Manin, Seite 121, Aufgabe 9)
+Eine \emph{Jordan--Hölder-Reihe} für ein Objekt~$X$ ist eine Filtrierung
+$0 = X_0 \hookrightarrow X_1 \hookrightarrow \cdots \hookrightarrow X_{n-1}
+\hookrightarrow X_n = X$, sodass die Quotienten~$X_i/X_{i-1}$ jeweils einfache
+Objekte sind.
+\begin{enumerate}
+\item Zeige: Je zwei Jordan--Hölder-Reihen eines Objekts~$X$ haben dieselbe
+Länge und bis auf Isomorphie treten dieselben Quotienten auf.
 
-AB5
+\emph{Tipp:} Lasse dich vom klassischen Beweis des Satzes über
+Schreier--Zassenhaus, zum Beispiel für Gruppen oder Moduln, inspirieren.
+\item Sei~$A$ eine~$(n \times n)$-Matrix über einem algebraisch abgeschlossenen
+Körper~$K$. Der Vektorraum~$K^n$ wird durch die Setzung~$f(X) \cdot v := f(A)v$
+für~$f \in K[X]$ und~$v \in K^n$ zu einem~$K[X]$-Modul. Hängen die
+Jordanform von~$A$ und Jordan--Hölder-Reihen von~$K^n$ als~$K[X]$-Modul
+miteinander zusammen?
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Serresche Quotientenkategorien}
+Sei~$\A$ eine abelsche Kategorie. Sei~$\B$ eine \emph{Serresche Unterkategorie}
+von~$\A$, das ist eine volle Unterkategorie~$\B$ von~$\A$, welche das Nullobjekt von~$\A$
+enthält und für jede kurze exakte Sequenz~$0 \to X' \to X \to X'' \to 0$
+in~$\A$ folgendes gilt: $X$ liegt genau dann in~$\B$, wenn~$X'$ und~$X''$
+in~$\B$ liegen.
+\begin{enumerate}
+\item Zeige: Ist~$X$ ein Objekt von~$\B$, so liegt jedes in~$\A$ zu~$X$ isomorphe
+Objekt ebenfalls in~$\B$.
+\item Mache dir kurz klar: Die Kategorie der endlich-dimensionalen
+Vektorräume ist eine Serresche Unterkategorie der Kategorie aller Vektorräume.
+\item Die \emph{Serresche Quotientenkategorie}~$\A/\B$ hat als Objekte
+dieselben wie~$\A$. Die Morphismen definiert man über
+\[ \Hom_{\A/\B}(X,Y) := \colim_{X',Y'} \Hom_\A(X', Y/Y'), \]
+wobei~$X'$ über alle Unterobjekte von~$X$ mit~$X/X' \in \B$ und~$Y'$ über alle
+Unterobjekte von~$Y$ mit~$Y' \in \B$ läuft. Wie ist die Morphismenverkettung
+in~$\A/\B$ zu definieren? Wie wird~$\A/\B$ zu einer abelschen Kategorie?
+Welchen Funktor~$F : \A \to \A/\B$ kann man kanonisch angeben? Wieso ist dieser
+exakt? Wieso gilt genau dann~$F(X) = 0$, wenn~$X \in \B$? Wieso ist~$F : \A \to
+\A/\B$ unter allen exakten Funktoren~$G : \A \to \C$ mit dieser Eigenschaft
+initial? Kläre so viele dieser Fragen, wie du möchtest.
+\end{enumerate}
+\emph{Bemerkung:} Serresche Quotientenkategorien sind zur algorithmischen
+Implementierung von Kategorien kohärenter Modulgarben auf gewissen Schemata
+nützlich (siehe Artikel von Mohamed Barakat und anderen).
+\end{aufgabe}
+
+Eine Aufgabe zu AB5
 
 \end{document}
 

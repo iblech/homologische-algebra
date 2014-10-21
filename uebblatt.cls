@@ -97,6 +97,7 @@
 \newcommand{\PP}{\mathbb{P}}
 \renewcommand{\AA}{\mathbb{A}}
 \newcommand{\A}{\mathcal{A}}
+\newcommand{\B}{\mathcal{B}}
 \newcommand{\C}{\mathcal{C}}
 \newcommand{\D}{\mathcal{D}}
 \newcommand{\E}{\mathcal{E}}
