@@ -43,6 +43,52 @@ Wedhorn, \emph{Manifolds, sheaves, and cohomology}, Seite 86}.)
 \end{enumerate}
 \end{aufgabe}
 
+\begin{aufgabe}{Beispiele für flache Moduln}
+\begin{enumerate}
+\item Zeige: Jeder freie Modul ist flach.
+\item Zeige: Direkte Summanden freier Moduln sind flach.
+\item Zeige: Filtrierte Kolimiten freier Moduln (also Moduln der
+Form~$\colim_{i \in I} M_i$, wobei~$I$ eine filtrierte Kategorie ist) sind flach.
+
+\emph{Erinnerung:} Eine Kategorie heißt genau dann \emph{filtriert}, wenn in
+ihr jedes endliche Diagram einen Kokegel besitzt (welcher nicht unbedingt eine
+universelle Eigenschaft erfüllen muss). Wenn du magst, kannst du der
+Einfachheit halber gerne annehmen, dass~$I$ die von einer gerichteten Menge
+induzierte Kategorie ist.
+\end{enumerate}
+\emph{Hinweis:} In der Übung werden wir diskutieren, wie man sich Flachheit von
+Moduln geometrisch vorstellen kann.
+\end{aufgabe}
+
+\newpage
+
+\begin{aufgabe}{Serresche Quotientenkategorien}
+Sei~$\A$ eine abelsche Kategorie. Sei~$\B$ eine \emph{Serresche Unterkategorie}
+von~$\A$, das ist eine volle Unterkategorie~$\B$ von~$\A$, welche das Nullobjekt von~$\A$
+enthält und für die für jede kurze exakte Sequenz~$0 \to X' \to X \to X'' \to 0$
+in~$\A$ folgendes gilt: $X$ liegt genau dann in~$\B$, wenn~$X'$ und~$X''$
+in~$\B$ liegen.
+\begin{enumerate}
+\item Zeige: Ist~$X$ ein Objekt von~$\B$, so liegt auch jedes in~$\A$ zu~$X$ isomorphe
+Objekt in~$\B$.
+\item Mache dir kurz klar: Die Kategorie der endlich-dimensionalen
+Vektorräume ist eine Serresche Unterkategorie der Kategorie aller Vektorräume.
+\item Die \emph{Serresche Quotientenkategorie}~$\A/\B$ hat als Objekte
+dieselben wie~$\A$. Die Morphismen definiert man über
+\[ \Hom_{\A/\B}(X,Y) := \colim_{X',Y'} \Hom_\A(X', Y/Y'), \]
+wobei~$X'$ über alle Unterobjekte von~$X$ mit~$X/X' \in \B$ und~$Y'$ über alle
+Unterobjekte von~$Y$ mit~$Y' \in \B$ läuft. Wie ist die Morphismenverkettung
+in~$\A/\B$ zu definieren? Wie wird~$\A/\B$ zu einer abelschen Kategorie?
+Welchen Funktor~$F : \A \to \A/\B$ kann man kanonisch angeben? Wieso ist dieser
+exakt? Wieso gilt genau dann~$F(X) = 0$, wenn~$X \in \B$? Wieso ist~$F : \A \to
+\A/\B$ unter allen exakten Funktoren~$G : \A \to \C$ mit dieser Eigenschaft
+initial? Kläre so viele dieser Fragen, wie du möchtest.
+\end{enumerate}
+\emph{Bemerkung:} Serresche Quotientenkategorien sind zur algorithmischen
+Implementierung von Kategorien kohärenter Modulgarben auf gewissen Schemata
+nützlich (siehe Artikel von Mohamed Barakat und anderen).
+\end{aufgabe}
+
 \begin{aufgabe}{Der Satz von Jordan--Hölder}
 Ein Objekt~$X$ einer abelschen Kategorie heißt genau dann \emph{einfach}, wenn
 es \emph{genau zwei} Unterobjekte besitzt. (Ein \emph{Unterobjekt} ist ein
@@ -67,35 +113,6 @@ Jordanform von~$A$ und Jordan--Hölder-Reihen von~$K^n$ als~$K[X]$-Modul
 miteinander zusammen?
 \end{enumerate}
 \end{aufgabe}
-
-\begin{aufgabe}{Serresche Quotientenkategorien}
-Sei~$\A$ eine abelsche Kategorie. Sei~$\B$ eine \emph{Serresche Unterkategorie}
-von~$\A$, das ist eine volle Unterkategorie~$\B$ von~$\A$, welche das Nullobjekt von~$\A$
-enthält und für jede kurze exakte Sequenz~$0 \to X' \to X \to X'' \to 0$
-in~$\A$ folgendes gilt: $X$ liegt genau dann in~$\B$, wenn~$X'$ und~$X''$
-in~$\B$ liegen.
-\begin{enumerate}
-\item Zeige: Ist~$X$ ein Objekt von~$\B$, so liegt jedes in~$\A$ zu~$X$ isomorphe
-Objekt ebenfalls in~$\B$.
-\item Mache dir kurz klar: Die Kategorie der endlich-dimensionalen
-Vektorräume ist eine Serresche Unterkategorie der Kategorie aller Vektorräume.
-\item Die \emph{Serresche Quotientenkategorie}~$\A/\B$ hat als Objekte
-dieselben wie~$\A$. Die Morphismen definiert man über
-\[ \Hom_{\A/\B}(X,Y) := \colim_{X',Y'} \Hom_\A(X', Y/Y'), \]
-wobei~$X'$ über alle Unterobjekte von~$X$ mit~$X/X' \in \B$ und~$Y'$ über alle
-Unterobjekte von~$Y$ mit~$Y' \in \B$ läuft. Wie ist die Morphismenverkettung
-in~$\A/\B$ zu definieren? Wie wird~$\A/\B$ zu einer abelschen Kategorie?
-Welchen Funktor~$F : \A \to \A/\B$ kann man kanonisch angeben? Wieso ist dieser
-exakt? Wieso gilt genau dann~$F(X) = 0$, wenn~$X \in \B$? Wieso ist~$F : \A \to
-\A/\B$ unter allen exakten Funktoren~$G : \A \to \C$ mit dieser Eigenschaft
-initial? Kläre so viele dieser Fragen, wie du möchtest.
-\end{enumerate}
-\emph{Bemerkung:} Serresche Quotientenkategorien sind zur algorithmischen
-Implementierung von Kategorien kohärenter Modulgarben auf gewissen Schemata
-nützlich (siehe Artikel von Mohamed Barakat und anderen).
-\end{aufgabe}
-
-Eine Aufgabe zu AB5
 
 \end{document}
 
