@@ -1,0 +1,153 @@
+\documentclass{uebblatt}
+\usepackage{stmaryrd}
+\xyoption{rotate}
+\geometry{tmargin=3cm,bmargin=3cm,lmargin=3.1cm,rmargin=3.1cm}
+
+\begin{document}
+
+\section*{Garben über Erzeuger und Relationen}
+
+\subsection*{Erzeuger und Relationen in der Algebra}
+
+Gruppen oder Moduln spezifiert man gelegentlich durch Angabe von
+\emph{Erzeugern} und \emph{Relationen} zwischen diesen Erzeugern.
+
+\begin{itemize}
+\item Die additive Gruppe der ganzen Zahlen ist die von einem Erzeuger frei
+erzeugte Gruppe:~$\ZZ = \langle x \rangle$.
+\item Der additive Monoid der natürlichen Zahlen ist der von einem Erzeuger
+frei erzeugte Monoid:~$\NN = \langle x \rangle$.
+\item Die Gruppe~$\ZZ/(2)$ ist die von einem Erzeuger~$x$, modulo der
+Relation~$x \circ x = e$ (neutrales Element), erzeugte Gruppe:~$\ZZ/(2) =
+\langle x \,|\, x \circ x = e \rangle$.
+\item Die Dieder-Gruppe~$D_n$ ist durch zwei Erzeuger und eine Relation
+erzeugt:~$D_n = \langle r,s \,|\, r^n = e, srs = r^{-1} \rangle$.
+\item Das Tensorprodukt~$M \otimes_A N$ kann wie folgt präsentiert werden:~$M
+\otimes_A N = \langle (x,y) \,|\, x \in M, y \in N, (x,y_1+y_2) =
+(x,y_1)+(x,y_2), \ldots \rangle$.
+\end{itemize}
+
+Ist ein algebraisches Objekt~$X$ durch Erzeuger und Relationen gegeben, so kann
+man Morphismen in ein weiteres Objekt~$Y$ einfach dadurch spezifizieren, indem
+man für jeden Erzeuger von~$X$ jeweils ein gewisses Element von~$Y$ als Bild
+vorgibt und darauf achtet, dass diese Bilder die gegebenen Relationen erfüllen.
+
+Außerdem kann man ein und dieselbe Präsentation durch Erzeuger und Relationen
+in verschiedenen Kontexten interpretieren. Etwa ist~$\langle x,y \rangle$ in
+der Kategorie der Gruppen die von zwei Elementen frei erzeugte Gruppe~$\ZZ
+\star \ZZ$. Dieselbe Präsentation führt in der Kategorie der abelschen Gruppen
+zur abelschen Gruppe~$\ZZ^2$.
+
+
+\subsection*{Erzeugnisse als Kolimiten}
+
+In jeder Kategorie algebraischer Objekte kann man die Erzeugnisse von
+Präsentationen als gewisse Kolimiten charakterisieren. Sei~$\ul{n}$ das von~$n$
+Erzeugern~$e_1,\ldots,e_n$ ohne Relationen erzeugte Objekt: in~$\Grp$ also~$\ZZ
+\star \cdots \star \ZZ$, in~$\Ab$ ist es~$\ZZ^n$, in~$\mathrm{Mod}(R)$ ist
+es~$R^n$.
+
+\begin{itemize}
+\item $\ZZ \star \ZZ$ ist in der Kategorie der Gruppen der Kolimes des
+folgenden Diagramms:
+\[ \ul{1} \qquad \ul{1} \]
+\item $\langle x,y,z \,|\, 2x = 3y \rangle$ ist in der Kategorie der abelschen
+Gruppen der Kolimes des folgenden Diagramms:
+\[ \xymatrix{
+  \ul{1} \ar[rd]_{e_1 \mapsto e_1} && \ul{1} \ar[ld]^{e_1 \mapsto e_2} & \ul{1} \\
+  & \ul{2} \\
+  & \ul{1} \ar@/^/[u]^{e_1 \mapsto 2e_1} \ar@/_/[u]_{e_1 \mapsto 3e_2}
+} \]
+Kleinere Diagramme sind ebenfalls möglich (etwa~$\ul{1} \to \ul{2} \quad
+\ul{1}$), aber weniger systematisch.
+\end{itemize}
+
+Die allgemeine Regel lautet also wie folgt:
+\begin{itemize}
+\item Für jeden Erzeuger~$x$ platziert man eine Kopie von~$\ul{1}$ im
+Diagramm:~$\ul{1}_x$.
+\item Für jede Relation~$r$ der Form~$t_1(a_1,\ldots,a_n) =
+t_2(a_1,\ldots,a_n)$ platziert man eine Kopie von~$\ul{n}$,
+notiert~$\ul{n}_r$; eine Kopie von~$\ul{1}$, notiert~$\ul{1}^r$; und
+folgende Morphismen:
+
+Für~$i=1,\ldots,n$ einen Morphismus~$\ul{1}_{a_i} \to \ul{n}_r$, der
+den Erzeuger von~$\ul{1}_{a_i}$ auf~$e_i$ schickt; einen
+Morphismus~$\ul{1}^r \to \ul{n}_r$, der den Erzeuger von~$\ul{1}^r$
+auf~$t_1(e_1,\ldots,e_n)$ schickt; einen Morphismus~$\ul{1}^r \to \ul{n}_r$,
+der den Erzeuger von~$\ul{1}^r$ auf~$t_2(e_1,\ldots,e_n)$.
+\end{itemize}
+
+
+\subsection*{Präsentationen von Prägarben und Garben}
+
+Prägarben und Garben auf einem Raum~$X$ kann man ebenfalls durch
+Erzeuger und Relationen spezifizieren. Erzeuger sind dabei Schnitte auf
+bestimmten offenen Mengen, Relationen sind Vorgaben, welche Restriktionen von
+Erzeugern auf kleinere offene Mengen gleich sein sollen.
+
+Etwa ist die terminale Garbe gegeben durch einen Erzeuger~$\star$ auf ganz~$X$
+und keine Relationen. Die initiale Garbe ist gegeben durch keinerlei Erzeuger
+und keine Relationen. Die konstante Prägarbe~$\NN$ ist gegeben durch abzählbar
+viele Erzeuger~$x_0,x_1,\ldots$ und keine Relationen.
+
+Das Erzeugnis einer Präsentation enthält im Fall einer Kategorie algebraischer
+Objekte mehr Elemente, als nur die Erzeuger selbst. Etwa enthalten Erzeugnisse
+in der Kategorie der~$R$-Moduln auch formale~$R$-Linearkombinationen zwischen
+den Erzeugern. Erzeugnisse in der Kategorie der Gruppen enthalten formale
+Verknüpfungen und formale Inverse der Erzeuger.
+
+Im Fall von Prägarben kommen ebenfalls zu den Erzeugern weitere Schnitte hinzu.
+Ist etwa~$s$ ein Erzeuger auf~$U$, so kommen alle Restriktionen~$s|_V$ für~$V
+\subsetneq U$ hinzu.
+
+Im Fall von Garben kommen außerdem Verklebungen hinzu: Ist~$s$ ein Erzeuger
+auf~$U$,~$t$ ein Erzeuger auf~$V$ und gilt~$U \cap V = \emptyset$, so gibt es
+in der erzeugten Garbe auch einen Schnitt für die Verklebung von~$s$ und~$t$.
+(Dass~$U \cap V = \emptyset$, ist eine unnötig starke Forderung. Es kommen auch
+Verklebungen von solchen Schnitten hinzu, die auf Überlappungen
+übereinstimmen.)
+
+Außerdem können sich im Fall von Garben weitere Relationen ergeben. Gilt
+etwa~$X = U \cup V$, und sind zwei Erzeuger~$s$ und~$t$ auf~$X$ mit den
+Relationen~$s|_U = t|_U$ und~$s|_V = t|_V$, so gilt im Erzeugnis automatisch
+auch~$s = t$ auf ganz~$X$.
+
+
+\subsection*{Garbifizierung über Präsentationen}
+
+Die Garbifizierung einer Prägarbe kann man im Präsentationsbild sehr einfach
+verstehen. Ist eine Prägarbe über irgendwelche Erzeuger und Relationen gegeben,
+so ist ihre Garbifizierung durch dieselben Erzeuger und Relationen gegeben --
+nur jetzt in der Kategorie der Garben interpretiert.
+
+Diese Beobachtung war eine der Motivationen für diese Notizen.
+
+
+\subsection*{Kategorielle Umsetzung}
+
+Seien Erzeuger~$s_i$ auf~$U_i$ sowie Relationen~$s_{a_k}|_{W_k} =
+s_{b_k}|_{W_k}$ auf~$W_k \subseteq U_{a_k} \cap U_{b_k}$ gegeben. Die
+zugehörige Prägarbe oder Garbe ist in der entsprechenden Kategorie der Kolimes
+des wie folgt aufgebauten Diagramms:
+
+\begin{itemize}
+\item Für den Erzeuger~$s_i$ auf~$U_i$ eine Kopie~$\A^i$ der
+Garbe~$\Hom(\placeholder,U_i)$. Die Menge der Schnitte dieser Garbe auf einer
+offenen Menge~$V \subseteq X$ enthält genau ein Element, falls~$V \subseteq
+U_i$, und ist leer sonst.
+\item Für jede Relation~$s_{a_k}|_{W_k} =
+s_{b_k}|_{W_k}$ eine Kopie~$\B^k$ der Garbe~$\Hom(\placeholder,W_k)$ zusammen
+mit zwei Morphismen: einem Morphismus~$\B^k \to \A^{a_k}$ und einem
+Morphismus~$\B^k \to \A^{b_k}$ (diese sind eindeutig bestimmt).
+\end{itemize}
+
+
+\subsection*{Übungsaufgabe}
+
+Wie kann man Prägarben und Garben abelscher Gruppen präsentieren? Zusätzlich
+zur Vorgabe von Restriktionen können dabei Summen von Schnitten vorgegeben
+werden. Durch welche Erzeuger und Relationen ist~$f^{-1} \E$ gegeben, wenn
+Erzeuger und Relationen für~$\E$ bekannt sind? Wie sieht es mit~$f^* \E$ aus?
+
+\end{document}
