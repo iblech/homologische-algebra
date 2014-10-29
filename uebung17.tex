@@ -1,0 +1,60 @@
+\documentclass{uebblatt}
+\haiitrue
+
+\begin{document}
+
+\maketitle{17}{}
+
+\begin{aufgabe}{Halmweise Exaktheit}
+Sei~$X$ ein topologischer Raum (keine Örtlichkeit!). Sei~$0 \to \E \to \F \to
+\G \to 0$ eine Sequenz von Garben abelscher Gruppen auf~$X$. Zeige, dass sie
+genau dann exakt ist (im allgemeinen Sinn der Exaktheit in abelschen
+Kategorien), wenn für jeden Punkt~$x \in X$ die induzierte Sequenz~$0 \to \E_x
+\to \F_x \to \G_x \to 0$ von Halmen exakt ist.
+\end{aufgabe}
+
+\begin{aufgabe}{Kategorielle Charakterisierung von partieller Exaktheit}
+Zeige, dass ein additiver Funktor zwischen abelschen Kategorien genau dann
+linksexakt ist, wenn er endliche Limiten bewahrt.
+\end{aufgabe}
+
+\begin{aufgabe}{Beispiele für projektive Moduln}
+\begin{enumerate}
+\item Zeige, dass~$\ZZ/(2)$ als~$\ZZ/(6)$-Modul projektiv, aber
+nicht frei ist.
+\item Sei~$R = \ZZ[\sqrt{-5}]$ und~$\mmm = (3, 1+\sqrt{-5})$ das bekannte
+Beispiel für ein maximales Ideal, das lokal ein Hauptideal, aber nicht selbst
+ein Hauptideal ist. Zeige, dass~$\mmm$ als~$R$-Modul projektiv, aber nicht frei
+ist.
+
+\emph{Tipp:} Projektivität von endlich präsentierten Moduln kann man lokal
+testen. Wäre~$\mmm$ frei, so wäre~$\mmm$ frei vom Rang 1 (wieso?). Damit
+wäre~$\mmm$ ein Hauptideal (wieso?).
+\end{enumerate}
+
+Die wichtigste Bezugsquelle für nicht-freie projektive Moduln sind
+nichttriviale Vektorbündel, das besagt der Satz von Serre--Swan. Eine gut
+lesbare Darstellung gibt es in Abschnitt~6 von Pete Clarks Notizen zu
+kommutativer Algebra, \url{http://www.math.uga.edu/~pete/integral.pdf#page=112}.
+In der algebraischen Geometrie lernt man, dass auch die Beispiele dieser
+Aufgabe von dieser Form sind.
+\end{aufgabe}
+
+\begin{aufgabe}{Die Kategorie der Garben als Lokalisierung}
+Sei~$X$ ein topologischer Raum. Sei~$S$ die Klasse all
+derjenigen Morphismen von Prägarben auf~$X$, die halmweise Bijektionen sind.
+Zeige, dass die Kategorie der Garben auf~$X$ die Lokalisierung der Kategorie
+der Prägarben nach~$S$ ist: $\Sh(X) \simeq \PSh(X)[S^{-1}]$. Wie sehen unter
+dieser Äquivalenz der Vergissfunktor und der Garbifizierungsfunktor aus?
+
+\emph{Hinweis:} Sobald die Donnerstagsvorlesung stattgefunden hat, wird es an
+dieser Stelle einen geeigneten Tipp geben.
+\end{aufgabe}
+
+\begin{aufgabe}{Ein Beispiel für den Pushforward von Garben}
+Sei~$f : S^1 \to S^1$ die Abbildung~$z \mapsto z^2$ des Einheitskreises in
+sich. Sei~$\ul{\ZZ}$ die konstante Garbe mit Halmen~$\ZZ$ auf~$S^1$. Was sind
+die Halme von~$f_*\ul{\ZZ}$? Ist~$f_*\ul{\ZZ}$ isomorph zu~$\ul{\ZZ^2}$?
+\end{aufgabe}
+
+\end{document}
