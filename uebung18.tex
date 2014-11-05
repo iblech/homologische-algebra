@@ -1,0 +1,66 @@
+\documentclass{uebblatt}
+\haiitrue
+
+\begin{document}
+
+\maketitle{18}{}
+
+\begin{aufgabe}{Informationsverlust beim Dualisieren}
+\begin{enumerate}
+\item Zeige:~$(\ZZ/(2))^\vee = 0$.
+Folgere:~$(\ZZ/(2))^{\vee\vee} \not\cong \ZZ/(2)$.
+
+Dabei ist~$M^\vee := \Hom_\ZZ(M,\ZZ)$ für~$\ZZ$-Moduln~$M$.
+\item Finde eine projektive Auflösung von~$\ZZ/(2)$ der Form~$0 \to {?} \to {?} \to
+0$.
+\item Dualisiere diese Auflösung.
+\item Dualisiere den Komplex aus~c).
+\item Zeige: Die Komplexe aus~b) und~d) sind zueinander isomorph.
+\item Was ist die Moral der Geschichte?
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Die Kategorie der vollständigen metrischen Räume}
+Sei~$\Met$ die Kategorie der metrischen Räume und lipschitzstetigen
+Abbildungen. Sei~$\Met_\mathrm{compl}$ ihre volle Unterkategorie der
+vollständigen metrischen Räume. Für welche Klasse~$S$ von Morphismen
+gilt~$\Met_\mathrm{compl} \simeq \Met[S^{-1}]$?
+
+%\rotatebox{180}{\emph{Tipp:} In~$S$ ist etwa die Inklusion~$\RR \setminus \{
+%23, 42 \} \hookrightarrow \RR$ enthalten.}
+\end{aufgabe}
+
+%\begin{aufgabe}{Trivialität der derivierten Kategorie}
+%Sei~$\A$ eine abelsche Kategorie. Sei~$k : \D(\A) \to \Kom_0(\A)$ der
+%Kohomologiefunktor.
+%\end{aufgabe}
+
+\begin{aufgabe}{Die K-Theorie einer abelschen Kategorie}
+Die \emph{K-Theorie}~$K(\A)$ einer abelschen Kategorie~$\A$ wird als abelsche
+Gruppe von den Objekten aus~$\A$ und, für jede kurze exakte
+Sequenz~$0 \to X' \to X \to X'' \to 0$ in~$\A$, der Relation~$X = X' + X''$ erzeugt.
+
+\begin{enumerate}
+\item Gelte~$X \cong Y$ in einer abelschen Kategorie~$\A$. Zeige:~$X = Y \in \K(\A)$.
+\item Zeige: Die~$K$-Theorie der Kategorie der endlich-dimensionalen Vektorräume
+ist isomorph zu~$\ZZ$.
+\item Zeige: Die~$K$-Theorie der Kategorie aller Vektorräume ist Null.
+\item Sei~$\Komb(\A)$ die Kategorie der beschränkten Kettenkomplexe über einer
+abelschen Kategorie~$\A$. Zeige: Die auf Erzeugern gegebene Zuordnung
+\[ K(\Komb(\A)) \longrightarrow K(\A),\ K^\bullet \longmapsto
+  \chi(K^\bullet) := \sum_{n \in \ZZ} (-1)^n \, K^n \]
+induziert einen wohldefinierten Isomorphismus.
+
+\emph{Tipp:} Zeige~$\chi(K^\bullet) = \chi(H^\bullet(K^\bullet))$ und verwende
+die lange exakte Sequenz.
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Serresche Quotientenkategorien als Lokalisierungen}
+Sei~$\B$ eine Serresche Unterkategorie einer abelschen Kategorie~$\A$. Sei~$S$
+die Klasse all derjenigen Morphismen in~$\A$, deren Kerne und Kokerne in~$\B$
+liegen. Zeige:~$\A/\B \simeq \A[S^{-1}]$.
+Du musst nicht alle Details nachrechnen.
+\end{aufgabe}
+
+\end{document}

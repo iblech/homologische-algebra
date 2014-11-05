@@ -145,6 +145,9 @@
 \newcommand{\pr}{\mathrm{pr}}
 \newcommand{\lMod}[1]{#1\text{-}\mathrm{Mod}}
 \newcommand{\rMod}[1]{\mathrm{Mod}\text{-}#1}
+\newcommand{\Kom}{\mathrm{Kom}}
+\newcommand{\Komb}{\mathrm{Kom}^\mathrm{b}}
+\newcommand{\Met}{\mathrm{Met}}
 \DeclareMathOperator{\sk}{sk}
 \DeclareMathOperator{\Tr}{Tr}
 \DeclareMathOperator{\Spec}{Spec}
