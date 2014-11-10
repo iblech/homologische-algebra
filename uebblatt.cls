@@ -36,18 +36,18 @@
 \setlength{\titleskip}{1.5em}
 \renewcommand{\maketitle}[2]{%
   \pagestyle{empty}%
+  \ifhaii
     Universität Augsburg \hfill
     Prof. Marc Nieper-Wißkirchen \\
     Lehrstuhl für Algebra und Zahlentheorie \hfill
     Ingo Blechschmidt \\
     Wintersemester 2014/2015 \\[0em]
-  \ifhaii
   \else
     Universität Augsburg \hfill
-    Sommersemester \\
-    Lehrstuhl für Algebra und Zahlentheorie \\
     Prof. Marc Nieper-Wißkirchen \\
-    Ingo Blechschmidt \\[0em]
+    Lehrstuhl für Algebra und Zahlentheorie \hfill
+    Ingo Blechschmidt \\
+    Sommersemester 2014 \\[0em]
   \fi
 
   \begin{center}\Large \textbf{Übungsblatt #1 zur Homologischen Algebra
