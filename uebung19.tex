@@ -1,0 +1,73 @@
+\documentclass{uebblatt}
+\haiitrue
+
+\begin{document}
+
+\maketitle{19}{}
+
+\begin{aufgabe}{Die kanonische Filtrierung eines Komplexes}
+Die \emph{gute Abschneidung} eines Komplexes~$K^\bullet$ über einer abelschen
+Kategorie~$\A$ ist der Komplex
+\[ (\tau_{\leq n} K^\bullet)^i := \begin{cases}
+  K^\bullet, & \text{für $i < n$}, \\
+  \ker(K^n \to K^{n+1}), & \text{für $i = n$}, \\
+  0, & \text{für $i > n$}.
+\end{cases} \]
+
+\begin{enumerate}
+\item Es gibt auch die \emph{dumme Abschneidung}. Die gute Abschneidung hat ihr
+gegenüber den Vorteil, dass~$H^i(\tau_{\leq n} K^\bullet)$ noch für~$i \leq n$
+mit~$H^i(K^\bullet)$ übereinstimmt. Beweise diesen Sachverhalt.
+\item Bestimme den Kokern der kanonischen Inklusion~$\tau_{\leq n-1}K^\bullet
+\hookrightarrow \tau_{\leq n}K^\bullet$.
+\item Finde einen Quasiisomorphismus vom Kokern in den im Grad~$n$
+konzentrierten Komplex~$H^n(K^\bullet)[-n]$.
+\item Folgere: In~$K(D(\Kom^b(\A)))$ gilt die
+Rechnung~$K^\bullet = \sum_n (-1)^n\, H^n(K^\bullet)$.
+
+{\scriptsize
+Die abgeleitete Kategorie~$D(\Kom^b(\A))$ ist im Allgemeinen nicht abelsch.
+Ihre K-Theorie ist daher anders zu definieren: als die von den Objekten
+von~$D(\Kom^b(\A))$ erzeugte abelsche Gruppe modulo den Relationen~$X = X' +
+X''$ für jedes \emph{ausgezeichnete Dreieck}~$X' \to X \to X'' \to$. Das muss dich
+jetzt aber noch nicht kümmern. Bestätige die Rechnung einfach
+in~$K(\Kom^b(\A))$, verwende aber die zusätzlichen Rechenregeln, dass
+quasiisomorphe Komplexe dieselbe Klasse in der K-Theorie haben
+und~$L^\bullet[1] = -L^\bullet$ gilt.
+\par}
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Komplexe mit vorgegebener Kohomologie}
+Sei~$\B$ eine Serresche Unterkategorie einer abelschen Kategorie~$\A$.
+Sei~$\Kom_\B(\A)$ die volle Unterkategorie derjenigen Objekte~$K^\bullet$
+von~$\Kom(\A)$, deren Kohomologien~$H^n(K^\bullet)$ alle in~$\B$ liegen.
+Dann definieren wir~$D_\B(\A) := \Kom_\B(\A)[\text{qis}^{-1}]$.
+\begin{enumerate}
+\item Zeige, dass~$D_\B(\A)$ auf kanonische Art und Weise eine volle
+Unterkategorie von~$D(\A)$ ist.
+\item Sei jedes Objekt aus~$\B$ ein Unterobjekt eines Objekts aus~$\B$, welches
+als Objekt von~$\A$ injektiv ist. Zeige, dass der kanonische Funktor~$D^+(\B)
+\to D^+_\B(\A)$ eine Kategorienäquivalenz ist.
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Nullheit von Morphismen}
+\begin{enumerate}
+\item Zeige: Ein Morphismus~$f$ in~$D(\A)$ ist genau dann Null, wenn ein
+Quasiisomorphismus~$s$ existiert, sodass~$sf$ nullhomotop ist.
+\item Zeige, dass die Implikationen
+\[ \text{$f = 0$ in $\Kom(\A)$} \Longrightarrow
+   \text{$f = 0$ in $\K(\A)$} \Longrightarrow
+   \text{$f = 0$ in $\D(\A)$} \Longrightarrow
+   \text{$H^n(f) = 0$ in $\A$ für alle~$n$}
+\]
+im Allgemeinen nicht umkehrbar sind.
+
+\emph{Tipp:} Folgt noch.
+\end{enumerate}
+\end{aufgabe}
+
+Aufgabe zu Ext-Gruppen auf Seite 184.
+
+\end{document}
