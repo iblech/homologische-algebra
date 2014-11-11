@@ -122,6 +122,7 @@
 \newcommand{\qqq}{\mathfrak{q}}
 \newcommand{\mmm}{\mathfrak{m}}
 \newcommand{\End}{\mathrm{End}}
+\newcommand{\Ext}{\mathrm{Ext}}
 \newcommand{\Hom}{\mathrm{Hom}}
 \newcommand{\HOM}{\mathcal{H}\mathrm{om}}
 \newcommand{\id}{\mathrm{id}}

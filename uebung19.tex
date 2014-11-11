@@ -5,6 +5,102 @@
 
 \maketitle{19}{}
 
+\begin{aufgabe}{Nullmorphismen}
+\begin{enumerate}
+\item Zeige: Ein Morphismus~$f$ in~$D(\A)$ ist genau dann Null, wenn ein
+Quasiisomorphismus~$s$ existiert, sodass~$sf$ nullhomotop ist.
+\item Zeige: Ein Komplex ist genau dann azyklisch, wenn sein
+Identitätsmorphismus in~$D(\A)$ Null ist.
+\item Finde einen Morphismus, der nicht in~$\Kom(\A)$, aber in~$\K(A)$ Null
+ist; einen, der nicht in~$\K(\A)$, aber in~$D(\A)$ Null ist; einen, der nicht
+in~$D(\A)$ Null ist, aber in Kohomologie den Nullmorphismus induziert.
+\item Konstruiere einen nichttrivialen Morphismus zwischen folgenden Komplexen
+in~$D(\mathrm{Ab})$.
+\[ \xymatrix{
+  \cdots \ar[r] & 0 \ar[r] & 0 \ar[r] & \ZZ/(2) \ar[r] & 0 \ar[r] & \cdots \\
+  \cdots \ar[r] & 0 \ar[r] & \ZZ \ar[r] & 0 \ar[r] & 0 \ar[r] & \cdots
+} \]
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Komplexe mit vorgegebener Kohomologie}
+Sei~$\B$ eine Serresche Unterkategorie einer abelschen Kategorie~$\A$.
+Sei~$\Kom_\B(\A)$ die volle Unterkategorie derjenigen Objekte~$K^\bullet$
+von~$\Kom(\A)$, deren Kohomologien~$H^n(K^\bullet)$ alle in~$\B$ liegen.
+Dann definieren wir~$D_\B(\A) := \Kom_\B(\A)[\text{qis}^{-1}]$.
+\begin{enumerate}
+\item Zeige, dass~$D_\B(\A)$ auf kanonische Art und Weise eine volle
+Unterkategorie von~$D(\A)$ ist.
+\item Sei jedes Objekt aus~$\B$ ein Unterobjekt eines Objekts aus~$\B$, welches
+als Objekt von~$\A$ injektiv ist. Zeige, dass der kanonische Funktor~$D^+(\B)
+\to D^+_\B(\A)$ eine Kategorienäquivalenz ist.
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Zerfallende kurze exakte Sequenzen}
+\begin{enumerate}
+\item
+Zeige, dass folgende Bedingungen an eine kurze exakte Sequenz~$0 \to X \xra{i} Y
+\xra{p} Z \to 0$ in einer abelschen Kategorie äquivalent sind:
+\begin{enumerate}
+\item[1.] Die Sequenz zerfällt.
+\item[2.] Es gibt einen Morphismus~$s : Z \to Y$ mit~$ps = \id$.
+\item[3.] Es gibt einen Morphismus~$t : Y \to X$ mit~$ti = \id$.
+\end{enumerate}
+\item Folgere, dass wenn~$X$ injektiv oder~$Z$ projektiv ist, die Sequenz
+zerfällt.
+\item Folgere, dass additive Funktoren stets zerfallende kurze exakte Sequenzen
+bewahren.
+\end{enumerate}
+\end{aufgabe}
+
+\begin{center}\emph{-- Bitte wenden. --}\end{center}
+
+\newpage
+\begin{aufgabe}{Klassifikation kurzer exakter Sequenzen}
+Für Objekte~$X$ und~$Y$ in einer abelschen Kategorie~$\A$ ist~$\Ext^1(X,Y)$ die
+Klasse aller kurzen exakten Sequenzen der Form~$0 \to Y \to {?} \to X \to 0$
+modulo der Äquivalenzrelation "`$\text{obere Zeile} \sim \text{untere Zeile}$"'
+für jedes kommutative Diagramm der Form
+\[ \xymatrix{
+  0 \ar[r] & Y \ar[r] \ar@{=}[d] & {?} \ar[r]\ar[d] & X \ar[r]\ar@{=}[d] & 0 \\
+  0 \ar[r] & Y \ar[r] & {?}' \ar[r] & X \ar[r] & 0. \\
+} \]
+\begin{enumerate}
+\item Ist~$\varphi : Y \to Y'$ ein Morphismus und~$E : 0 \to Y \to Z \to X
+\to 0$ eine kurze exakte Sequenz, so können wir das Diagramm
+\[ \xymatrix{
+  {}\phantom{\varphi}E{:} & 0 \ar[r] & Y \ar[r]^i \ar[d]_{\varphi} & Z \ar[r]\ar@{-->}[d] & X \ar[r]^p\ar@{=}[d] & 0 \\
+  \varphi E{:} & 0 \ar[r] & Y' \ar@{-->}[r] & Z \amalg_Y Y' \ar@{-->}[r] & X \ar[r] & 0
+} \]
+konstruieren. Zeige, dass die untere Zeile~$\varphi E$ wieder exakt ist, und dass die
+Zuordnung~$E \mapsto \varphi E$ eine wohldefinierte Abbildung~$\Ext^1(X,Y) \to
+\Ext^1(X,Y')$ induziert.
+
+{\scriptsize\emph{Tipp:} Der auftretende Kolimes kann auch als~$(Z \oplus Y') /
+\{ (\varphi(y), -i(y)) \,|\ y\?Y \}$ geschrieben werden. Beweise die Behauptung
+mit Diagrammjagden.\par}
+\end{enumerate}
+Analog kann man auch für Morphismen~$\psi : X' \to X$ eine wohldefinierte
+Zuordnung~$E \in \Ext^1(X,Y) \mapsto E \psi \in \Ext^1(X',Y)$ konstruieren.
+Nimm zur Kenntnis: $(\varphi_1 \circ \varphi_2) E =
+\varphi_1(\varphi_2 E)$, $E (\psi_1 \circ \psi_2) = (E \psi_1) \psi_2$,
+$(\varphi E) \psi = \varphi (E \psi)$.
+
+Sind~$E,E' \in \Ext^1(X,Y)$, so definieren wir ihre \emph{Baersumme}
+als~$\nabla_Y (E \oplus E') \Delta_X \in \Ext^1(X,Y)$. Dabei sind~$\Delta_X : X
+\to X \oplus X$ und~$\nabla_Y : Y \oplus Y \to Y$ die kanonischen Morphismen
+und~$E \oplus E'$ die sich durch direkte Summenbildung ergebende Sequenz
+in~$\Ext^1(X \oplus X, Y \oplus Y)$.
+
+\begin{enumerate}
+\addtocounter{enumi}{1}
+\item Zeige, dass~$\Ext^1(X,Y)$ mit der Baersumme zu einer abelschen Gruppe mit
+Nullelement~$[0 \to Y \to X \oplus Y \to X \to 0]$ wird.
+\end{enumerate}
+
+\end{aufgabe}
+
 \begin{aufgabe}{Die kanonische Filtrierung eines Komplexes}
 Die \emph{gute Abschneidung} eines Komplexes~$K^\bullet$ über einer abelschen
 Kategorie~$\A$ ist der Komplex
@@ -38,36 +134,13 @@ und~$L^\bullet[1] = -L^\bullet$ gilt.
 \end{enumerate}
 \end{aufgabe}
 
-\begin{aufgabe}{Komplexe mit vorgegebener Kohomologie}
-Sei~$\B$ eine Serresche Unterkategorie einer abelschen Kategorie~$\A$.
-Sei~$\Kom_\B(\A)$ die volle Unterkategorie derjenigen Objekte~$K^\bullet$
-von~$\Kom(\A)$, deren Kohomologien~$H^n(K^\bullet)$ alle in~$\B$ liegen.
-Dann definieren wir~$D_\B(\A) := \Kom_\B(\A)[\text{qis}^{-1}]$.
-\begin{enumerate}
-\item Zeige, dass~$D_\B(\A)$ auf kanonische Art und Weise eine volle
-Unterkategorie von~$D(\A)$ ist.
-\item Sei jedes Objekt aus~$\B$ ein Unterobjekt eines Objekts aus~$\B$, welches
-als Objekt von~$\A$ injektiv ist. Zeige, dass der kanonische Funktor~$D^+(\B)
-\to D^+_\B(\A)$ eine Kategorienäquivalenz ist.
-\end{enumerate}
-\end{aufgabe}
-
-\begin{aufgabe}{Nullheit von Morphismen}
-\begin{enumerate}
-\item Zeige: Ein Morphismus~$f$ in~$D(\A)$ ist genau dann Null, wenn ein
-Quasiisomorphismus~$s$ existiert, sodass~$sf$ nullhomotop ist.
-\item Zeige, dass die Implikationen
-\[ \text{$f = 0$ in $\Kom(\A)$} \Longrightarrow
-   \text{$f = 0$ in $\K(\A)$} \Longrightarrow
-   \text{$f = 0$ in $\D(\A)$} \Longrightarrow
-   \text{$H^n(f) = 0$ in $\A$ für alle~$n$}
-\]
-im Allgemeinen nicht umkehrbar sind.
-
-\emph{Tipp:} Folgt noch.
-\end{enumerate}
-\end{aufgabe}
-
-Aufgabe zu Ext-Gruppen auf Seite 184.
-
 \end{document}
+
+\begin{aufgabe}{Bewahrung von Injektiven}
+Beweise, dass additive Funktoren, die einen linksexakten Linksadjungierten
+besitzen, injektive Objekte bewahren.
+\end{aufgabe}
+
+Zwei-Term-Komplex über Ext^1 klassifizieren.
+
+Ext^2
