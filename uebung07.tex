@@ -57,9 +57,9 @@ kanonischen Injektionen~$DA_\bullet \to NA_\bullet$ werden zu einem Komplexmorph
 Art und Weise.
 \item Sei nun~$X$ eine simpliziale Menge, sodass Ränder nichtdegenerierter
 Simplizes wieder nichtdegeneriert sind (vgl.~Blatt~2, Aufgabe~2). Erinnere
-dich, dass~$A_n := \ZZ\langle X_n \rangle$ (freie abelsche Gruppe auf den
+dich, dass~$A_n \defeq \ZZ\langle X_n \rangle$ (freie abelsche Gruppe auf den
 Elementen von~$X_n$) zu einer simplizialen abelschen Gruppe wird.
-Sei~$\widetilde A_n := \ZZ\langle X_{(n)} \rangle$ die freie abelsche Gruppe
+Sei~$\widetilde A_n \defeq \ZZ\langle X_{(n)} \rangle$ die freie abelsche Gruppe
 auf den nichtdegenerierten~$n$-Simplizes.
 
 Überlege zunächst, wie~$\widetilde A$ zu einem Verklebedatum abelscher
@@ -73,15 +73,15 @@ nichtdegenerierten Simplizes einschränken darf.
 \end{aufgabe}
 
 Der Unterkomplex der degenerierten Ketten ist in Grad~$n$ durch
-\[ DA_n := \sum_{i=0}^{n-1} \Image(A(\sigma^i) : A_{n-1} \to A_n) \subseteq
+\[ DA_n \defeq \sum_{i=0}^{n-1} \Image(A(\sigma^i) : A_{n-1} \to A_n) \subseteq
 CA_n \]
 gegeben. Mit dem Summensymbol ist die Summe von Untergruppen gemeint. Ferner
 benötigen wir den \emph{normalisierten Moore-Komplex} $NA_\bullet$ mit
 \begin{align*}
-  NA_n &:= \bigcap_{i=0}^{n-1} \Kernel(A(\partial^i) : A_n \to A_{n-1})
+  NA_n &\defeq \bigcap_{i=0}^{n-1} \Kernel(A(\partial^i) : A_n \to A_{n-1})
 \qquad\text{(nicht bis~$n$!)} \\
 \intertext{und für alle~$j \geq 0$ die Unterkomplexe~$N^jA_\bullet$ mit}
-  N^jA_n &:= \begin{cases}
+  N^jA_n &\defeq \begin{cases}
   \bigcap_{i=0}^j \Kernel(A(\partial^j) : A_n \to A_{n-1}), &
   \text{für~$n \geq j + 2$,} \\
   NA_n, &
@@ -109,7 +109,7 @@ dem Differential von~$CA_\bullet$.
 \item[3.] Sei~$e^j : N^{j+1}A_\bullet \hookrightarrow N^jA_\bullet$ die
 Einbettung. Wir definieren eine Möchtegernumkehrung~$f^j : N^jA_\bullet \to
 N^{j+1}A_\bullet$ durch
-\[ (f^j)_n(x) := \begin{cases}
+\[ (f^j)_n(x) \defeq \begin{cases}
   x - A(\sigma^{j+1}) A(\partial^{j+1})x, &
   \text{für $n \geq j+2$,} \\
   x, & \text{für $n \leq j+1$}. \end{cases} \]
@@ -120,7 +120,7 @@ in~$N^{j+1}A_\bullet$ annimmt, und~$f^j$ ist ein Komplexmorphismus.
 
 \item[5.] Es gilt~$\id_{N^jA_\bullet} - e^j f^j = d t^j + t^j d : N^jA_\bullet \to
 N^jA_\bullet$. Dabei ist
-\[ (t^j)_n(x) := \begin{cases}
+\[ (t^j)_n(x) \defeq \begin{cases}
   (-1)^j A(\sigma^{j+1}), & \text{für $n \geq j+1$,} \\
   0, & \text{sonst.} \end{cases} \]
 

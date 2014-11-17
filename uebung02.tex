@@ -21,7 +21,7 @@ diese Aufgabe auch unmittelbar vermöge abstrakten Nonsens lösen kann.
 In der Vorlesung wurde eine Konstruktion beschrieben, um aus einem
 Verklebedatum~$(X_{(n)})$ eine simpliziale Menge~$\widetilde X$ zu bauen: Als
 Menge der~$m$-Simplizes nimmt man dabei
-\[ \widetilde X_m := \coprod_{\substack{k \geq 0 \\ g : [m] \twoheadrightarrow [k]}} X_{(k)}, \]
+\[ \widetilde X_m \defeq \coprod_{\substack{k \geq 0 \\ g : [m] \twoheadrightarrow [k]}} X_{(k)}, \]
 Ein~$m$-Simplex von~$\widetilde X$ ist also ein Tupel~$(g,x)$, wobei~$g : [m]
 \to [k]$ eine monotone Surjektion (mit~$k \geq 0$ beliebig) und~$x \in X_{(k)}$
 ein~$k$-Simplex von~$X$ ist; wir stellen es uns als "`Degeneration von~$x$
@@ -29,7 +29,7 @@ längs~$g$"' vor. (Wenn~$g$ die Identität ist, ist das keine gute Vorstellung -
 sonst aber schon.)
 
 Ist~$f : [n] \to [m]$ eine monotone Abbildung, so definiert
-man~$\widetilde X(f)(g,x) := (\pi, X(\iota)x)$, wobei~$[n]
+man~$\widetilde X(f)(g,x) \defeq (\pi, X(\iota)x)$, wobei~$[n]
 \xrightarrow{\pi} [\ell] \xrightarrow{\iota} [k]$ die eindeutige Epi/Mono-Zerlegung
 von~$g \circ f$ ist.
 \begin{enumerate}

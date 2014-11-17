@@ -7,6 +7,7 @@
 \RequirePackage[ngerman]{babel}
 \RequirePackage{amsmath,amsthm,amssymb,amscd,color,graphicx,environ,tabto}
 \RequirePackage[all,2cell]{xy}
+\RequirePackage{mathtools}
 \RequirePackage{framed}
 \RequirePackage[protrusion=true,expansion=true]{microtype}
 \RequirePackage{multicol}
@@ -168,3 +169,4 @@
 \newcommand{\Ll}{:\Longleftrightarrow}
 \newcommand{\notat}[1]{{!#1}}
 \newcommand{\brak}[1]{{\llbracket{#1}\rrbracket}}
+\newcommand{\defeq}{\vcentcolon=}

@@ -28,7 +28,7 @@ Sei~$\Id_\Set : \Set \to \Set$ der Identitätsfunktor auf~$\Set$, $P : \Set \to
 \to \Set$ der Funktor
 \[ \begin{array}{@{}rrcl@{}}
   & X &\longmapsto& X \times X \\
-  & f &\longmapsto& f \times f := ((a,b) \mapsto (f(a),f(b))).
+  & f &\longmapsto& f \times f \defeq ((a,b) \mapsto (f(a),f(b))).
 \end{array} \]
 \begin{enumerate}
 \item
@@ -136,7 +136,7 @@ Element, die wie in Aufgabe~3c) miteinander verträglich sind, sind tatsächlich
 gleich und kommutativ.
 
 \item Sei~$A$ ein Objekt einer~2-Kategorie~$\C$. Sei~$\id_A : A \to A$ der
-(1-)Identitätsmorphismus. Sei~$Z_\C(A) := \End(\id_A)$ die Menge
+(1-)Identitätsmorphismus. Sei~$Z_\C(A) \defeq \End(\id_A)$ die Menge
 aller~2-Morphismen von~$\id_A$ nach~$\id_A$.
 
 Finde zwei Monoidstrukturen auf~$Z(A)$, zeige, dass sie miteinander
@@ -159,7 +159,7 @@ also das Assoziativgesetz und finde die Identitätsmorpismen.
 \begin{align*}
   \text{Objekte: } & \text{alle endlichen Mengen} \\
   \text{Morphismen: } &
-    \Hom(X,Y) := \bigl\{
+    \Hom(X,Y) \defeq \bigl\{
       \text{Abbildungen~$f : X \to Y$ zusammen mit} \\
     & \qquad\qquad\qquad\qquad \text{
       Totalordnungen auf den Fasern~$f^{-1}[\{y\}]$, $y \in Y$} \bigr\}

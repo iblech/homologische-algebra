@@ -65,15 +65,15 @@ Blatt~7) nachzuweisen. Wieso genügt das?
 \begin{aufgabe}{Der Hochschild-Komplex}
 Sei~$k$ ein kommutativer Ring (mit Eins),~$A$ eine assoziative (aber nicht
 unbedingt kommutative)~$k$-Algebra und~$M$ ein~$A$-$A$-Bimodul (was ist das?).
-Wir statten die~$k$-Moduln~$C_n(A,M) := M \otimes A^{\otimes n}$ (alle
+Wir statten die~$k$-Moduln~$C_n(A,M) \defeq M \otimes A^{\otimes n}$ (alle
 Tensorprodukte über~$k$) mit den Randabbildungen
 \begin{align*}
-  d^0(m \otimes a_1 \otimes \cdots \otimes a_n) &:=
+  d^0(m \otimes a_1 \otimes \cdots \otimes a_n) &\defeq
     ma_1 \otimes a_2 \otimes \cdots \otimes a_n \\
-  d^i(m \otimes a_1 \otimes \cdots \otimes a_n) &:=
+  d^i(m \otimes a_1 \otimes \cdots \otimes a_n) &\defeq
     m \otimes a_1 \otimes \cdots \otimes a_{i-1} \otimes a_i a_{i+1} \otimes
     a_{i+2} \otimes \cdots \otimes a_n \\
-  d^n(m \otimes a_1 \otimes \cdots \otimes a_n) &:=
+  d^n(m \otimes a_1 \otimes \cdots \otimes a_n) &\defeq
     a_n m \otimes a_1 \cdots \otimes a_{n-1}
 \end{align*}
 und dem Differential~$d = \sum_{i=0}^n (-1)^i d^i : C_n(A,M) \to C_{n-1}(A,M)$
@@ -88,9 +88,9 @@ Algebra~$A$ mit Koeffizienten in~$M$.
 \begin{aufgabe}{Der Koszul-Komplex}
 Sei~$A$ ein kommutativer Ring und~$M$ ein~$A$-Modul.
 Seien~$\varphi_1,\ldots,\varphi_p : M \to M$ paarweise kommutierende
-Endomorphismen. Auf den~$A$-Moduln~$M^n := M \otimes_\ZZ \Lambda^n \ZZ^p$
+Endomorphismen. Auf den~$A$-Moduln~$M^n \defeq M \otimes_\ZZ \Lambda^n \ZZ^p$
 definieren wir das Differential
-\[ d(x \otimes (e_{j_1} \wedge \cdots \wedge e_{j_n})) :=
+\[ d(x \otimes (e_{j_1} \wedge \cdots \wedge e_{j_n})) \defeq
   \sum_{j=1}^p \varphi_j(x) \otimes (e_j \wedge e_{j_1} \wedge \cdots \wedge
   e_{j_n}). \]
 Dabei ist~$(e_1,\ldots,e_p)$ die kanonische Basis in~$\ZZ^p$ und~$\Lambda^n
@@ -120,7 +120,7 @@ vereinfachende Techniken kennenlernen.
 \begin{aufgabe}{Differentialformen und die Formel von Cartan}
 Das \emph{Differential} einer glatten Funktion~$f : U \to \RR$, wobei~$U$ eine
 offene Teilmenge des~$\RR^n$ ist, ist der formale Ausdruck
-$df := \sum_{i=1}^n \frac{\partial f}{\partial x_i} dx_i$.
+$df \defeq \sum_{i=1}^n \frac{\partial f}{\partial x_i} dx_i$.
 %Die~$dx_i$ kann man dabei als formale Symbole ansehen; zugleich sind sie aber
 %auch die Differentiale der Koordinatenfunktionen~$x_1,\ldots,x_n : U \to \RR$.
 Ist~$M$ eine glatte Mannigfaltigkeit, so definieren wir eine
@@ -135,14 +135,14 @@ definieren wir als Garbifizierung der Prägarbe~$U \mapsto \Lambda^p_{\C^\infty}
 \begin{enumerate}
 \item Seien~$\xi$ und~$\eta$ Vektorfelder auf einer glatten
 Mannigfaltigkeit~$M$, also Derivationen~$\C^\infty(M) \to \C^\infty(M)$. Zeige,
-dass die \emph{Lie-Klammer}~$[\xi,\eta] := \xi \circ \eta - \eta \circ \xi$
+dass die \emph{Lie-Klammer}~$[\xi,\eta] \defeq \xi \circ \eta - \eta \circ \xi$
 wieder eine Derivation ist.
 \end{enumerate}
 Ist~$\xi$ ein Vektorfeld und~$f dg$ eine~$1$-Form, so definieren
 wir~$\iota_\xi(fdg) = f \cdot \xi(g)$. Das definiert einen Garbenmorphismus~$\A^1
 \to \C^\infty$ (wie genau?). Wenn wir fordern, dass die Leibnizregel gelten
 soll, gibt es ferner nur eine Fortsetzung zu Garbenmorphismen~$\A^p \to
-\A^{p-1}$. Damit können wir~$\omega(\xi_1,\ldots,\xi_n) := (\iota_{\xi_n} \circ
+\A^{p-1}$. Damit können wir~$\omega(\xi_1,\ldots,\xi_n) \defeq (\iota_{\xi_n} \circ
 \cdots \iota_{\xi_1})(\omega)$ für~$n$-Formen~$\omega$ definieren.
 \begin{enumerate}
 \addtocounter{enumi}{1}

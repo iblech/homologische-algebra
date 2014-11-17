@@ -85,11 +85,11 @@ Funktoraxiome erfüllt?
 Wir betrachten die drei monotonen Abbildungen
 \[ \begin{array}{@{}rrclrcl@{}}
   \lceil\smallplaceholder\rceil: & \QQ &\longrightarrow& \ZZ, &
-  x &\longmapsto& \text{Aufrundung von~$x$ := (kleinste ganze Zahl~$\geq x$)} \\
+  x &\longmapsto& \text{Aufrundung von~$x$ $\defeq$ (kleinste ganze Zahl~$\geq x$)} \\
   i: & \ZZ &\longrightarrow& \QQ, &
   z &\longmapsto& z \\
   \lfloor\smallplaceholder\rfloor: & \QQ &\longrightarrow& \ZZ, &
-  x &\longmapsto& \text{Abrundung von~$x$ := (größte ganze Zahl~$\leq x$)}
+  x &\longmapsto& \text{Abrundung von~$x$ $\defeq$ (größte ganze Zahl~$\leq x$)}
 \end{array} \]
 und die induzierten Funktoren zwischen~$B\QQ$ und~$B\ZZ$.
 Zeige:
@@ -102,12 +102,12 @@ Weise drei monotone Abbildungen zwischen den Potenzmengen.
 Zeige: $B\exists_f \dashv Bf^{-1} \dashv B\forall_f$.
 \[ \begin{array}{@{}rr@{\ }c@{\ }lr@{\ }c@{\ }l@{}}
   \exists_f : & \P(X) &\longrightarrow& \P(Y), &
-    U &\longmapsto& \exists_f(U) := f[U] = \{ y \in Y \ |\ \exists x \in
+    U &\longmapsto& \exists_f(U) \defeq f[U] = \{ y \in Y \ |\ \exists x \in
     X{:}\ y = f(x) \wedge x \in U \} \\[0.5em]
   f^{-1} : & \P(Y) &\longrightarrow& \P(X), &
     V &\longmapsto& f^{-1}[V] \\[0.5em]
   \forall_f : & \P(X) &\longrightarrow& \P(Y), &
-    W &\longmapsto& \forall_f(W) := \{ y \in Y \ |\ \forall x \in X{:}\
+    W &\longmapsto& \forall_f(W) \defeq \{ y \in Y \ |\ \forall x \in X{:}\
       y = f(x) \Rightarrow x \in W \}
 \end{array} \]
 \vspace{-1em}

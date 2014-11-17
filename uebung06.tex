@@ -44,7 +44,7 @@ Sei~$\F$ eine Prägarbe auf einem topologischen Raum~$X$. Der zugehörige
 Halme~$\F_x$,~$x \in X$, und man topologisiert ihn über die gröbste Topologie, in
 der für alle lokalen Schnitte~$s \in \Gamma(U,\F)$, $U \subseteq X$ offen, die
 Teilmengen
-\[ F(s) := \{ (x, s_x) \in F \,|\, x \in U \} \subseteq F \]
+\[ F(s) \defeq \{ (x, s_x) \in F \,|\, x \in U \} \subseteq F \]
 offen sind. Sei~$\pi : F \to X$ die kanonische Projektionsabbildung
 mit~$(x,u) \mapsto x$.
 
@@ -111,7 +111,7 @@ noch exakt ist. Wieso geht die Surjektivität hinten verloren?
 \begin{aufgabe}{Inneres Hom}
 Seien~$\F$ und~$\G$ Prägarben auf einem topologischen Raum~$X$. Dann
 definieren wir eine weitere Prägarbe durch die Setzung
-\[ \Gamma(U, \HOM(\F,\G)) := \{ \alpha : \F|_U \to \G|_U \text{ Morphismus von Prägarben auf~$U$} \} \]
+\[ \Gamma(U, \HOM(\F,\G)) \defeq \{ \alpha : \F|_U \to \G|_U \text{ Morphismus von Prägarben auf~$U$} \} \]
 und die offensichtlichen Einschränkungsabbildungen (welche?).
 
 Zeige: Ist~$\G$ sogar eine Garbe, so ist~$\HOM(\F,\G)$ ebenfalls eine Garbe.
@@ -157,7 +157,7 @@ welke Garbe einbetten kann.
 Eine Garbe~$\F$ auf einem topologischen Raum~$X$ heißt genau dann \emph{weich}
 (engl. \emph{soft}, franz. \emph{mou}), wenn die Abbildungen~$\Gamma(X,\F) \to
 \Gamma(A,\F)$ für alle \emph{abgeschlossenen} Teilmengen~$A \subseteq X$
-surjektiv sind. Zur Erinnerung:~$\Gamma(A,\F) := \colim\limits_{{U \subseteq
+surjektiv sind. Zur Erinnerung:~$\Gamma(A,\F) \defeq \colim\limits_{{U \subseteq
 X\,\text{offen},\,A \subseteq U}} \Gamma(U,\F).$
 
 Weiche Garben werden vor allem auf parakompakten Hausdorffräumen studiert. Ein
@@ -246,7 +246,7 @@ definieren. Überlege, wie diese Setzung zu einer wohldefinierten Prägarbe wird
 Weise dann die Garbenaxiome nach.
 
 \item Zeige, dass für die Halme an Punkten~$\ppp \in \Spec A$ gilt:
-\[ (\O_{\Spec A})_\ppp \cong A_\ppp := A[(A \setminus \ppp)^{-1}]. \]
+\[ (\O_{\Spec A})_\ppp \cong A_\ppp \defeq A[(A \setminus \ppp)^{-1}]. \]
 \end{enumerate}
 
 {\scriptsize
