@@ -1,0 +1,86 @@
+\documentclass{uebblatt}
+\haiitrue
+
+\begin{document}
+
+\maketitle{20}{}
+
+\begin{aufgabe}{Beispiele für Ext-Gruppen}
+\begin{enumerate}
+\item Seien~$A$ und~$B$ abelsche Gruppen. Sei~$U$ eine Untergruppe
+von~$A$. Sei~$f : U \to B$ ein Gruppenhomomorphismus. Formuliere und
+verifiziere ein hinreichendes und notwendiges Kriterium dafür, dass sich~$f$ zu
+einem Gruppenhomomorphismus~$\overline{f} : A \to B$ fortsetzen lässt, in
+dem~$\Ext^1_\ZZ(A/U,B)$ vorkommt.
+\item Sei~$A$ eine abelsche Gruppe. Zeige: $\Ext^n_\ZZ(\ZZ, A) = 0$ für alle~$n > 0$.
+\item Sei~$A$ eine abelsche Torsionsgruppe. Zeige: $\Ext^1_\ZZ(A,\ZZ) \cong
+\Hom_\ZZ(A, \QQ/\ZZ)$.
+\item Zeige: $\Ext^1_\ZZ(\ZZ/(m), \ZZ/(n)) \cong \ZZ/(m,n)$.
+\end{enumerate}
+%{\scriptsize \emph{Tipp:} Verwende die klassische Definition der Ext-Funktoren:
+%$\Ext^n_\ZZ(M,N) \cong H^n(\Hom_\ZZ(P^\bullet,N)) \cong
+%H^n(\Hom_\ZZ(M,I^\bullet))$ für eine projektive Auflösung~$P^\bullet \to M$
+%oder eine injektive Auflösung~$N \to I^\bullet$. Außerdem kannst du die lange
+%exakte Sequenz für die Ext-Gruppen verwenden: Ist~$0 \to N' \to N \to N \to 0$
+%eine kurze exakte Sequenz, so ist die induzierte Sequenz~$\cdots \to
+%\Ext^n(M,N') \to \Ext^n(M,N) \to \Ext^n(M,N'') \to \Ext^{n+1}(M,N) \to \cdots$
+%exakt (und analog für Sequenzen im ersten Argument).\par
+%}
+\end{aufgabe}
+
+\begin{aufgabe}{Kohomologischer Kleber}
+Seien $X$ und~$Y$ Objekte einer abelschen Kategorie~$\A$.
+\begin{enumerate}
+\item Sei~$\eta : Y[0] \to X[2]$ ein Morphismus in~$\D(\A)$ und~$C^\bullet$ ein Kegel
+von~$\eta$. \\ Zeige:~$H^{-2}(C^\bullet) \cong X$,~$H^{-1}(C^\bullet)
+\cong Y$ und die restliche Kohomologie verschwindet.
+\item Sei~$C^\bullet$ ein Komplex mit~$H^{-2}(C^\bullet) \cong
+X$,~$H^{-1}(C^\bullet) \cong Y$ und restlicher Kohomologie Null. Zeige, dass~$C^\bullet$
+ein Kegel eines Morphismus~$\eta : Y[0] \to X[2]$ ist.
+\item Ziehe das Fazit: Komplexe mit Kohomologie wie in Teilaufgabe~b) sind
+bis auf Isomorphie eindeutig durch~$H^{-2}$, $H^{-1}$ und \emph{kohomologischen
+Kleber} gegeben.
+\end{enumerate}
+%{\scriptsize \emph{Tipp:} Verwende für den ersten Teil die lange exakte Sequenz in
+%Kohomologie: Ist~$A^\bullet \to B^\bullet \to C^\bullet \to$ ein
+%ausgezeichnetes Dreieck in~$\D(\A)$, so ist die induzierte Sequenz~$\cdots \to
+%H^n(A^\bullet) \to H^n(B^\bullet) \to H^n(C^\bullet) \to H^{n+1}(A^\bullet) \to \cdots$
+%exakt. Verwende für den zweiten Teil die kanonische Filtrierung (Blatt 19,
+%Aufgabe 5).\par}
+\end{aufgabe}
+
+\begin{aufgabe}{Kein kohomologischer Kleber}
+Sei~$\A$ eine abelsche Kategorie mit~$\Ext^n(X,Y)$ für alle Objekte~$X$ und~$Y$
+und alle~$n \geq 2$. Zeige, dass jeder beschränkte Komplex~$K^\bullet$
+in~$\D^b(\A)$ isomorph zu seinem Kohomologiekomplex~$H^\bullet(K^\bullet)$ (mit
+Nulldifferentialen) ist.
+
+{\scriptsize \emph{Hinweis:} Verwende ohne Beweis, dass ein ausgezeichnetes
+Dreieck der Form~$A^\bullet \to B^\bullet \to C^\bullet \to$, wobei der
+Morphismus~$C^\bullet \to A^\bullet[1]$ Null ist, \emph{zerfällt} und daher
+insbesondere~$B^\bullet$ isomorph zu~$A^\bullet \oplus C^\bullet$ ist. Das
+werden wir in angemessener Allgemeinheit später beweisen.
+\emph{Tipp:}
+Führe einen Induktionsbeweis über die Amplitude von~$K^\bullet$
+(was kann das wohl sein?) und verwende die kanonische Filtrierung.\par}
+\end{aufgabe}
+
+\begin{aufgabe}{Homotopie und Zylinder}
+Zeige: Homotopien~$h : f \simeq g$ von Komplexmorphismen~$f, g : K \to L$
+stehen in kanonischer Eins-zu-Eins-Korrespondenz zu kommutativen Diagrammen der
+Form
+\[ \xymatrix{
+  K \ar[rd]^g \ar[d] \\
+  \operatorname{Cyl}(\id_K) \ar[r] & L \\
+  K \ar[ru]_f \ar[u]
+} \]
+wobei die beiden senkrechten Morphismen die kanonischen sind. Was bedeutet das
+anschaulich?
+\end{aufgabe}
+
+\end{document}
+
+\begin{aufgabe}{Bewahrung von Injektiven}
+Beweise, dass additive Funktoren, die einen linksexakten Linksadjungierten
+besitzen, injektive Objekte bewahren.
+\end{aufgabe}
