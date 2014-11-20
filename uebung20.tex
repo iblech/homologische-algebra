@@ -1,4 +1,5 @@
 \documentclass{uebblatt}
+\usepackage{wrapfig}
 \haiitrue
 
 \begin{document}
@@ -66,8 +67,23 @@ Führe einen Induktionsbeweis über die Amplitude von~$K^\bullet$
 Aufgabe 5).\par}
 \end{aufgabe}
 
-\begin{aufgabe}{Homotopie und Zylinder}
-\emph{Folgt in Kürze.}
+\begin{aufgabe}{Homotopie und Pfadobjekt}
+\begin{wrapfigure}{r}{0.05\textwidth}
+$\xymatrix{
+  & L \\
+  K \ar[ru]^f \ar[rd]_g \ar[r] & L^I \ar[d]^{\mathrm{ev}_1}
+  \ar[u]_{\mathrm{ev}_0} \\
+  & L
+}$
+\end{wrapfigure}
+Sei~$L$ ein Komplex. Das \emph{Pfadobjekt}~$L^I$ ist durch~$(L^I)^n =
+L^n \oplus L^{n-1} \oplus L^n$ und~$d(u,p,v) = (du, -dp-u-v, dv)$ definiert.
+\begin{enumerate}
+\item Definiere zwei kanonische Morphismen $\mathrm{ev}_0, \mathrm{ev}_1 : L^I \to L$.
+\item Zeige, dass Homotopien~$h : f \simeq g$ von Komplexmorphismen~$f, g : K \to L$
+in kanonischer Eins-zu-Eins-Korrespondenz zu kommutativen Diagrammen wie
+abgebildet stehen. Was bedeutet das anschaulich?
+\end{enumerate}
 \end{aufgabe}
 
 \end{document}
