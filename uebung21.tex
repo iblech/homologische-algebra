@@ -1,0 +1,81 @@
+\documentclass{uebblatt}
+\usepackage{wrapfig}
+\haiitrue
+
+\begin{document}
+
+\maketitle{21}{}
+
+\begin{aufgabe}{Ext und Auflösungen}
+\begin{enumerate}
+\item Zeige, dass die kanonische Abbildung~$\Hom_{K(\A)}(X^\bullet,Y^\bullet)
+\to \Hom_{D(\A)}(X^\bullet,Y^\bullet)$ für $X^\bullet \in \Kom^{-}(\P)$ oder
+für~$Y^\bullet \in \Kom^{+}(\I)$ ein Isomorphismus ist. Dabei ist~$\P$
+(bzw.~$\I$) die Klasse der projektiven (bzw. injektiven) Objekte einer
+abelschen Kategorie~$\A$.
+
+{\tiny \emph{Tipp:} Ist~$s : I^\bullet \to W^\bullet$ in Quasiiso in~$\Kom(\A)$,
+wobei~$I^\bullet \in \Kom^{+}(\I)$, so gibt es einen
+Morphismus~$t : W^\bullet \to I^\bullet$ mit~$ts \simeq \id$.\par}
+\item Seien~$X$ und~$Y$ Objekte einer abelschen Kategorie~$\A$. Zeige,
+dass~$\Ext^\bullet(X,Y) \defeq \Hom_{D(\A)}(X[0],Y[n])$ wie klassisch bekannt
+über eine projektive Auflösung von~$X$ oder eine injektive Auflösung von~$Y$
+berechnet werden kann.
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Die homologische Dimension erblicher Ringe}
+\begin{enumerate}
+\item Zeige, dass die homologische Dimension der Kategorie aller (nicht nur
+kohärenter) Moduln über einem erblichen Ring $\leq 1$ ist.
+\item Zeige, dass Hauptidealbereiche erblich sind.
+\end{enumerate}
+{\tiny\emph{Hinweis:} Ein Ring~$R$ heißt genau dann \emph{erblich} (engl.
+\emph{hereditary}), wenn Untermoduln projektiver~$R$-Moduln projektiv sind.
+Dafür genügt es schon, wenn alle Ideale von~$R$ als~$R$-Moduln projektiv
+sind, siehe Lam, \emph{Lectures on modules and rings}, Thm.~2.24.\par}
+\end{aufgabe}
+
+\begin{aufgabe}{Bewahrung von Injektiven}
+Beweise, dass additive Funktoren, die einen linksexakten Linksadjungierten
+besitzen, injektive Objekte bewahren.
+\end{aufgabe}
+
+\begin{aufgabe}{Die Feinstruktur von Vektorraumendomorphismen}
+Sei~$\varphi : V \to V$ ein Endomorphismus eines endlich-dimensionalen
+Vektorraums.
+\begin{enumerate}
+\item Zeige mit der Smithschen Normalform, dass~$V_\varphi$ isomorph zu einer
+direkten Summe der Form~$\bigoplus_i k[T]/(f_i)$ ist, wobei die~$f_i$ normierte
+Polynome mit~$f_1 | f_2 | \cdots | f_k$ sind.
+Wie sieht die Darstellungsmatrix von~$\varphi$ aus, wenn man in jedem
+Summanden die Basis~$[1],[t],\ldots,[t^{\deg f_i - 1}]$ wählt? Diese
+Matrix heißt \emph{Frobeniussche Normalform}.
+\item Zeige, dass sich~$V_\varphi$ weiter in Summanden der Form~$k[T]/(p^r)$,
+wobei~$p$ irreduzibel ist, zerlegen lässt. Welche Basis muss man, im Fall
+dass diese Polynome~$p$ alle linear sind, in den Summanden wählen, damit die
+zugehörige Darstellungsmatrix die bekannte \emph{Jordansche Normalform} ist?
+\end{enumerate}
+{\tiny\emph{Hinweis:} Durch die Setzung~$f(t) \cdot v \defeq
+f(\varphi)(v)$ wird~$V$ zu einem~$k[t]$-Modul, notiert~$V_\varphi$. Als solcher
+ist er endlich präsentiert mit Präsentationsmatrix~$tI - A$, wenn~$A$ eine
+Darstellungsmatrix von~$V$ ist; es gilt also~$V_\varphi \cong \Coker(tI - A :
+k[t]^m \to k[t]^n)$.\par}
+\end{aufgabe}
+
+\begin{aufgabe}{Die K-Theorie der Endomorphismenkategorie}
+Zeige, dass~$K(\Vect(k)_\text{findim}[T])$ isomorph ist zur
+multiplikativen Gruppe der rationalen Funktionen mit normiertem Zähler- und
+Nennerpolynom.
+
+{\tiny\emph{Hinweis:} Sei~$\Vect(k)_\text{findim}[T]$ die Kategorie der
+Endomorphismen endlich-dimensionaler Vektorräume über einem Körper~$k$: Objekte
+sind Paare~$(V,\varphi)$ bestehend aus einem endlich-dimensionalen
+Vektorraum~$V$ und einem Endomorphismus~$\varphi : V \to V$, Morphismen sind
+kommutative Quadrate. Das \emph{charakteristische Polynom} einen solchen Paars
+ist~$\det(xI-A) \in k[x]$. Zeige, dass das charakteristische Polynom
+multiplikativ in kurzen exakten Sequenzen ist, und verwende diese Erkenntnis,
+um den gesuchten Isomorphismus zu definieren.\par}
+\end{aufgabe}
+
+\end{document}
