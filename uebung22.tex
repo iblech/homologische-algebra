@@ -6,10 +6,10 @@
 
 \maketitle{22}{}
 
-\begin{aufgabe}{Erzeugte Unterkategorie}
+\begin{aufgabe}{Von einem Erzeuger aufgespannte Unterkategorie}
 Sei~$X$ ein Objekt einer abelschen Kategorie~$\A$. Sei~$\langle X \rangle
 \subseteq \A$ die volle Unterkategorie aller direkten Summen direkter Summanden
-von~$X$. Diese Unterkategorie wird eine additive Kategorie.
+von~$X$. Diese Unterkategorie wird additiv.
 \begin{enumerate}
 \item Sei~$\Ext_\A^i(X,X) = 0$ für alle~$i > 0$. Zeige, dass der kanonische
 Funktor~$K^b(\langle X \rangle) \to D^b(\A)$ volltreu ist.
@@ -35,7 +35,7 @@ Nullkomplexes ist, aber nicht homotopieäquivalent zum Nullkomplex ist.\par}
 \begin{enumerate}
 \item Zeige, dass ein~$A$-Modul~$M$ genau dann endlich erzeugt ist, wenn der
 Funktor~$\Hom(M,\smallplaceholder) : \mathrm{Mod}(A) \to \Set$ mit filtrierten
-Kolimiten von Monomorphismen vertauscht, dass also für jedes filtrierte
+Kolimiten von Monomorphismen vertauscht, wenn also für jedes filtrierte
 Diagramm~$(V_i)_i$, in der die Übergangsabbildungen $V_i \to V_j$ alle injektiv
 sind, folgende kanonische Abbildung bijektiv ist.
 \[ \colim_i \Hom(M,V_i) \longrightarrow \Hom(M, \colim_i V_i) \]
@@ -45,6 +45,29 @@ vertauscht.
 \end{enumerate}
 \end{aufgabe}
 
-\begin{center}\textbf{Wird nach dem Mittagessen noch ergänzt.}\end{center}
+\begin{aufgabe}{Interpretation der zweiten Ext-Gruppen}
+\begin{enumerate}
+\item Seien Objekte~$X \hookrightarrow Y \hookrightarrow Z$ in einer abelschen
+Kategorie gegeben. Dann gibt es die kanonische exakte Sequenz
+\[ \gamma : 0 \lra X \lra Y \lra Z/X \lra Z/Y \lra 0. \]
+Zeige, dass~$\gamma = \gamma_1 \gamma_2 \in \Ext^2(Z/Y,X)$, wobei~$\gamma_1 \in
+\Ext^1(Y/X,X)$ und $\gamma_2 \in \Ext^1(Z/Y,Y/X)$ zu folgenden kurzen exakten
+Sequenzen gehören.
+\[ \gamma_1 : 0 \to X \to Y \to Y/X \to 0 \qquad
+  \gamma_2 : 0 \to Y/X \to Z/X \to Z/Y \to 0 \]
+\item Zeige weiter, dass~$\gamma = 0 \in \Ext^2(Z/Y,X)$.
+\item Zeige die Umkehrung: Gilt für Elemente~$\gamma_1 \in \Ext^1(B,C)$ und
+$\gamma_2 \in \Ext^1(A,B)$ dass~$\gamma_1 \gamma_2 = 0 \in \Ext^1(A,C)$, so
+gibt es ein Objekt~$Z$ und Unterobjekte~$X \hookrightarrow Y \hookrightarrow
+Z$, sodass~$A \cong Z/Y$, $B \cong Y/X$, $C \cong X$ und sodass unter diesen
+Isomorphismen~$\gamma_1$ und~$\gamma_2$ von der Form wie in~a) sind.
+\end{enumerate}
+\end{aufgabe}
+
+\newpage
+
+\begin{aufgabe}{Noch eine weitere Aufgabe}
+XXX
+\end{aufgabe}
 
 \end{document}
