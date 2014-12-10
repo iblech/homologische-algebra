@@ -17,17 +17,79 @@ Zeige: $(M^\dd)^\dd \cong M$.
 \end{enumerate}
 
 {\tiny\emph{Hinweis:} Die Kategorie~$\Mod(A)_\mathrm{coh}$ ist die volle
-Unterkategorie aller kohärenten Moduln. Ist~$A$ noethersch (was du gerne
+Unterkategorie der kohärenten~$A$-Moduln. Ist~$A$ noethersch (was du gerne
 voraussetzen darfst), sind die kohärenten Moduln gerade die endlich erzeugten.
 Die Kategorie~$D^b(\Mod(A))_\mathrm{coh}$ ist die volle Unterkategorie
 derjenigen Komplexe, deren Kohomologiemoduln alle kohärent sind.\par}
 \end{aufgabe}
 
+\begin{aufgabe}{Auflösungen durch azyklische Objekte}
+Sei~$F : \A \to \B$ ein linksexakter Funktor. Existiere seine
+Rechtsableitung~$RF : D^+(\A) \to D^+(\B)$. Ein Objekt~$U$ heißt genau dann
+\emph{$F$-azyklisch}, wenn~$R^{\geq 1}F(U) = 0$.
+\begin{enumerate}
+\item Zeige, dass Kokerne von Morphismen zwischen~$F$-azyklischen
+Objekten und Extensionen von~$F$-azyklischen Objekten~$F$-azyklisch sind.
+\item Sei~$X^\bullet \in K^+(\A)$ ein azyklischer Komplex aus~$F$-azyklischen
+Objekte. Zeige, dass~$F(X^\bullet)$ ebenfalls azyklisch ist.
+\item Beweise Lerays Azyklizitätslemma: Ist~$X^\bullet \in D^+(\A)$ ein Komplex, der nur
+aus~$F$-azyklischen Objekten besteht, so ist der kanonische
+Morphismus~$F(X^\bullet) \to RF(X^\bullet)$ ein Isomorphismus.
+\item Folgere: Ist~$0 \to M \to X^\bullet$ eine Auflösung durch~$F$-azyklische
+Objekte, so ist~$R^nF(M)$ kanonisch zu~$H^n(F(X^\bullet))$ isomorph.
+\end{enumerate}
+
+{\tiny\emph{Tipp:} Teilaufgabe~c) baut nicht direkt auf den ersten beiden
+Teilaufgaben auf. Wenn du magst, dann beschränke dich in Teilaufgabe~c) auf den Fall,
+dass~$X^\bullet$ in beide Richtungen beschränkt ist. Führe einen
+Induktionsbeweis und verwende das ausgezeichnete Dreieck~$\hat\tau_{\geq a+1}
+X^\bullet \to X^\bullet \to \hat\tau_{\leq a} X^\bullet \to$, das zwischen
+dummen Abschneidungen vermittelt. Teilaufgabe~d) kann schnell aus~c) gefolgert
+werden. Es gibt aber auch elementare Beweise, die~c) nicht verwenden.\par}
+\end{aufgabe}
+
+\begin{aufgabe}{Triangulierte Kategorien}
+Eine \emph{triangulierte Kategorie} ist eine additive Kategorie~$\C$ zusammen
+mit einer Autoäquivalenz~$T : \C \to \C$ und einer Klasse \emph{ausgezeichneter
+Dreiecke}, die die unten stehenden Axiome erfüllen (wobei wir~"`$X[1]$"' statt~"`$T(X)$"'
+schreiben). Sei~$\A$ eine abelsche Kategorie. Beweise, dass~$K^*(\A)$ und~$D^*(\A)$
+mit dem Verschiebungsfunktor und den gwöhnlichen ausgezeichneten Dreiecken
+triangulierte Kategorien sind. Auf den Nachweis von~TR4 kannst du
+verzichten.\par
+\begin{scriptsize}
 \begin{itemize}
-\item Nachrechnen: TR1, TR2, TR3 für $K^\star$ und $D^\star$
-\item Auflösungen durch~$F$-azyklische Objekte
-\item Kleine Lemmas, die fürs Nachrechnen der Aussagen im Kapitel über
-abgeleitete Funktoren wichtig sind
+\item[TR1] Für jedes Objekt~$X$ ist $X \xra{\id} X \to 0 \to$
+ausgezeichnet.\\[-1.3em]
+
+Für jeden Morphismus~$X \xra{f} Y$ existiert ein Objekt~$Z$ und ein
+ausgezeichnetes Dreieck~$X \xra{f} Y \to Z \to$.\\[-1.3em]
+
+Jedes zu einem ausgezeichneten Dreieck isomorphe Dreieck ist selbst
+ausgezeichnet.
+
+\item[TR2] Ist~$X \xra{f} Y \xra{g} Z \xra{h}$ ein ausgezeichnetes Dreieck, so
+ist auch $Y \xra{g} Z \xra{h} X[1] \xra{-f[1]}$ ausgezeichnet.
+% und $Z[-1] \xra{-h[-1]} X \xra{f} Y \xra{g}$, aber das ist redundant.
+
+\item[TR3] Jedes kommutative Diagramm der abgebildeten Form, in dem die beiden Zeilen
+ausgezeichnete Dreiecke sind, kann vermöge eines (nicht notwendigerweise
+eindeutigen!) gestrichelt eingezeichneten Morphismus zu einem Morphismus von
+Dreiecken ergänzt werden.
+
+\item[TR4] Das zu Unrecht gefürchtete Oktaederaxiom.
+\marginpar{\scriptsize\vspace*{-0.5cm}\hspace*{-3cm}$
+\xymatrix{
+  X \ar[r] \ar[d] & Y \ar[r] \ar[d] & Z \ar[r] \ar@{-->}[d] & \\
+  \widetilde X \ar[r] & \widetilde Y \ar[r] & \widetilde Z \ar[r] &
+}$}
 \end{itemize}
+\end{scriptsize}
+
+\begin{minipage}{0.8\textwidth}{\tiny\emph{Hinweis:} Die Uneindeutigkeit des Morphismus in~TR3 -- die fehlende
+Funktorialität der Kegel -- führt zu einigen Problemen. Zum Glück sind die
+meisten in der Natur vorkommenden triangulierten Kategorien nur
+die~1-kategoriellen Schatten von stabilen~$(\infty,1)$-Kategorien, die dieses
+Problem nicht haben.\par}\end{minipage}
+\end{aufgabe}
 
 \end{document}
