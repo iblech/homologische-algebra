@@ -6,7 +6,9 @@
 \maketitle{24}{}
 
 \begin{aufgabe}{Spektralsequenzen als Verallgemeinerungen langer exakter Sequenzen}
-Sei eine Spektralsequenz~$E_1^{pq} \Rightarrow E^n_\infty$ gegeben, deren erste
+Sei eine Spektralsequenz~$E_1^{pq} \Rightarrow E^n_\infty$ gegeben
+(ausführlich: $E_1^{pq} \Rightarrow F^p
+E^{p+q}_\infty/F^{p+1}E^{p+q}_\infty$), deren erste
 Seite in den Spalten~$p = 0$ und~$p = 1$ konzentriert ist. Seien die
 Filtrierungen~$F^\bullet E^n_\infty$ separiert und erschöpfend (exhaustive).
 \begin{enumerate}
@@ -20,6 +22,54 @@ $F^0 E^n_\infty = F^{-1} E^n_\infty = \cdots = E^n_\infty$.
 \[ \cdots \lra E^{1,n-1}_1 \lra E^n_\infty \lra E^{0n}_1
 \stackrel{\partial}{\lra} E^{1n}_1 \lra \cdots. \]
 \end{enumerate}
+\vspace{-1em}
 \end{aufgabe}
 
+\begin{aufgabe}{Mayer--Vietoris als Spezialfall einer Spektralsequenz}
+Sei~$X$ ein topologischer Raum. Die Komposition der Funktoren
+\[ \AbSh(X) \xrightarrow{\text{vergessen}} \AbPSh(X)
+  \xrightarrow{\check H^0} \Ab \]
+ist der globale-Schnitte-Funktor $\Gamma : \Sh(X) \to \Ab$. Sei~$X = A \cup B$
+eine Überdeckung durch zwei offene Mengen. Leite aus der
+Grothendieck-Spektralsequenz zu dieser Funktorkomposition die
+Mayer--Vietoris-Sequenz für Garbenkohomologie her:
+\[ \cdots \lra H^n(X; \E) \lra
+  H^n(A; \E) \oplus H^n(B; \E) \lra
+  H^n(A \cap B; \E) \stackrel{\partial}{\lra} H^{n+1}(X; \E) \lra \cdots \]
+{\tiny\emph{Hinweis:} Für eine beliebige offene Überdeckung~$X = \bigcup_i U_i$
+ist~$\check H^0(\E) \defeq \{ (s_i)_i \,|\, s_i \in \E(U_i), s_i|_{U_{ij}} =
+s_j|_{U_{ij}} \}$. Verwende ohne Beweis, dass~$R^n \check H^0(\E)$
+die~$n$-te Čech-Kohomologie~$\check H^n(\E)$ von~$X$ mit Werten in~$\E$ bezüglich der
+Überdeckung~$(U_i)_i$ ist. Vereinfache die Definitionen für den Fall, dass die
+Überdeckung aus nur zwei offenen Mengen besteht (zur Kontrolle: $\check
+H^0(\E)$ und~$\check H^1(\E)$ sind Kern bzw. Kokern von $\E(A) \oplus \E(B) \to
+\E(A \cap B)$ und die höheren Gruppen verschwinden). Verwende ohne Beweis, dass
+die~$n$-te Rechtsableitung des Vergissfunktors bei~$\E$ die Prägarbe $(U
+\mapsto H^n(U; \E))$ ist. Verwende Aufgabe~1.\par}
+\end{aufgabe}
+
+\begin{aufgabe}{Euler-Charakteristik des Grenzwerts}
+Sei~$E_r^{pq} \Rightarrow E^n_\infty$ eine konvergente Spektralsequenz,
+deren~$r$-te Seite in einem endlichen Bereich konzentriert ist. Seien die
+Filtrierungen~$F^\bullet E^n_\infty$ separiert und erschöpfend. Zeige, dass die
+Euler-Charakteristik des Bikomplexes~$E_r^{\bullet\bullet}$ mit der des
+Komplexes~$E_\infty^\bullet$ übereinstimmt, dass also in der K-Theorie folgende
+Identität gilt.
+\[ \sum_{p,q} (-1)^{p+q} \, [E_r^{pq}] = \sum_n (-1)^n \, [E_\infty^n] \]
+{\tiny\emph{Tipp:} Ist~$K^\bullet$ ein Komplex, so gilt $\sum_n (-1)^n \, [K^n] =
+\sum_n (-1)^n \, [H^n(K^\bullet)]$ (siehe Aufgabe~3 von Blatt~18). Außerdem gilt
+$[E_\infty^n] = \sum_p (-1)^p \, [F^p E_\infty^n / F^{p+1} E_\infty^n]$, wieso?\par}
+\end{aufgabe}
+
+Symmetrie von Ext und Tor
+
+Azyklizitätslemma (in schwacher Form) aus Spektralsequenz folgern
+
 \end{document}
+
+http://mathoverflow.net/questions/45036/spectral-sequences-opening-the-black-box-slowly-with-an-example
+http://mathoverflow.net/questions/12428/how-does-one-get-the-short-exact-sequence-in-a-two-column-spectral-sequence
+http://neil-strickland.staff.shef.ac.uk/courses/bestiary/ss.pdf
+http://math.stanford.edu/~vakil/0708-216/216ss.pdf
+http://therisingsea.org/notes/SpectralSequences.pdf
+http://www.math.mcgill.ca/goren/SeminarOnCohomology/infres.pdf

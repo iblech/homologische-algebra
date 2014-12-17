@@ -139,6 +139,8 @@
 \newcommand{\Vect}{\mathrm{Vect}}
 \newcommand{\Sh}{\mathrm{Sh}}
 \newcommand{\PSh}{\mathrm{PSh}}
+\newcommand{\AbSh}{\mathrm{AbSh}}
+\newcommand{\AbPSh}{\mathrm{AbPSh}}
 \newcommand{\Zar}{\mathrm{Zar}}
 \newcommand{\Sch}{\mathrm{Sch}}
 \newcommand{\sSet}{\mathrm{sSet}}
