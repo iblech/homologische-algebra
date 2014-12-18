@@ -8,7 +8,7 @@
 \maketitle{23}{}
 
 \begin{aufgabe}{Abgeleitetes Dualisieren}
-Sei~$A$ ein kommutativer Ring.
+Sei~$A$ ein kommutativer Ring, der als Modul über sich selbst kohärent ist.
 \begin{enumerate}
 \item Zeige: $D^b(\Mod(A)_\mathrm{coh}) \simeq D^b(\Mod(A))_\mathrm{coh}$.
 \item Sei~$(\smallplaceholder)^\dd : D^-(\Mod(A))^\op \to D^+(\Mod(A))$ die
@@ -17,7 +17,10 @@ Zeige: $(M^\dd)^\dd \cong M$.
 \end{enumerate}
 
 {\tiny\emph{Hinweis:} Die Kategorie~$\Mod(A)_\mathrm{coh}$ ist die volle
-Unterkategorie der kohärenten~$A$-Moduln. Ist~$A$ noethersch (was du gerne
+Unterkategorie der kohärenten~$A$-Moduln. Unter der Voraussetzung, dass~$A$ als
+Modul über sich selbst kohärent ist, ist das die kleinste volle
+abelsche Unterkategorie von~$\Mod(A)$, welche alle freien Moduln endlichen
+Rangs enthält. Ist~$A$ noethersch (was du gerne
 voraussetzen darfst), sind die kohärenten Moduln gerade die endlich erzeugten.
 Die Kategorie~$D^b(\Mod(A))_\mathrm{coh}$ ist die volle Unterkategorie
 derjenigen Komplexe, deren Kohomologiemoduln alle kohärent sind.\par}
@@ -28,8 +31,9 @@ Sei~$F : \A \to \B$ ein linksexakter Funktor. Existiere seine
 Rechtsableitung~$RF : D^+(\A) \to D^+(\B)$. Ein Objekt~$U$ heißt genau dann
 \emph{$F$-azyklisch}, wenn~$R^{\geq 1}F(U) = 0$.
 \begin{enumerate}
-\item Zeige, dass Kokerne von Monomorphismen zwischen~$F$-azyklischen
-Objekten und Extensionen von~$F$-azyklischen Objekten~$F$-azyklisch sind.
+\item Sei~$0 \to X \to Y \to Z \to 0$ eine kurze exakte Sequenz. Zeige, dass
+wenn~$X$ und~$Y$ oder~$X$ und~$Z$ jeweils~$F$-azyklisch sind, dann auch das
+dritte Objekt~$F$-azyklisch ist.
 \item Sei~$X^\bullet \in K^+(\A)$ ein azyklischer Komplex aus~$F$-azyklischen
 Objekten. Zeige, dass~$F(X^\bullet)$ ebenfalls azyklisch ist.
 \item Beweise Lerays Azyklizitätslemma: Ist~$X^\bullet \in D^+(\A)$ ein Komplex, der nur
@@ -59,10 +63,10 @@ verzichten.\par
 \begin{scriptsize}
 \begin{itemize}
 \item[TR1] Für jedes Objekt~$X$ ist $X \xra{\id} X \to 0 \to$
-ausgezeichnet.\\[-1.3em]
+ausgezeichnet.\\[-1.5em]
 
 Für jeden Morphismus~$X \xra{f} Y$ existiert ein Objekt~$Z$ und ein
-ausgezeichnetes Dreieck~$X \xra{f} Y \to Z \to$.\\[-1.3em]
+ausgezeichnetes Dreieck~$X \xra{f} Y \to Z \to$.\\[-1.5em]
 
 Jedes zu einem ausgezeichneten Dreieck isomorphe Dreieck ist selbst
 ausgezeichnet.
