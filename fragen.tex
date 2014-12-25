@@ -1,4 +1,6 @@
 \documentclass{uebblatt}
+\haiitrue
+\hagesamttrue
 
 \newcommand{\tipp}[1]{\footnote{\rotatebox{180}{Tipp: #1}}}
 
@@ -9,12 +11,15 @@
 
 \maketitle{$\boldsymbol{\omega}$}{}
 
-\begin{center}
-  \emph{-- Themen, die hier noch fehlen --}
+\pagestyle{plain}
 
-  Simpliziale Mengen \textbullet{} Kettenkomplexe \textbullet{} Garben
-  \textbullet{} \ldots
+\vspace{-1.5em}
+\begin{center}
+  \small
+  \emph{Es fehlen noch Fragen zu simplizialen Mengen und weitere
+  Fragen zu den restlichen Themen.}
 \end{center}
+\vspace{0.5em}
 
 \begin{aufgabeE}{Kategorientheorie: Grundlagen}
 \item Was ist eine Kategorie, was ein Funktor, was eine natürliche
@@ -59,6 +64,10 @@ C\textsuperscript{*}\kern-.1ex-Algebren (mit Eins) äquivalent?
 \item Über welche Kategorienäquivalenz ist die Darstellungstheorie von
 Fundamentalgruppen (oder besser Fundamentalgruppoiden) eng mit der
 Überlagerungstheorie verknüpft?
+\item Wann heißen Ringe zueinander Morita-äquivalent?
+\item Der Matrixring~$k^{n \times n}$ wurde als "`nicht ernsthaft
+nichtkommutativ"' bezeichnet, da er Morita-äquivalent zu~$k$ ist. Wie sieht die
+Äquivalenz~$\Mod(k) \to \Mod(k^{n \times n})$ aus?
 \item Was ist Pontrjagin-Dualität?
 \end{aufgabeE}
 
@@ -95,6 +104,35 @@ Linksadjungierte und nicht Rechtsadjungierte?
 Wie sieht unter diesem Bild die Yoneda-Einbettung aus?
 \item Was sind drei Beispiele für Anwendungen des Yoneda-Lemmas?
 \item Wieso ist der Funktor~$\Hom_\C(X,\placeholder)$ stetig (limesbewahrend)?
+\end{aufgabeE}
+
+\begin{aufgabeE}{Kettenkomplexe}
+\item Wieso induzieren nullhomotope Morphismen dieselben Morphismen in
+Kohomologie?
+\item Wie konstruiert man aus einer kurzen exakten Sequenz von Kettenkomplexen
+die zugehörige lange exakte Sequenz?
+\item Welche Funktorialitätseigenschaften hat diese?
+\item Wieso sind simpliziale Mengen eine wichtige Bezugsquelle für
+Kettenkomplexe?
+\end{aufgabeE}
+
+\begin{aufgabeE}{Garben}
+\item Was ist eine Prägarbe? Was ist eine Garbe?
+\item Wie ist der Pushforward einer Garbe definiert?
+\item Wie der Pullback (Rückzug)?
+\item Wie sieht der Rückzug von Garben im étalen Bild aus?
+\item Was weiß man über die Halme einer zurückgezogenen Garbe? Wie beweist man
+das?
+\item Zu welcher einfachen Kategorie ist die Kategorie der Garben auf dem
+einpunktigen Raum äquivalent?
+\item Unter welchem Trivialnamen ist Vordrücken auf den Punkt auch bekannt?
+\item Was ist der Rückzug einer Menge~$E$ unter der eindeutigen Abbildung~$X
+\to 1$? Wie ist die Frage zu verstehen?
+\item Was ist eine lokal konstante Garbe?
+\item Was sind Beispiele für lokal konstante Garben?
+\item Was ist Monodromie einer lokal konstanten Garbe?
+\item Was ist der Zusammenhang zwischen lokal konstanten Garben und
+Überlagerungen?
 \end{aufgabeE}
 
 \begin{aufgabeE}{Geometrie}
@@ -167,11 +205,12 @@ der abgeleiteten Kategorie nicht nur die Homotopieäquivalenzen?
 \item Unter welchen Voraussetzungen ist jeder Komplex in der abgeleiteten
 Kategorie isomorph zu seinem Kohomologiekomplex?
 \item Was ist die dumme Abschneidung eines Komplexes? Was die gute?
-\item Welche drei Definitionen des Ext-Funktoren gibt es?
-\item Welche Interpretation haben die Elemente von $\Ext^2$? Welche Elemente
-gelten als Null?
 \item Welche wichtigen ausgezeichneten Dreiecke erhält man über die beiden
 Abschneidungen?
+\item Welche drei Definitionen des Ext-Funktoren gibt es?
+\item Was ist das Yoneda-Produkt?
+\item Welche Interpretation haben die Elemente von $\Ext^2$? Welche Elemente
+gelten als Null?
 \item In welchen Fällen kann man die Kohomologie des Kegels eines Morphismus
 einfach angeben?
 \item Was ist ein Beispiel für eine Kategorie, die nicht genügend viele
@@ -208,6 +247,7 @@ Spektralsequenz über die~$E_\infty$-Seite selbst dann noch ziehen, wenn keine
 Degeneration vorliegt und man nicht viel Mühe investieren möchte?
 \item Was ist die Grothendieck-Spektralsequenz?
 \item Was ist die Leray-Spektralsequenz?
+\item Was ist die Spektralsequenz zu einem Doppelkomplex?
 \end{aufgabeE}
 
 \end{document}

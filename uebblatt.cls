@@ -32,6 +32,7 @@
 
 \newif\ifpruefung\pruefungfalse
 \newif\ifhaii\haiifalse
+\newif\ifhagesamt\hagesamtfalse
 
 \newlength{\titleskip}
 \setlength{\titleskip}{1.5em}
@@ -52,7 +53,7 @@
   \fi
 
   \begin{center}\Large \textbf{Übungsblatt #1 zur Homologischen Algebra
-  \ifhaii II \else I \fi} \\[1em]
+  \ifhagesamt I und II \else \ifhaii II \else I \fi \fi} \\[1em]
   \normalsize #2
   \end{center}
   \vspace{\titleskip}}
