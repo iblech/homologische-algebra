@@ -5,12 +5,56 @@
 
 \maketitle{25}{}
 
-Čech-Kohomologie gleich Garbenkohomologie:
-\begin{itemize}
-\item in Dimension <= 1
-\item wenn Garbe auf den Schnitten azyklisch
-\end{itemize}
+\begin{aufgabe}{Čech-Methoden zur Berechnung von Garbenkohomologie}
+Für eine Prägarbe~$\F$ abelscher Gruppen auf einem topologischen Raum ist die
+Gruppe der~$n$-Čech-Koketten bezüglich einer Überdeckung~$\U = (U_i)_i$ von~$X$
+definiert als~$\check C^n(\U, \F) \defeq \prod_{i_0,\ldots,i_n \in I}
+\F(U_{i_0 \cdots i_n})$, wobei~$U_{i_0 \cdots i_n} \defeq U_{i_0} \cap \cdots
+\cap U_{i_n}$. Sei~$\F$ im Folgenden sogar eine Garbe abelscher Gruppen.
+\begin{enumerate}
+\item Sei~$\iota : \AbSh(X) \to
+\AbPSh(X)$ der Vergissfunktor. Sei~$U \subseteq X$ eine offene Menge.
+Zeige:~$(R^n \iota\F)(U) \cong H^n(U, \F)$.
 
+{\tiny\emph{Tipp:} Verwende die Grothendieck-Spektralsequenz für~$\Gamma_U
+\circ \iota : \AbSh(X) \to \Ab$, wobei~$\Gamma_U : \AbPSh(X) \to \Ab$ die
+Gruppe der~$U$-Schnitte bestimmt. Benutze Aufgabe~3 von Blatt~21, um dazu eine
+technische Voraussetzung nachzuweisen.\par}
+\item Zeige: Die Garbifizierung der Prägarben~$R^n \iota \F$ ist für~$n \geq 1$
+Null.
+
+{\tiny\emph{Tipp:} Verwende die Grothendieck-Spektralsequenz
+für~$\Id_{\AbSh(X)} \cong s \circ \iota$, wobei~$s$ der Garbifizierungsfunktor
+ist.\par}
+\item Konstruiere zwei Spektralsequenzen mit
+\[ \check H^p(\U, R^q \iota \F) \Longrightarrow H^{p+q}(X, \F)
+  \quad\text{und}\quad
+  \check H^p(U, R^q \iota \F) \Longrightarrow H^{p+q}(X, \F). \]
+{\tiny\emph{Hinweis:} Es ist $\check H^p(U,\E) \defeq \colim_{\U} \check H^p(\U,\E)$,
+wobei~$\U$ über alle offenen Überdeckungen von~$U$ läuft. Man kann zeigen, dass
+für verschiedene Verfeinerungen~$\U \to \V$ die induzierten
+Morphismen~$\check H^p(\U,\E) \to \check H^p(\V,\E)$ übereinstimmen.\par}
+% XXX: Tipp
+\item Gelte~$H^q(U_{i_0 \cdots i_r}, \F) = 0$ für alle~$q > 0$ und~$r \geq 0$.
+Zeige: $\check H^p(\U, \F) \cong H^p(X, \F)$.
+\item Zeige: Die Abbildung~$\check H^n(X,\F) \to H^n(X,\F)$ ist für~$n = 0$ und
+für~$n = 1$ ein Isomorphismus und für~$n = 2$ ein Monomorphismus.
+
+{\tiny\emph{Tipp:} Verwende Aufgabe~2.\par}
+% XXX: Tipp
+\item Zeige: Ist~$X$ parakompakt, ist die Abbildung sogar für alle~$n \geq 0$ ein
+Isomorphismus.
+% XXX: Tipp
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Die exakte Sequenz in niedrigen Graden zu einer
+Spektralsequenz}
+XXX
+\end{aufgabe}
+
+\begin{aufgabe}{Gruppenkohomologie}
 Seite 214, Aufgabe 1
+\end{aufgabe}
 
 \end{document}
