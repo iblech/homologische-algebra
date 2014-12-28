@@ -41,9 +41,7 @@ Morphismen~$\check H^p(\U,\E) \to \check H^p(\V,\E)$ übereinstimmen.\par}
 Zeige: $\check H^p(\U, \F) \cong H^p(X, \F)$.
 \item Zeige: Die Abbildung~$\check H^n(X,\F) \to H^n(X,\F)$ ist für~$n = 0$
 und~$n = 1$ ein Isomorphismus und für~$n = 2$ ein Monomorphismus.
-
 {\tiny\emph{Tipp:} Verwende Aufgabe~2.\par}
-% XXX: Tipp
 \item Zeige: Ist~$X$ parakompakt, ist die Abbildung sogar für alle~$n \geq 0$ ein
 Isomorphismus.
 
@@ -61,9 +59,24 @@ Spektralsequenz. Konstruiere daraus eine exakte Sequenz der Form
 \[ 0 \lra E_2^{1,0} \lra E^1_\infty \lra E_2^{0,1} \lra E_2^{2,0} \lra
 E^2_\infty. \]
 \end{aufgabe}
+\vspace{-1.5em}
 
-\begin{aufgabe}{Gruppenkohomologie}
-Seite 214, Aufgabe 1
+\begin{aufgabe}{Die Serre--Hochschild-Spektralsequenz}
+Sei~$G$ eine Gruppe. Ein \emph{$G$-Modul}~$M$ ist eine abelsche Gruppe~$M$
+zusammen mit einer linearen Operation von~$G$.
+\begin{enumerate}
+\item Zeige: Der Funktor~$(\smallplaceholder)^G : \Mod(G) \to \Ab$, $M \mapsto M^G = \{ x \in M \,|\,
+\text{$gx = x$ für alle $g \in G$} \}$ ist linksexakt.
+\item Zeige: Die Kategorie der~$G$-Moduln ist äquivalent zur Kategorie der
+Moduln über dem Ring~$\ZZ[G]$, und unter dieser Korrespondenz entspricht der
+Invariantenfunktor aus~a) dem Funktor~$\Hom_{\ZZ[G]}(\ZZ, \smallplaceholder)$.
+\item Sei~$H \subseteq G$ ein Normalteiler. Überlege, wie~$G$ auf~$H^n(H,A)
+\defeq R^n(\smallplaceholder)^H(A)$ wirkt und schreibe die Wirkung im Kontext
+der Definitionen aus der Homologischen Algebra~I explizit hin.
+\item Konstruiere eine Spektralsequenz~$H^p(G/H, H^q(H,A))
+\Rightarrow H^n(G,A)$.
+{\tiny\emph{Tipp:} $A^G = (A^H)^{G/H}$.\par}
+\end{enumerate}
 \end{aufgabe}
 
 \end{document}
