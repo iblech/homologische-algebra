@@ -1,5 +1,6 @@
 \documentclass{uebblatt}
 \haiitrue
+\weihnachtsbonustrue
 
 \begin{document}
 
@@ -10,7 +11,8 @@ Für eine Prägarbe~$\F$ abelscher Gruppen auf einem topologischen Raum ist die
 Gruppe der~$n$-Čech-Koketten bezüglich einer Überdeckung~$\U = (U_i)_i$ von~$X$
 definiert als~$\check C^n(\U, \F) \defeq \prod_{i_0,\ldots,i_n \in I}
 \F(U_{i_0 \cdots i_n})$, wobei~$U_{i_0 \cdots i_n} \defeq U_{i_0} \cap \cdots
-\cap U_{i_n}$. Sei~$\F$ im Folgenden sogar eine Garbe abelscher Gruppen.
+\cap U_{i_n}$. Die Kohomologie des entstehenden Komplexes wird mit~$\check
+H^\bullet(\U, \F)$ bezeichnet. Sei~$\F$ im Folgenden sogar eine Garbe abelscher Gruppen.
 \begin{enumerate}
 \item Sei~$\iota : \AbSh(X) \to
 \AbPSh(X)$ der Vergissfunktor. Sei~$U \subseteq X$ eine offene Menge.
@@ -37,20 +39,27 @@ Morphismen~$\check H^p(\U,\E) \to \check H^p(\V,\E)$ übereinstimmen.\par}
 % XXX: Tipp
 \item Gelte~$H^q(U_{i_0 \cdots i_r}, \F) = 0$ für alle~$q > 0$ und~$r \geq 0$.
 Zeige: $\check H^p(\U, \F) \cong H^p(X, \F)$.
-\item Zeige: Die Abbildung~$\check H^n(X,\F) \to H^n(X,\F)$ ist für~$n = 0$ und
-für~$n = 1$ ein Isomorphismus und für~$n = 2$ ein Monomorphismus.
+\item Zeige: Die Abbildung~$\check H^n(X,\F) \to H^n(X,\F)$ ist für~$n = 0$
+und~$n = 1$ ein Isomorphismus und für~$n = 2$ ein Monomorphismus.
 
 {\tiny\emph{Tipp:} Verwende Aufgabe~2.\par}
 % XXX: Tipp
 \item Zeige: Ist~$X$ parakompakt, ist die Abbildung sogar für alle~$n \geq 0$ ein
 Isomorphismus.
-% XXX: Tipp
+
+{\tiny\emph{Tipp:} Verwende folgendes Lemma: Ist~$\check H^n(X,\E) = 0$ für
+alle~$n \geq 0$ und alle Prägarben~$\E$ mit~$s\E = 0$, so ist für alle
+Prägarben~$\E$ die kanonische Abbildung~$\check H^n(X,\E) \to H^n(X,s\E)$ in
+allen Graden~$n \geq 0$ ein Isomorphismus.\par}
 \end{enumerate}
 \end{aufgabe}
 
 \begin{aufgabe}{Die exakte Sequenz in niedrigen Graden zu einer
 Spektralsequenz}
-XXX
+Sei~$E_2^{pq} \Rightarrow E_\infty^n$ eine im ersten Quadranten konzentrierte
+Spektralsequenz. Konstruiere daraus eine exakte Sequenz der Form
+\[ 0 \lra E_2^{1,0} \lra E^1_\infty \lra E_2^{0,1} \lra E_2^{2,0} \lra
+E^2_\infty. \]
 \end{aufgabe}
 
 \begin{aufgabe}{Gruppenkohomologie}
@@ -58,3 +67,5 @@ Seite 214, Aufgabe 1
 \end{aufgabe}
 
 \end{document}
+
+http://math.stanford.edu/~notzeb/sheaf-coh.pdf

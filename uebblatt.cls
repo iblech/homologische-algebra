@@ -33,6 +33,7 @@
 \newif\ifpruefung\pruefungfalse
 \newif\ifhaii\haiifalse
 \newif\ifhagesamt\hagesamtfalse
+\newif\ifweihnachtsbonus\weihnachtsbonusfalse
 
 \newlength{\titleskip}
 \setlength{\titleskip}{1.5em}
@@ -52,7 +53,7 @@
     Sommersemester 2014 \\[0em]
   \fi
 
-  \begin{center}\Large \textbf{Übungsblatt #1 zur Homologischen Algebra
+  \begin{center}\Large \textbf{\ifweihnachtsbonus Wunschzettel \else Übungsblatt \fi #1 zur Homologischen Algebra
   \ifhagesamt I und II \else \ifhaii II \else I \fi \fi} \\[1em]
   \normalsize #2
   \end{center}
@@ -68,7 +69,7 @@
 \newcounter{aufgabennummer}
 \newenvironment{aufgabe}[1]{
   \addtocounter{aufgabennummer}{1}
-  \textbf{Aufgabe \theaufgabennummer{}.} \emph{#1} \par
+  \textbf{\ifweihnachtsbonus Wohnung \else Aufgabe \fi \theaufgabennummer{}.} \emph{#1} \par
 }{\vspace{\aufgabenskip}}
 \newenvironment{aufgabeE}[1]{\begin{aufgabe}{#1}\begin{enumerate}}{\end{enumerate}\end{aufgabe}}
 
