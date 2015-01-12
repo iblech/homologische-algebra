@@ -127,6 +127,7 @@
 \newcommand{\mmm}{\mathfrak{m}}
 \newcommand{\End}{\mathrm{End}}
 \newcommand{\Ext}{\mathrm{Ext}}
+\newcommand{\Tor}{\mathrm{Tor}}
 \newcommand{\Hom}{\mathrm{Hom}}
 \newcommand{\HOM}{\mathcal{H}\mathrm{om}}
 \newcommand{\id}{\mathrm{id}}
