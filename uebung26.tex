@@ -23,6 +23,25 @@ $0 \to E_2^{0,-n} \to E_\infty^{-n} \to E_2^{-1,-n+1} \to 0$.\par}
 \end{enumerate}
 \end{aufgabe}
 
+\begin{aufgabe}{Čech-Methoden für Einsteiger}
+\begin{enumerate}
+\item Berechne die Kohomologie von~$S^1$ mit Werten in der konstanten Garbe~$\ul{\ZZ}$.
+
+{\tiny\emph{Hinweis:} Verwende eine Überdeckung durch drei offene Mengen.\par}
+
+\item Sei~$X = \AA^2_k \setminus \{0\}$ die punktierte Ebene.
+Berechne die Kohomologie von~$\O_X$.
+
+{\tiny\emph{Hinweis:} Obwohl~$X$ ein Schema ist, muss man kaum etwas von
+Schematheorie wissen, um die Kohomologie zu berechnen. Verwende die
+Überdeckung~$X = D(x) \cup D(y)$; den Isomorphismus~$D(x) \cong \Spec
+k[x,y,x^{-1}]$; den Isomorphismus~$\O_{\Spec A}(\Spec A) \cong A$ für
+Ringe~$A$; und das nichttriviale Resultat, dass die höhere Kohomologie von
+quasikohärenten Modulgarben (wie~$\O_X$) auf affinen Schemata
+verschwindet.\par}
+\end{enumerate}
+\end{aufgabe}
+
 \begin{aufgabe}{Die Frölicher-Spektralsequenz}
 Sei~$X$ eine komplexe Mannigfaltigkeit. Sei~$\Omega_X^p$ die Garbe der
 holomorphen~$p$-Formen auf~$X$; also ist~$\Omega_X^0$ die Garbe der holomorphen
@@ -39,9 +58,20 @@ Seite (das ist nichttrivial) und weist die \emph{Hodge-Zerlegung} $H^n(X,C) = \o
 H^p(X,\Omega_X^q)$ nach.\par}
 \end{aufgabe}
 
-Mayer--Vietoris für Garben
+\begin{aufgabe}{Mayer--Vietoris für abgeschlossene Überdeckungen}
+Sei~$X = A \cup B$ eine abgeschlossene Überdeckung eines topologischen
+Raums~$X$. Sei~$\E$ eine Garbe abelscher Gruppen auf~$X$. Leite eine
+Mayer--Vietoris-Sequenz her, die die Kohomologie von~$\E$ mit der Kohomologie
+der zurückgezogenen Garben~$\E|_A$,~$\E|_B$ und~$\E|_{A \cap B}$ in Verbindung
+setzt.
 
-Garbenkohomologie des~$\PP^n$
+{\tiny\emph{Tipp:} Aus der gegebenen Überdeckung kann man nicht (etwa durch
+Komplementbildung) eine offene erhalten und dann die gewöhnliche
+Mayer--Vietoris-Sequenz verwenden. Konstruiere stattdessen eine kurze exakte
+Sequenz~$0 \to \E \to i_* i^{-1} \E \oplus j_* j^{-1} \E \to k_* k^{-1} \E \to
+0$, wobei~$i$,~$j$ und~$k$ die Inklusionen von~$A$, $B$ und~$A \cap B$ in~$X$
+sind. Beachte~$\E|_A \defeq i^{-1} \E$.\par}
+\end{aufgabe}
 
 \end{document}
 
