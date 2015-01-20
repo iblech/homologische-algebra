@@ -106,6 +106,7 @@
 \newcommand{\E}{\mathcal{E}}
 \newcommand{\F}{\mathcal{F}}
 \newcommand{\G}{\mathcal{G}}
+\newcommand{\T}{\mathcal{T}}
 \newcommand{\U}{\mathcal{U}}
 \newcommand{\V}{\mathcal{V}}
 \newcommand{\I}{\mathcal{I}}
@@ -177,3 +178,5 @@
 \newcommand{\notat}[1]{{!#1}}
 \newcommand{\brak}[1]{{\llbracket{#1}\rrbracket}}
 \newcommand{\defeq}{\vcentcolon=}
+
+\newcommand{\stackhref}[1]{\href{http://stacks.math.columbia.edu/tag/#1}{#1}}
