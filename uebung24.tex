@@ -34,9 +34,9 @@ ist der globale-Schnitte-Funktor $\Gamma : \Sh(X) \to \Ab$. Sei~$X = A \cup B$
 eine Überdeckung durch zwei offene Mengen. Leite aus der
 Grothendieck-Spektralsequenz zu dieser Funktorkomposition die
 Mayer--Vietoris-Sequenz für Garbenkohomologie her:
-\[ \cdots \lra H^n(X; \E) \lra
-  H^n(A; \E) \oplus H^n(B; \E) \lra
-  H^n(A \cap B; \E) \stackrel{\partial}{\lra} H^{n+1}(X; \E) \lra \cdots \]
+\[ \cdots \lra H^n(X, \E) \lra
+  H^n(A, \E) \oplus H^n(B, \E) \lra
+  H^n(A \cap B, \E) \stackrel{\partial}{\lra} H^{n+1}(X, \E) \lra \cdots \]
 {\tiny\emph{Hinweis:} Für eine beliebige offene Überdeckung~$X = \cup_i U_i$
 ist~$\check H^0(\E) \defeq \{ (s_i)_i \,|\, s_i \in \E(U_i), \text{$s_i =
 s_j$ auf $U_{ij}$} \}$. Verwende ohne Beweis, dass~$R^n \check H^0(\E)$
@@ -46,7 +46,7 @@ die~$n$-te Čech-Kohomologie~$\check H^n(\E)$ von~$X$ mit Werten in~$\E$ bezügl
 H^0(\E)$ und~$\check H^1(\E)$ sind Kern bzw. Kokern von $\E(A) \oplus \E(B) \to
 \E(A \cap B)$ und die höheren Gruppen verschwinden). Verwende ohne Beweis, dass
 die~$n$-te Rechtsableitung des Vergissfunktors bei~$\E$ die Prägarbe $(U
-\mapsto H^n(U; \E))$ ist. Verwende Aufgabe~1.\par}
+\mapsto H^n(U, \E))$ ist. Verwende Aufgabe~1c).\par}
 \end{aufgabe}
 
 \begin{aufgabe}{Euler-Charakteristik des Grenzwerts}
@@ -76,15 +76,15 @@ Sei~$f : X \to Y$ eine \emph{beliebige stetige Abbildung}. Dann verbindet die
 Leray-Spektralsequenz die Kohomologie von~$X$,
 die von~$Y$ und die der Fasern von~$f$ miteinander. Genauer gibt es für jede
 Garbe~$\E$ abelscher Gruppen auf~$X$ eine Spektralsequenz mit
-\[ E_2^{pq} = H^p(Y; R^q f_* \E) \Longrightarrow H^{p+q}(X; \E). \]
+\[ E_2^{pq} = H^p(Y, R^q f_* \E) \Longrightarrow H^n(X, \E). \]
 Auch, wenn~$\E$ eine konstante Garbe ist, sind die höheren direkten Bilder~$R^q
 f_* \E$ das im Allgemeinen nicht. Daher benötigt man allein zur Formulierung
 dieses Zusammenhangs Garbenkohomologie. Die Leray-Spektralsequenz war der
 Ausgangspunkt für die Entwicklung von Garbenkohomologie und
 Spektralsequenzen.\par Verwende: Garbenkohomologie mit Werten in einer
-konstante Garbe -- also $H^n(X; \ul{A}) \defeq R^n \Gamma_X(\ul{A})$ -- stimmt
+konstante Garbe -- also $H^n(X, \ul{A}) \defeq R^n \Gamma_X(\ul{A})$ -- stimmt
 für lokal zusammenziehbare Räume (etwa Mannigfaltigkeiten und CW-Komplexe) mit
-der üblichen singulären Kohomologie~$H^n(X; A)$ überein; für eigentliche
+der üblichen singulären Kohomologie~$H^n(X, A)$ überein; für eigentliche
 Abbildungen (wie~$\pi$) gilt unter gewissen topologischen Voraussetzungen (die
 hier erfüllt sind), dass~$(R^n f_* \E)_y \cong H^n(f^{-1}[y],
 \E|_{f^{-1}[y]})$; die Kohomologie von~$S^1 \times S^1$ mit Werten in~$\RR$
@@ -107,7 +107,7 @@ dasselbe Objekt.\par}
 \begin{aufgabe}{Auflösungen durch beliebige Objekte}
 Sei~$0 \to A \to X^\bullet$ ein Komplex. Sei~$F$ ein linksexakter Funktor. Was
 sagt die Hyperkohomologiespektralsequenz
-$E^{pq}_2 = H^p((R^q F X^p)_p) \Rightarrow R^{p+q}F(X^\bullet)$ über~$R^nF(A)$ aus,
+$E^{pq}_2 = H^p((R^q F X^p)_p) \Rightarrow R^nF(X^\bullet)$ über~$R^nF(A)$ aus,
 wenn
 \begin{enumerate}
 \item die Objekte~$X^i$ alle~$F$-azyklisch sind oder
