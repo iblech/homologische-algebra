@@ -32,8 +32,48 @@ in~$\Ab_\text{fp}$ zerfallen? Wie schwächt man seine Resultate dadurch ab?
 \end{enumerate}
 \end{aufgabe}
 
+\begin{aufgabe}{Kohomologie von~$\RR^1$ mit kompaktem Träger}
+\begin{enumerate}
+\item Zeige, dass~$0 \to \ul{\RR} \to \C^1 \to
+\C \to 0$ eine exakte Sequenz von Garben auf~$\RR^1$ ist. Dabei schickt der Morphismus~$\C^1
+\to \C$ eine stetig differenzierbare Funktion auf ihre Ableitung.
+\item Wieso sind~$\C$ und~$\C^1$ weiche Garben?
+\item Berechne~$H^\bullet_c(\RR^1, \RR)$.
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Dimensionstheorie über Kohomologie mit kompaktem Träger}
+Die \emph{Dimension} eines topologischen Raums~$X$ ist die kleinste Zahl~$n
+\geq 0$, sodass~$H_c^{> n}(X,\E)$ für alle Garben~$\E$ abelscher Gruppen
+auf~$X$ verschwindet. Sei im Folgenden~$X$ ein lokal kompakter Hausdorffraum,
+der das zweite Abzählbarkeitsaxiom erfüllt.
+\begin{enumerate}
+\item Sei~$Y \subseteq X$ eine offene oder abgeschlossene Teilmenge.
+Zeige~$\dim_c Y \leq \dim_c X$.
+
+{\tiny\emph{Tipp:} Ist~$i : Y \hookrightarrow X$ die Inklusion, so gilt
+$H_c^\bullet(Y,\E) \cong H_c^\bullet(X,i_! \E)$.\par}
+\item Sei~$0 \to \E \to \L^0 \to \cdots \to \L^{n-1} \to \L^n \to 0$ eine
+exakte Sequenz von Garben abelscher Gruppen auf~$X$.
+Seien~$\L^0,\ldots,\L^{n-1}$ weich. Sei~$\dim_c X \leq n$. Zeige, dass dann
+auch~$\L^n$ weich ist.
+
+{\tiny\emph{Tipp:} Eine Garbe~$\F$ ist genau dann weich, wenn~$H^1_c(U,\F) = 0$
+für alle offenen Teilmengen~$U \subseteq X$. Zerlege die Sequenz in viele
+kurze, um~$H^1_c(U,\L^n) \cong H^{n+1}_c(U,\E)$ nachzuweisen.\par}
+\item Sei~$X$ durch offene Mengen~$U$ mit~$\dim_c U \leq
+n$ überdeckt. Zeige~$\dim_c X \leq n$.
+
+{\tiny\emph{Tipp:} Eine Garbe ist genau dann weich, wenn sie lokal weich
+ist.\par}
+\item Sei~$f : X \to Y$ eine eigentliche stetige Abbildung. Sei~$\dim_c X \leq n$.
+Zeige~$R^{> n} f_! = 0$.
+\item Zeige, dass in der Situation aus~d)~$Rf_!$ als Funktor~$D^b \to D^b$ und
+auch als Funktor~$D^- \to D^-$ wohldefiniert ist.
+\end{enumerate}
+\end{aufgabe}
+
 \begin{itemize}
-\item Dimensionsbehauptungen aus dem Buch (Seite 237f.)
 \item Details zum Beweis von Seite 226
 \item Eine abgeleitete Adjunktion
 \end{itemize}

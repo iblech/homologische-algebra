@@ -106,6 +106,7 @@
 \newcommand{\E}{\mathcal{E}}
 \newcommand{\F}{\mathcal{F}}
 \newcommand{\G}{\mathcal{G}}
+\renewcommand{\L}{\mathcal{L}}
 \newcommand{\T}{\mathcal{T}}
 \newcommand{\U}{\mathcal{U}}
 \newcommand{\V}{\mathcal{V}}
