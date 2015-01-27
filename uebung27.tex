@@ -19,7 +19,7 @@
 Die \emph{Dimension} eines topologischen Raums~$X$ ist die kleinste Zahl~$n
 \geq 0$, sodass~$H_c^{> n}(X,\E)$ für alle Garben~$\E$ abelscher Gruppen
 auf~$X$ verschwindet. Sei im Folgenden~$X$ ein lokal kompakter Hausdorffraum,
-der das zweite Abzählbarkeitsaxiom erfüllt.
+der abzählbar im Unendlichen ist.
 \begin{enumerate}
 \item Sei~$Y \subseteq X$ eine offene oder abgeschlossene Teilmenge.
 Zeige~$\dim_c Y \leq \dim_c X$.
@@ -39,10 +39,13 @@ n$ überdeckt. Zeige~$\dim_c X \leq n$.
 
 {\tiny\emph{Tipp:} Eine Garbe ist genau dann weich, wenn sie lokal weich
 ist.\par}
-\item Sei~$f : X \to Y$ eine eigentliche stetige Abbildung. Sei~$\dim_c X \leq n$.
+\item Sei~$f : X \to Y$ eine stetige Abbildung. Sei~$\dim_c X \leq n$.
 Zeige~$R^{> n} f_!(\E) = 0$ für alle Garben~$\E$ abelscher Gruppen auf~$X$.
-\item Zeige, dass in der Situation aus~d)~$Rf_!$ als Funktor~$D^b \to D^b$ und
+\item Zeige, dass in der Situation aus~d)~$\RR f_!$ als Funktor~$D^b \to D^b$ und
 auch als Funktor~$D^- \to D^-$ wohldefiniert ist.
+
+{\tiny\emph{Tipp:} Für den ersten Teil nutze die Spektralsequenz~$E_2^{pq} =
+R^p f_! (H^q(\E^\bullet)) \Rightarrow \RR^n f_!(\E^\bullet)$.\par}
 \end{enumerate}
 \end{aufgabe}
 
@@ -53,8 +56,8 @@ von Birger Iversen, wenn du nicht weiterkommst.
 \end{aufgabe}
 
 \begin{aufgabe}{Abgeleitetes Zurückziehen und Vordrücken}
-Sei~$f : X \to Y$ ein Morphismus lokal geringter Räume. Zeige, dass~$Lf^*$
-linksadjungiert zu~$Rf_*$ ist.
+Sei~$f : X \to Y$ ein Morphismus lokal geringter Räume. Zeige, dass~$\LL f^*$
+linksadjungiert zu~$\RR f_*$ ist. Wie ist das präzise zu formulieren?
 \end{aufgabe}
 
 \begin{center}\emph{-- Für eine ungarbige Aufgabe bitte wenden. --}\end{center}
@@ -86,6 +89,13 @@ voll und daher eine Kategorienäquivalenz ist.
 zu tun, wenn man vorgeben möchte, dass alle kurzen exakten Sequenzen
 in~$\Ab_\text{fp}$ zerfallen? Wie schwächt man seine Resultate dadurch ab?
 \end{enumerate}
+
+{\tiny\emph{Hinweis:} Allgemeiner ist für jeden Integritätsbereich~$R$ der
+Quotient der Kategorie der~$R$-Moduln modulo der Unterkategorie der
+Torsionsmoduln äquivalent zur Kategorie der Vektorräume über dem
+Quotientenkörper von~$R$, siehe
+\href{http://stacks.math.columbia.edu/tag/026Z}{Stacks Project, Abschnitt \emph{The
+category of modules modulo torsion modules}}.\par}
 \end{aufgabe}
 
 \end{document}

@@ -118,6 +118,7 @@
 \newcommand{\R}{\mathcal{R}}
 \renewcommand{\S}{\mathcal{S}}
 \newcommand{\NN}{\mathbb{N}}
+\newcommand{\LL}{\mathbb{L}}
 \newcommand{\RR}{\mathbb{R}}
 \newcommand{\QQ}{\mathbb{Q}}
 \newcommand{\CC}{\mathbb{C}}
