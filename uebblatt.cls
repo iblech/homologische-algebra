@@ -34,6 +34,7 @@
 \newif\ifhaii\haiifalse
 \newif\ifhagesamt\hagesamtfalse
 \newif\ifweihnachtsbonus\weihnachtsbonusfalse
+\newif\ifadventures\adventuresfalse
 
 \newlength{\titleskip}
 \setlength{\titleskip}{1.5em}
@@ -53,10 +54,16 @@
     Sommersemester 2014 \\[0em]
   \fi
 
-  \begin{center}\Large \textbf{\ifweihnachtsbonus Wunschzettel \else Übungsblatt \fi #1 zur Homologischen Algebra
-  \ifhagesamt I und II \else \ifhaii II \else I \fi \fi} \\[1em]
-  \normalsize #2
-  \end{center}
+  \ifadventures
+    \begin{center}\Large
+      \textbf{The Adventures of Sheafification Man}
+    \end{center}
+  \else
+    \begin{center}\Large \textbf{\ifweihnachtsbonus Wunschzettel \else Übungsblatt \fi #1 zur Homologischen Algebra
+    \ifhagesamt I und II \else \ifhaii II \else I \fi \fi} \\[1em]
+    \normalsize #2
+    \end{center}
+  \fi
   \vspace{\titleskip}}
 
 \renewcommand*\theenumi{\alph{enumi}}
