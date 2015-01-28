@@ -2,6 +2,11 @@
 \haiitrue
 \adventurestrue
 
+\ifxetex
+\usepackage{fontspec}
+\setmainfont{Comic Sans MS}
+\fi
+
 \begin{document}
 
 \maketitle{28}{}
@@ -41,8 +46,13 @@ Außerdem werden noch Betreuer fürs \emph{Mathecamp} gesucht (22. bis 27. Augus
 2015). Die Arbeit mit den Kindern bringt viel Spaß und Freude, es lohnt sich sehr.
 \end{aufgabe}
 
-\begin{center}\emph{-- Zu ungarbig? Bitte wenden! --}
-\end{center}
+\ifxetex
+  \begin{center}Zu ungarbig? Bitte wenden!
+  \end{center}
+\else
+  \begin{center}\emph{-- Zu ungarbig? Bitte wenden! --}
+  \end{center}
+\fi
 
 \newpage
 

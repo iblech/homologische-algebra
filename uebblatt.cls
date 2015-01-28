@@ -3,7 +3,8 @@
 
 \LoadClass[a4paper,ngerman]{scrartcl}
 
-\RequirePackage[utf8]{inputenc}
+\RequirePackage{ifxetex}
+\ifxetex\else\RequirePackage[utf8]{inputenc}\fi
 \RequirePackage[ngerman]{babel}
 \RequirePackage{amsmath,amsthm,amssymb,amscd,color,graphicx,environ,tabto}
 \RequirePackage[all,2cell]{xy}
