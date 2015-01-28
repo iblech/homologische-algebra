@@ -5,14 +5,17 @@
 
 \maketitle{28}{}
 
+\vspace{8cm}
+
 \begin{aufgabe}{Verbesserung des Stacks Projects}
 Sicherlich kennst du das Stacks Project,
 \url{http://stacks.math.columbia.edu/}, das freie Nachschlagewerk zu Themen wie
 Garben, Homologische Algebra, Schematheorie und Stacks. Es fasst mehr als 4500
-Seiten und ist das Werk vieler Mitwirkenden unter der Leitung von Aise Johan de
-Jong. Nutze es zum Lernen und korrigiere Fehler! Korrekturen einzubringen
-dauert keine fünf Minuten, auf \url{https://github.com/stacks/stacks-project}
-ist der Quellcode direkt editierbar.
+Seiten und ist das Werk vieler Mitwirkenden, mit Aise Johan de
+Jong als Hauptautor. Nutze es zum Lernen und korrigiere Fehler! Korrekturen
+einzubringen dauert keine fünf Minuten, auf
+\url{https://github.com/stacks/stacks-project} ist der Quellcode direkt
+editierbar.
 \end{aufgabe}
 
 \begin{aufgabe}{Verbesserung des nLab}
@@ -25,28 +28,84 @@ hinausgehen, gehört es zum guten Ton, seine Änderungen auf dem \emph{nForum}
 bekanntzugeben.\par}
 \end{aufgabe}
 
-\begin{aufgabe}{Matheschülerzirkel}
-Mach beim Augsburger Matheschülerzirkel mit! Insbesondere werden noch Betreuer
-fürs \emph{Mathecamp} gesucht (22. bis 27. August 2015). Die Arbeit mit den
-Kindern bringt super viel Spaß, es lohnt sich sehr!
+\begin{aufgabe}{Engagement im Matheschülerzirkel}
+Mach beim Augsburger Matheschülerzirkel mit und übernimm die Verantwortung für
+einen Präsenz- oder Korrespondenzzirkel oder die Meta-Organisation!
+Außerdem werden noch Betreuer fürs \emph{Mathecamp} gesucht (22. bis 27. August
+2015). Die Arbeit mit den Kindern bringt viel Spaß und Freude, es lohnt sich sehr.
 \end{aufgabe}
 
 \begin{aufgabe}{Freie Gruppen}
 \begin{enumerate}
 \item Sei~$A$ eine abelsche Gruppe. Zeige: Ist~$A$ frei, so zerfällt jede kurze
 exakte Sequenz der Form~$0 \to \ZZ \to B \to A \to 0$.
-\item Gilt die Umkehrung? {\tiny\emph{Hinweis:} Fiese Frage.\par}
+\item Gilt die Umkehrung? {\tiny\emph{Hinweis:} Fiese Frage.}
 \end{enumerate}
 \end{aufgabe}
 
+\newpage
+
+\begin{aufgabe}{Kohomologie von~$\RR^n$ mit kompaktem Träger}
+\begin{enumerate}
+\item Verwende die Auflösung~$0 \to \ul{\RR} \to \Omega^\bullet$ der konstanten
+Garbe~$\ul{\RR}$ durch die Garben der Differentialformen,
+um~$H_c^\bullet(\RR^n,\ul{\RR})$ zu berechnen.
+\item Zeige~$\dim_c \RR^n = n$. {\tiny Dazu folgt noch ein ausführlicher Tipp.}
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Bewegung längs Immersionen}
+\begin{enumerate}
+\item Sei~$i : Z \hookrightarrow X$ die Inklusion eines abgeschlossenen
+Teilraums. Zeige~$i_* \cong i_!$.
+\item Sei~$j : U \hookrightarrow X$ die Inklusion eines offenen Teilraums.
+Zeige~$j^* \cong j^!$.
+\end{enumerate}
+\end{aufgabe}
+
+\begin{aufgabe}{Alexander-Dualität}
+Sei~$i : Z \hookrightarrow X$ die Inklusion einer abgeschlossenen Teilmenge
+einer~$n$-dimensionalen Mannigfaltigkeit~$X$. Sei~$\E$ eine Garbe
+von~$k$-Vektorräumen auf~$Z$. Zeige: \[ H_c^r(Z,\E)^\vee \cong
+\Ext_k^{n-r}(i_*\E, \omega_X[n-r]). \]
+
+{\tiny\emph{Hinweis:} Auf der linken Seite tritt die \emph{lokale
+Kohomologie}~$H_c^r(Z,\E)$ auf. Die ist die~$r$-te Rechtsableitung des
+Funktors~$\Gamma_Z : \AbSh(X) \to \Ab$, der eine Garbe~$\E$ auf die Menge
+derjenigen globalen Schnitte, deren Träger in~$Z$ liegt, schickt. \emph{Tipp:}
+Verwende~$\Gamma_Z(\E) \cong \Hom_{\AbSh(Z)}(\ZZ,i^!\E)$ und beginne mit dem
+Isomorphismus~$H_c^r(Z,\E)^\vee \cong \Hom_{D^+(\Vect(k))}(\RR \Gamma_c(\E),
+k[-r])$.\par}
+\end{aufgabe}
+
+\begin{aufgabe}{$t$-Strukturen auf triangulierten Kategorien}
+Eine \emph{$t$-Struktur} auf einer triangulierten Kategorie~$\C$ besteht aus
+zwei vollen Unterkategorien~$\C_{\geq 0}, \C_{\leq 0} \hookrightarrow \C$ mit
+folgenden Eigenschaften:
 \begin{itemize}
-\item Vergleich von de Rham mit Garbenkohomologie (mit kompaktem Träger);
-danach Koeffizienten in~$\ul{\ZZ}$; danach beliebige Koeffizienten. Damit dann
-Dimension von $\RR^n$.
-\item $j^! = j^*$
-\item Alexander-Dualität
-\item Standard-t-Struktur
+\item Für~$X \in \C_{\leq 0}$ und~$Y \in \C_{\geq 0}$ ist~$\Hom_\C(X,Y[-1]) =
+0$.
+\item Die Unterkategorie~$\C_{\geq 0}$ ist
+unter~$\smallplaceholder[-1]$ und~$\C_{\leq 0}$ ist
+unter~$\smallplaceholder[1]$ abgeschlossen.
+\item Für jedes Objekt~$X \in \C$ existiert ein ausgezeichnetes Dreieck~$A \to
+X \to B \to$ mit~$A \in \C_{\leq 0}$ und~$B \in \C_{\geq 0}[-1]$.
 \end{itemize}
+\begin{enumerate}
+\item Sei~$\A$ eine abelsche Kategorie und~$\C \defeq \D(\A)$ die zugehörige
+abgeleitete Kategorie. Sei~$\C_{\geq 0}$ die volle Unterkategorie bestehend aus
+denjenigen Komplexen, deren Kohomologie in Graden~$\geq 0$ konzentriert ist.
+Sei analog~$\C_{\leq 0}$ definiert. Zeige, dass diese Unterkategorien
+eine~$t$-Struktur auf~$\C$ bilden. {\tiny\emph{Tipp:} Gute Abschneidung.}
+\item Zeige weiter, dass die Kategorie~$\C_{\geq 0} \cap \C_{\leq 0}$ äquivalent zu~$\A$ ist.
+\item Sei eine~$t$-Struktur auf einer allgemeinen triangulierten Kategorie~$\C$
+gegeben. Zeige, dass ihr \emph{Herz} -- das ist der der Schnitt~$\C_{\geq 0}
+\cap \C_{\leq 0}$ -- eine abelsche Kategorie ist.
+\end{enumerate}
+{\tiny\emph{Hinweis:} Die abgeleitete Kategorie des Herzens einer $t$-Struktur
+auf einer triangulierten Kategorie~$\C$ stimmt nicht unbedingt mit~$\C$
+überein. $t$-Strukturen sind wichtig in der Stringtheorie.\par}
+\end{aufgabe}
 
 \end{document}
 
