@@ -12,8 +12,21 @@
 
   [ Wie kann man die Pointe formal korrekt umsetzen? ]
 
+  Dieser Sheafification Man könnte "coarse space man" genannt werden.
+  (Benjamin B.)
+
 * Auflösung von Garben so: In Behälter mit Säure halten. Danach sind die
   Garben sogar welk. (Marc)
 
 * Natürlich sind die Abenteuer des Sheafification Man nicht "episch".
   Sie sind "ko-monisch"! (Ingo)
+
+* Der Sheafification Man hat einen bizarro Twin -- seinen Adjungierten.
+  Der bettet Garben (oder Stacks) in die bizarro Welt der Prägarben (oder
+  Prästacks) ein. (Benjamin B.)
+
+* Der Sheafification Man benötigt einen guten Sidekick!
+  (Benjamin B.)
+
+* Wenn der Sheafification Man erwachsen wird, wird er zum Stackification Man.
+  (Lie F.)
