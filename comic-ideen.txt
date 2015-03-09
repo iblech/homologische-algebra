@@ -34,3 +34,10 @@
 * Kähler Man (Meru)
 
 * Symplectic Guy (Sven)
+
+* Das Polynom X^p - 1 betrachtet sich in einem rationalen Spiegel und findet
+  sich super "smooth". Es geht in eine Bar, um Frauen anzusprechen. Diese
+  lassen ihn aber abblitzen. Während er die Bar verlässt, sehen die Leser, dass
+  die Frauen Charakteristik p haben und sich dem Sheafification Man zuwenden
+  ("lass und doch zu mir nach Hause gehen, ich habe viele Prägarben, die du
+  garbifizieren könntest"). (Carina, Christian, Ingo, Peter)
