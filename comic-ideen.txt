@@ -41,3 +41,8 @@
   die Frauen Charakteristik p haben und sich dem Sheafification Man zuwenden
   ("lass und doch zu mir nach Hause gehen, ich habe viele Prägarben, die du
   garbifizieren könntest"). (Carina, Christian, Ingo, Peter)
+
+* Parametricity Man. Er steht jeden Samstag in der Fußgängerzone und hat ein
+  Schild mit der Aufschrift "Free Theorems" vor sich hingestellt. Wenn man ihm
+  einen Typ zuruft, dann antwortet er mit einem Theorem, das Werte dieses Typs
+  erfüllen. (Tim)
