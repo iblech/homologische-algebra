@@ -46,3 +46,7 @@
   Schild mit der Aufschrift "Free Theorems" vor sich hingestellt. Wenn man ihm
   einen Typ zuruft, dann antwortet er mit einem Theorem, das Werte dieses Typs
   erfüllen. (Tim)
+
+* Irgendwas mit der Doppelnegationstopologie. (Marc)
+
+* Irgendwas mit Wolkenkratzergarben. (Marc)
