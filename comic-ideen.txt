@@ -50,3 +50,6 @@
 * Irgendwas mit der Doppelnegationstopologie. (Marc)
 
 * Irgendwas mit Wolkenkratzergarben. (Marc)
+
+* Jemand wacht von einem Albtraum auf, weil er glaubt, irgendeine Konstruktion
+  sei nicht wohldefiniert. Ist sie aber zum Glück doch. (Ingo)
