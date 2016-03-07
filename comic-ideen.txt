@@ -57,3 +57,11 @@
 * Etwas mit der Prinzessin/Königin der Garben (Carina). Sie könnte zusammen mit
   Sheafi gegen den "étaler Raum"-Mann antreten. Später findet sie heraus, dass
   sie und er in Wahrheit identisch sind. (Ingo)
+
+* Wieso ist es "wichtig", die Dezimalentwicklung von Pi zu kennen? Um
+  Witze, die als Pointe haben, dass/ob schon TeX in der Version 3.2 erschienen
+  ist, würdigen zu können! (Marc)
+
+* Nerdig ist, was auch ein noch höherer Nerd noch als nerdig einstuft;
+  so erhält man (nach Definition) zumindest so viele Nerd-Abstufungen, wie es
+  Ordinalzahlen gibt. (Marc)
